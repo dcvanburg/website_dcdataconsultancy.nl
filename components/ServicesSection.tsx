@@ -1,54 +1,64 @@
-import { services } from "@/lib/site-content";
-import { Database, BarChart2, PieChart, Cpu } from "lucide-react";
-
-const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
+import Link from "next/link";
+import {
   Database,
   BarChart2,
-  PieChart,
   Cpu,
-};
+  Layers,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
+import { services } from "@/lib/site-content";
+
+const iconMap: Record<string, LucideIcon> = { Database, BarChart2, Cpu, Layers };
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 md:py-28 section-dark">
+    <section id={services.sectionId} className="py-20 md:py-28 section-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
-            {services.subheading}
+        <div className="max-w-3xl mb-12 md:mb-16">
+          <p className="text-blue-300 font-semibold text-sm uppercase tracking-widest mb-3">
+            Diensten
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-            {services.heading}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+            {services.subheading}
           </h2>
         </div>
 
-        {/* Services grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {services.items.map((service, index) => {
-            const Icon = iconMap[service.icon];
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {services.items.map((item) => {
+            const Icon = iconMap[item.icon];
+            const isPrimary = "primary" in item && item.primary;
             return (
-              <div
-                key={index}
-                className="group relative rounded-2xl border border-white/10 bg-white/5 hover:bg-white/8 p-6 md:p-8 transition-all duration-200 hover:border-blue-500/30"
+              <Link
+                key={item.title}
+                href={item.href}
+                className={`group relative p-7 rounded-2xl border transition-all hover:-translate-y-1 ${
+                  isPrimary
+                    ? "bg-blue-600/10 border-blue-500/40"
+                    : "bg-white/[0.03] border-white/10 hover:bg-white/[0.06]"
+                }`}
               >
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-2xl bg-blue-500/10 group-hover:bg-blue-500/20 flex items-center justify-center mb-6 transition-colors border border-blue-500/20">
-                  {Icon && <Icon size={28} className="text-blue-400" />}
+                <div className="flex items-start gap-4 mb-4">
+                  <div
+                    className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
+                      isPrimary
+                        ? "bg-blue-500 text-white"
+                        : "bg-white/10 text-blue-300"
+                    }`}
+                  >
+                    {Icon ? <Icon className="w-5 h-5" aria-hidden="true" /> : null}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                    <p className="text-blue-300/90 text-sm">{item.tagline}</p>
+                  </div>
                 </div>
-
-                <h3 className="text-xl font-bold text-white mb-1">
-                  {service.title}
-                </h3>
-                {service.subtitle && (
-                  <p className="text-blue-400 text-sm font-medium mb-3">
-                    {service.subtitle}
-                  </p>
-                )}
-                <p className="text-white/60 leading-relaxed">{service.description}</p>
-
-                {/* Hover accent */}
-                <div className="absolute inset-x-0 bottom-0 h-0.5 rounded-b-2xl bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
+                <p className="text-white/70 leading-relaxed mb-5">{item.description}</p>
+                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-300">
+                  Bekijk dienst
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
             );
           })}
         </div>

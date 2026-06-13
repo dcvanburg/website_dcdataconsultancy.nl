@@ -1,28 +1,67 @@
 import Link from "next/link";
-import { offer } from "@/lib/site-content";
+import { offerSection } from "@/lib/site-content";
+import SectionShell from "@/components/ui/SectionShell";
+import { ArrowRight } from "lucide-react";
 
 export default function OfferSection() {
   return (
-    <section id={offer.sectionId} className="py-20 md:py-28 section-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-4">
-            Mijn aanpak
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8">
-            {offer.heading}
-          </h2>
-          <p className="text-gray-600 text-xl leading-relaxed mb-10">
-            {offer.intro}
-          </p>
+    <SectionShell
+      id={offerSection.sectionId}
+      eyebrow={offerSection.eyebrow}
+      heading={offerSection.heading}
+      intro={offerSection.intro}
+      variant="white"
+    >
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {offerSection.pillars.map((p) => (
           <Link
-            href="#contact"
-            className="inline-flex px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold text-lg rounded-xl transition-all duration-200 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5"
+            key={p.title}
+            href={p.href}
+            className={`group relative p-8 rounded-2xl border transition-all hover:-translate-y-1 ${
+              p.primary
+                ? "bg-gradient-to-br from-blue-600 to-blue-700 border-blue-700 text-white shadow-xl shadow-blue-500/20"
+                : "bg-white border-gray-200 hover:border-blue-200 hover:shadow-lg"
+            }`}
           >
-            Aan de slag!
+            <p
+              className={`text-xs font-mono mb-4 ${
+                p.primary ? "text-blue-200" : "text-gray-400"
+              }`}
+            >
+              {p.number}
+            </p>
+            <h3
+              className={`text-2xl font-bold mb-1 ${
+                p.primary ? "text-white" : "text-gray-900"
+              }`}
+            >
+              {p.title}
+            </h3>
+            <p
+              className={`text-sm font-medium mb-4 ${
+                p.primary ? "text-blue-100" : "text-blue-600"
+              }`}
+            >
+              {p.tagline}
+            </p>
+            <p
+              className={`leading-relaxed mb-6 ${
+                p.primary ? "text-white/85" : "text-gray-600"
+              }`}
+            >
+              {p.description}
+            </p>
+            <span
+              className={`inline-flex items-center gap-1.5 text-sm font-semibold ${
+                p.primary ? "text-white" : "text-blue-600"
+              }`}
+            >
+              Lees meer
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </span>
           </Link>
-        </div>
+        ))}
       </div>
-    </section>
+    </SectionShell>
   );
 }

@@ -1,0 +1,85 @@
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
+import SectionShell from "@/components/ui/SectionShell";
+import { BreadcrumbSchema } from "@/components/SchemaMarkup";
+import { siteConfig } from "@/lib/site-content";
+
+export const metadata: Metadata = {
+  title: "Contact | DC Data Consultancy",
+  description:
+    "Neem contact op met Dennis van Burg voor een vrijblijvende kennismaking. Senior data engineering consultancy uit Breda, voor opdrachtgevers in heel Nederland.",
+  alternates: { canonical: `${siteConfig.url}/contact` },
+  openGraph: {
+    title: "Contact | DC Data Consultancy",
+    description:
+      "Neem contact op met Dennis van Burg voor een vrijblijvende kennismaking. Senior data engineering consultancy uit Breda.",
+    url: `${siteConfig.url}/contact`,
+    type: "website",
+  },
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <BreadcrumbSchema
+          items={[
+            { name: "Home", url: siteConfig.url },
+            { name: "Contact", url: `${siteConfig.url}/contact` },
+          ]}
+        />
+
+        <div className="pt-20">
+          <ContactSection />
+        </div>
+
+        <SectionShell
+          eyebrow="Wat verwacht je"
+          heading="Hoe een eerste gesprek eruitziet"
+          intro="Geen verkooppraatje. Wel een eerlijke read op waar je nu staat en wat haalbaar is."
+          variant="light"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+            <Step
+              number="01"
+              title="Korte intake (30 min)"
+              description="Je vertelt over je dataomgeving, het probleem en het gewenste resultaat. Ik luister vooral."
+            />
+            <Step
+              number="02"
+              title="Eerste read"
+              description="Ik deel mijn eerste observaties: waar zit denk ik de échte bottleneck, en wat zijn realistische opties."
+            />
+            <Step
+              number="03"
+              title="Vervolgvoorstel"
+              description="Mocht het matchen, dan stuur ik een concreet voorstel met aanpak, doorlooptijd en tarief."
+            />
+          </div>
+        </SectionShell>
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+function Step({
+  number,
+  title,
+  description,
+}: {
+  number: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="p-7 rounded-2xl bg-white border border-gray-200">
+      <p className="font-mono text-blue-600 text-sm font-bold mb-3">{number}</p>
+      <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 leading-relaxed">{description}</p>
+    </div>
+  );
+}

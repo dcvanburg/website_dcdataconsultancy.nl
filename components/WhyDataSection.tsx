@@ -1,88 +1,43 @@
-import { whyData } from "@/lib/site-content";
-import { CheckCircle } from "lucide-react";
+import { problemSection } from "@/lib/site-content";
+import SectionShell from "@/components/ui/SectionShell";
 
 export default function WhyDataSection() {
   return (
-    <section id={whyData.sectionId} className="py-20 md:py-28 section-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Text content */}
-          <div>
-            <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-4">
-              Data belang
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              {whyData.heading}
-            </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              {whyData.intro}
-            </p>
-
-            <ul className="space-y-4">
-              {whyData.bullets.map((bullet, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle
-                    className="text-blue-500 mt-0.5 shrink-0"
-                    size={22}
-                  />
-                  <span className="text-gray-700 text-base leading-relaxed">
-                    {bullet}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Visual side */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#0d1117] to-[#1c2333] p-8 md:p-10 shadow-2xl">
-              {/* Decorative data visualization mockup */}
-              <div className="space-y-5">
-                {/* Bars */}
-                {[85, 62, 91, 48, 74].map((width, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className="text-white/40 text-xs w-6 text-right">{String.fromCharCode(65 + i)}</span>
-                    <div className="flex-1 bg-white/5 rounded-full h-3">
-                      <div
-                        className="h-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-400"
-                        style={{ width: `${width}%` }}
-                      />
-                    </div>
-                    <span className="text-white/60 text-xs w-8">{width}%</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Mini stat cards */}
-              <div className="grid grid-cols-2 gap-3 mt-8">
-                <div className="bg-white/5 rounded-xl p-4">
-                  <p className="text-white/50 text-xs mb-1">Data punten</p>
-                  <p className="text-white font-bold text-2xl">2.4M</p>
-                  <p className="text-green-400 text-xs mt-1">+18% ↑</p>
-                </div>
-                <div className="bg-white/5 rounded-xl p-4">
-                  <p className="text-white/50 text-xs mb-1">Nauwkeurigheid</p>
-                  <p className="text-white font-bold text-2xl">97%</p>
-                  <p className="text-green-400 text-xs mt-1">+4% ↑</p>
-                </div>
-              </div>
-
-              {/* Decorative dots */}
-              <div className="absolute top-4 right-4 flex gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
-                <span className="w-2.5 h-2.5 rounded-full bg-green-400/60" />
-              </div>
+    <SectionShell
+      id={problemSection.sectionId}
+      eyebrow={problemSection.eyebrow}
+      heading={problemSection.heading}
+      intro={problemSection.intro}
+      variant="light"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {problemSection.problems.map((p) => (
+          <div
+            key={p.title}
+            className="group p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all"
+          >
+            <div className="w-10 h-10 rounded-lg bg-red-50 text-red-600 flex items-center justify-center mb-4 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
             </div>
-
-            {/* Floating badge */}
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4 border border-gray-100">
-              <p className="text-xs text-gray-500 mb-0.5">Data-driven beslissingen</p>
-              <p className="text-gray-900 font-bold text-sm">3x sneller groei</p>
-            </div>
+            <h3 className="font-semibold text-gray-900 mb-2 text-lg">{p.title}</h3>
+            <p className="text-gray-600 leading-relaxed text-sm">{p.description}</p>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </SectionShell>
   );
 }

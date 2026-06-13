@@ -1,76 +1,57 @@
 import Image from "next/image";
-import { about } from "@/lib/site-content";
+import Link from "next/link";
+import { aboutSection } from "@/lib/site-content";
+import { ArrowRight } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id={about.sectionId} className="py-20 md:py-28 section-dark">
+    <section id={aboutSection.sectionId} className="py-20 md:py-28 section-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Photo */}
-          <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
-            <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden ring-4 ring-blue-500/20 shadow-2xl">
-                <Image
-                  src={about.profileImage}
-                  alt={about.profileImageAlt}
-                  width={320}
-                  height={320}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-              </div>
-              {/* Experience badge */}
-              <div className="absolute -bottom-4 -right-4 bg-blue-500 text-white rounded-xl shadow-lg px-4 py-3 text-center">
-                <p className="text-2xl font-bold leading-none">8+</p>
-                <p className="text-xs mt-0.5 opacity-90">jaar ervaring</p>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/5] max-w-md">
+              <Image
+                src={aboutSection.profileImage}
+                alt={aboutSection.profileImageAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-transparent to-transparent" />
             </div>
           </div>
 
-          {/* Text */}
-          <div className="order-1 lg:order-2">
-            <p className="text-blue-400 font-semibold text-sm uppercase tracking-widest mb-4">
-              {about.subheading}
+          <div className="lg:col-span-7">
+            <p className="text-blue-300 font-semibold text-sm uppercase tracking-widest mb-3">
+              {aboutSection.eyebrow}
             </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-              {about.heading}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-3">
+              {aboutSection.heading}
             </h2>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
-              {about.bio}
-            </p>
+            <p className="text-blue-300/90 mb-6 font-medium">{aboutSection.role}</p>
 
-            {/* Industries */}
-            <div className="mb-8">
-              <p className="text-white/50 text-sm uppercase tracking-wider mb-3">
-                Sectoren
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {about.industries.map((industry) => (
-                  <span
-                    key={industry}
-                    className="px-3 py-1.5 rounded-lg bg-white/10 text-white/80 text-sm font-medium border border-white/10 hover:bg-white/15 transition-colors"
-                  >
-                    {industry}
-                  </span>
-                ))}
-              </div>
+            <div className="space-y-4 text-white/75 leading-relaxed mb-8">
+              {aboutSection.bio.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
 
-            {/* Stats row */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
-              <div>
-                <p className="text-3xl font-bold text-white">8+</p>
-                <p className="text-white/50 text-sm mt-1">Jaar ervaring</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-white">9+</p>
-                <p className="text-white/50 text-sm mt-1">Klanten</p>
-              </div>
-              <div>
-                <p className="text-3xl font-bold text-white">4</p>
-                <p className="text-white/50 text-sm mt-1">Specialisaties</p>
-              </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-8 py-6 border-y border-white/10">
+              {aboutSection.highlights.map((h) => (
+                <div key={h.label}>
+                  <p className="text-2xl md:text-3xl font-bold text-white">{h.value}</p>
+                  <p className="text-xs text-white/50 mt-1 leading-tight">{h.label}</p>
+                </div>
+              ))}
             </div>
+
+            <Link
+              href={aboutSection.cta.href}
+              className="inline-flex items-center gap-2 text-blue-300 hover:text-white font-semibold transition-colors"
+            >
+              {aboutSection.cta.label}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </div>

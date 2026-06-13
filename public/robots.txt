@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+
+# AI crawlers — explicit allow (we want to be indexed/cited by LLMs)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://www.dcdataconsultancy.nl/sitemap.xml
