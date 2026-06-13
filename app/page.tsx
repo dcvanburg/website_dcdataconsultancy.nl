@@ -7,6 +7,7 @@ import QuoteSection from "@/components/QuoteSection";
 import AiUseCasesSection from "@/components/AiUseCasesSection";
 import ServicesSection from "@/components/ServicesSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <AiUseCasesSection />
         <ServicesSection />
         <ProjectsSection />
+        <BlogSection />
         <ContactSection />
       </main>
       <Footer />

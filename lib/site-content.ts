@@ -8,7 +8,7 @@ export const siteConfig = {
   email: "dennis@dcdataconsultancy.nl",
   linkedin: "https://www.linkedin.com/in/dennisvanburg/",
   location: "Goes, Nederland",
-  copyright: "© 2024 DC Data Consultancy",
+  copyright: "© 2025 DC Data Consultancy",
 } as const;
 
 export const navigation = [
@@ -17,6 +17,7 @@ export const navigation = [
   { label: "Wat?", href: "#wat" },
   { label: "Projecten", href: "#projecten" },
   { label: "Contact", href: "#contact" },
+  { label: "Blog", href: "#blog" },
 ] as const;
 
 export const hero = {
@@ -32,10 +33,10 @@ export const whyData = {
   intro:
     "Data is niet meer weg te denken in onze huidige wereld. Bedrijven die data slim inzetten hebben een concurrentievoordeel. Maar wat kun je er eigenlijk mee?",
   bullets: [
-    "Om de concurrentie een stap voor te blijven",
-    "Om patronen te ontdekken die met het blote oog niet te vinden zijn",
-    "Om effectiever en efficiënter processen in te richten",
-    "Om keuzes te maken op basis van feiten in plaats van onderbuik gevoel",
+    "Om de concurrentie een stap voor te blijven!",
+    "Om patronen te ontdekken die met het blote oog niet te vinden zijn!",
+    "Om effectiever en efficiënter processen in te richten!",
+    "Om keuzes te maken op basis van feiten in plaats van onderbuik gevoel!",
   ],
 } as const;
 
@@ -45,7 +46,7 @@ export const about = {
   subheading: "Wie?",
   name: "Dennis van Burg",
   role: "Freelance data analytics consultant",
-  bio: "Mijn naam is Dennis van Burg en ik werk als freelance data analytics consultant. Met meer dan 8 jaar ervaring help ik organisaties om meer uit hun data te halen. Ik heb gewerkt voor bedrijven in uiteenlopende sectoren en weet daardoor goed wat er speelt.",
+  bio: "Mijn naam is Dennis van Burg en ik werk als freelance data analytics consultant. Mijn passie ligt bij het oplossen van complexe puzzels. Dit is precies hoe ik naar data kijk, het is een uitdagende puzzel die ontrafelt moet worden. Inmiddels werk ik al meer dan 8 jaar als data consultant met ervaring in onder andere logistiek, vastgoed, energiebanken en verzekeraars, daarom weet ik precies hoe complexe vraagstukken vertaald moeten worden naar begrijpbare taal. Klanten vinden dat ik; denk in oplossingen, initiatief neem, communicatief sterk ben en een echte teamplayer!",
   experience: "Meer dan 8 jaar ervaring",
   industries: ["Logistiek", "Vastgoed", "Energie", "Banken", "Verzekeraars"],
   profileImage: "/images/profile-dennis.jpg",
@@ -56,24 +57,7 @@ export const offer = {
   sectionId: "wat",
   heading: "Wat bied ik aan?",
   intro:
-    "Data analytics consultancy op maat. Samen maken we een plan op basis van jouw doelstelling. Of je nu wilt starten met data of jouw huidige aanpak wilt verbeteren — ik help je verder.",
-  items: [
-    {
-      title: "Inventarisatie",
-      description:
-        "We beginnen met een inventarisatie van jouw data en doelstellingen.",
-    },
-    {
-      title: "Plan op maat",
-      description:
-        "Op basis van de inventarisatie maken we een concreet plan dat aansluit bij jouw organisatie.",
-    },
-    {
-      title: "Uitvoering",
-      description:
-        "Van engineering tot dashboarding — ik kan het hele traject begeleiden of specifieke onderdelen oppakken.",
-    },
-  ],
+    "Als data analytics consultant weet ik precies hoe jij data optimaal kan inzetten binnen jouw bedrijf. Op basis van jouw doelstelling maken we in overleg een plan om tot de juiste inzichten te komen.",
 } as const;
 
 export const quote = {
@@ -127,28 +111,28 @@ export const services = {
       title: "Data Engineering",
       subtitle: "Extract Transform Load — ETL",
       description:
-        "Van ruwe data naar schone, betrouwbare data pipelines. Ik bouw en onderhoud de infrastructuur waarop jouw analyses draaien.",
+        "Extract Transform Load (ETL) staat voor het proces om van ruwe data, bruikbare data te maken waarmee je verdere analyses kunt doen!",
       icon: "Database",
     },
     {
       title: "Data Analyse",
       subtitle: "",
       description:
-        "Diepgaande analyses om patronen, trends en inzichten uit jouw data te halen die bijdragen aan betere beslissingen.",
+        "Data analyse is onderzoeksvragen beantwoorden door gebruik te maken van de nodige tools en technieken.",
       icon: "BarChart2",
     },
     {
       title: "Dashboarding",
       subtitle: "",
       description:
-        "Overzichtelijke en interactieve dashboards die de juiste informatie tonen aan de juiste mensen op het juiste moment.",
+        "Dashboards zijn een visuele weergave van bedrijfsdata, en geven inzicht in de stand van zaken van je bedrijf. Doordat deze informatie inzichtelijk is kunnen beslissingen gemaakt worden op basis van data in plaats van onderbuik gevoel.",
       icon: "PieChart",
     },
     {
       title: "Data Science (AI)",
       subtitle: "",
       description:
-        "Machine learning modellen en AI-oplossingen die jouw data laten werken. Van forecasting tot anomaly detection.",
+        "Data science is een combinatie van wiskunde, programmeervaardigheden en domeinkennis. Met het doel om met Artificial Intelligence (AI) verborgen patronen te ontdekken en hier voorspellingen mee te doen!",
       icon: "Cpu",
     },
   ],
@@ -175,7 +159,7 @@ export const contact = {
   sectionId: "contact",
   heading: "Neem contact op",
   intro:
-    "Heb je een vraag of wil je weten wat ik voor jouw organisatie kan betekenen? Stuur me een bericht en ik reageer zo snel mogelijk.",
+    "Wil je samenwerken om meer uit jouw data te halen? Neem dan contact met me op!",
   fields: {
     name: { label: "Naam", placeholder: "Jouw naam" },
     email: { label: "E-mail", placeholder: "jouw@email.nl" },
