@@ -3,17 +3,16 @@ type Props = {
   eyebrow?: string;
   heading?: string;
   intro?: string;
-  variant?: "light" | "dark" | "dark-2" | "white";
+  variant?: "canvas" | "white" | "night";
   align?: "left" | "center";
   children: React.ReactNode;
   className?: string;
 };
 
 const variantClass = {
-  light: "section-light",
-  dark: "section-dark",
-  "dark-2": "section-dark-2",
-  white: "bg-white text-gray-900",
+  canvas: "surface-canvas",
+  white: "surface-white",
+  night: "surface-night",
 } as const;
 
 export default function SectionShell({
@@ -26,27 +25,23 @@ export default function SectionShell({
   children,
   className = "",
 }: Props) {
-  const isDark = variant === "dark" || variant === "dark-2";
-  const headingClass = isDark ? "text-white" : "text-gray-900";
-  const introClass = isDark ? "text-white/70" : "text-gray-600";
-  const eyebrowClass = isDark ? "text-blue-300" : "text-blue-600";
+  const isNight = variant === "night";
+  const headingClass = isNight ? "text-night-ink" : "text-ink";
+  const introClass = isNight ? "text-night-ink/70" : "text-ink-soft";
+  const eyebrowExtra = isNight ? "text-night-ink/60" : "eyebrow-brand";
   const alignWrapper = align === "center" ? "text-center mx-auto" : "";
 
   return (
-    <section id={id} className={`py-20 md:py-28 ${variantClass[variant]} ${className}`}>
+    <section id={id} className={`py-28 md:py-36 ${variantClass[variant]} ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {(eyebrow || heading || intro) && (
-          <div className={`max-w-3xl mb-12 md:mb-16 ${alignWrapper}`}>
+          <div className={`max-w-3xl mb-16 md:mb-20 ${alignWrapper}`}>
             {eyebrow ? (
-              <p
-                className={`${eyebrowClass} font-semibold text-sm uppercase tracking-widest mb-3`}
-              >
-                {eyebrow}
-              </p>
+              <p className={`eyebrow ${eyebrowExtra} mb-6`}>{eyebrow}</p>
             ) : null}
             {heading ? (
               <h2
-                className={`${headingClass} text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-5`}
+                className={`font-display font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight text-balance mb-6 ${headingClass}`}
               >
                 {heading}
               </h2>

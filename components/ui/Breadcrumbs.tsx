@@ -7,8 +7,8 @@ export default function Breadcrumbs({
   items: { name: string; href?: string }[];
 }) {
   return (
-    <nav aria-label="Breadcrumb" className="mb-2">
-      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-white/60">
+    <nav aria-label="Breadcrumb" className="mb-6">
+      <ol className="flex flex-wrap items-center gap-1.5 font-mono text-xs uppercase tracking-[0.18em] text-ink-muted">
         {items.map((item, i) => {
           const isLast = i === items.length - 1;
           return (
@@ -16,15 +16,18 @@ export default function Breadcrumbs({
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-ink transition-colors"
                 >
                   {item.name}
                 </Link>
               ) : (
-                <span className={isLast ? "text-white" : ""}>{item.name}</span>
+                <span className={isLast ? "text-ink" : ""}>{item.name}</span>
               )}
               {!isLast && (
-                <ChevronRight className="w-3.5 h-3.5 text-white/30" aria-hidden="true" />
+                <ChevronRight
+                  className="w-3.5 h-3.5 text-ink-faint"
+                  aria-hidden="true"
+                />
               )}
             </li>
           );

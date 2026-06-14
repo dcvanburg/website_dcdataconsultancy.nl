@@ -32,22 +32,29 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         isScrolled
-          ? "bg-[#0d1117]/95 backdrop-blur-md shadow-lg border-b border-white/10"
-          : "bg-[#0d1117]/60 backdrop-blur-sm"
+          ? "bg-canvas/90 backdrop-blur-md border-b border-rule"
+          : "bg-canvas/70 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link
-            href="/"
-            className="text-white font-bold text-lg md:text-xl tracking-tight hover:text-blue-400 transition-colors flex items-center gap-2"
-            onClick={closeMobile}
-          >
-            <span className="inline-block w-2.5 h-2.5 rounded-sm bg-blue-500" aria-hidden="true" />
-            {siteConfig.name}
-          </Link>
+          <div className="flex items-center gap-5 min-w-0">
+            <Link
+              href="/"
+              className="font-display font-bold text-base md:text-lg tracking-tight text-ink hover:text-brand transition-colors"
+              onClick={closeMobile}
+            >
+              {siteConfig.name}
+            </Link>
+            <span className="hidden lg:inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-emerald-200 bg-emerald-50">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-700">
+                Beschikbaar voor nieuwe opdrachten
+              </span>
+            </span>
+          </div>
 
           <nav className="hidden lg:flex items-center gap-1">
             {topNav.map((item) => {
@@ -61,19 +68,19 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="flex items-center gap-1 px-3 py-2 text-white/80 hover:text-white text-sm font-medium transition-colors"
+                      className="flex items-center gap-1 px-3 py-2 text-ink-soft hover:text-ink text-sm font-medium transition-colors"
                     >
                       {item.label}
                       <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />
                     </Link>
                     {openDropdown === item.label && (
                       <div className="absolute top-full left-0 pt-2 min-w-[260px]">
-                        <div className="bg-[#161b22] border border-white/10 rounded-xl shadow-2xl p-2">
+                        <div className="bg-surface border border-rule rounded-lg shadow-xl p-2">
                           {item.dropdown.map((sub) => (
                             <Link
                               key={sub.href}
                               href={sub.href}
-                              className="block px-3 py-2.5 rounded-md text-white/70 hover:text-white hover:bg-white/5 text-sm transition-colors"
+                              className="block px-3 py-2.5 rounded-md text-ink-soft hover:text-ink hover:bg-rule-soft text-sm transition-colors"
                             >
                               {sub.label}
                             </Link>
@@ -88,7 +95,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-2 text-white/80 hover:text-white text-sm font-medium transition-colors"
+                  className="px-3 py-2 text-ink-soft hover:text-ink text-sm font-medium transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -96,14 +103,14 @@ export default function Header() {
             })}
             <Link
               href="/contact"
-              className="ml-3 px-5 py-2.5 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-md"
+              className="ml-3 px-4 py-2 text-brand font-display font-semibold text-sm hover:bg-brand-soft rounded-md transition-colors"
             >
-              Plan een gesprek
+              Plan kennismaking
             </Link>
           </nav>
 
           <button
-            className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors"
+            className="lg:hidden text-ink p-2 rounded-md hover:bg-rule-soft transition-colors"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMobileOpen}
@@ -114,13 +121,13 @@ export default function Header() {
       </div>
 
       {isMobileOpen && (
-        <div className="lg:hidden bg-[#0d1117] border-t border-white/10 max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <div className="lg:hidden bg-canvas border-t border-rule max-h-[calc(100vh-4rem)] overflow-y-auto">
           <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col">
             {topNav.map((item) => (
-              <div key={item.href} className="border-b border-white/5">
+              <div key={item.href} className="border-b border-rule-soft">
                 <Link
                   href={item.href}
-                  className="block py-3 text-white/90 font-medium"
+                  className="block py-3 text-ink font-display font-semibold"
                   onClick={closeMobile}
                 >
                   {item.label}
@@ -131,7 +138,7 @@ export default function Header() {
                       <Link
                         key={sub.href}
                         href={sub.href}
-                        className="py-1.5 text-white/60 hover:text-white text-sm"
+                        className="py-1.5 text-ink-soft hover:text-ink text-sm"
                         onClick={closeMobile}
                       >
                         {sub.label}
@@ -143,10 +150,10 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="mt-4 w-full text-center px-5 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
+              className="mt-4 w-full text-center px-5 py-3 bg-brand text-brand-ink font-display font-semibold rounded-lg transition-colors"
               onClick={closeMobile}
             >
-              Plan een gesprek
+              Plan een kennismaking
             </Link>
           </nav>
         </div>

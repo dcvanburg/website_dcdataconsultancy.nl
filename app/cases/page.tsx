@@ -32,50 +32,48 @@ export default function CasesPage() {
         />
 
         <PageHero
-          eyebrow={casesPage.hero.eyebrow}
+          eyebrow={casesPage.hero.eyebrow.toUpperCase()}
           heading={casesPage.hero.heading}
           subheading={casesPage.hero.intro}
-          primaryCta={{ label: "Plan een gesprek", href: "/contact" }}
+          primaryCta={{ label: "Plan een kennismaking", href: "/contact" }}
           secondaryCta={{ label: "Bekijk industrieën", href: "/industrieen" }}
         />
 
         <SectionShell variant="white">
-          <div className="space-y-6">
+          <ul className="divide-y divide-rule border-y border-rule">
             {casesPage.cases.map((c) => (
-              <article
-                key={c.slug}
-                id={c.slug}
-                className="p-7 md:p-10 rounded-3xl border border-gray-200 bg-gray-50 hover:bg-white hover:shadow-lg transition-all"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <li key={c.slug} id={c.slug} className="py-12 md:py-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                   <div className="lg:col-span-4">
-                    <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-2">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand mb-3">
                       {c.industry}
                     </p>
-                    <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug">
+                    <h2 className="font-display font-bold text-2xl md:text-3xl text-ink leading-snug tracking-tight mb-6">
                       {c.role}
                     </h2>
-                    <div className="flex flex-wrap gap-2 mt-4">
+                    <ul className="flex flex-wrap gap-2 mt-4">
                       {c.tech.map((t) => (
-                        <span
+                        <li
                           key={t}
-                          className="px-2.5 py-1 rounded-md bg-white text-gray-700 text-xs border border-gray-200"
+                          className="font-mono text-xs px-2.5 py-1 bg-rule-soft text-ink-soft rounded"
                         >
                           {t}
-                        </span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
-                  <div className="lg:col-span-8 space-y-4">
+                  <div className="lg:col-span-8 space-y-6">
                     <CaseBlock label="Uitdaging" text={c.challenge} />
                     <CaseBlock label="Aanpak" text={c.approach} />
                     <CaseBlock label="Resultaat" text={c.outcome} />
                   </div>
                 </div>
-              </article>
+              </li>
             ))}
-          </div>
-          <p className="mt-12 text-sm text-gray-500 max-w-2xl">{casesPage.disclaimer}</p>
+          </ul>
+          <p className="mt-12 text-sm text-ink-muted max-w-2xl">
+            {casesPage.disclaimer}
+          </p>
         </SectionShell>
 
         <CtaBanner />
@@ -88,10 +86,8 @@ export default function CasesPage() {
 function CaseBlock({ label, text }: { label: string; text: string }) {
   return (
     <div>
-      <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">
-        {label}
-      </p>
-      <p className="text-gray-700 leading-relaxed">{text}</p>
+      <p className="eyebrow mb-2">{label}</p>
+      <p className="text-ink-soft leading-relaxed text-base">{text}</p>
     </div>
   );
 }

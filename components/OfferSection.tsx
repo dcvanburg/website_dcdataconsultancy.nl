@@ -1,67 +1,62 @@
 import Link from "next/link";
-import { offerSection } from "@/lib/site-content";
-import SectionShell from "@/components/ui/SectionShell";
 import { ArrowRight } from "lucide-react";
+import { offerSection } from "@/lib/site-content";
 
 export default function OfferSection() {
   return (
-    <SectionShell
-      id={offerSection.sectionId}
-      eyebrow={offerSection.eyebrow}
-      heading={offerSection.heading}
-      intro={offerSection.intro}
-      variant="white"
-    >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {offerSection.pillars.map((p) => (
-          <Link
-            key={p.title}
-            href={p.href}
-            className={`group relative p-8 rounded-2xl border transition-all hover:-translate-y-1 ${
-              p.primary
-                ? "bg-gradient-to-br from-blue-600 to-blue-700 border-blue-700 text-white shadow-xl shadow-blue-500/20"
-                : "bg-white border-gray-200 hover:border-blue-200 hover:shadow-lg"
-            }`}
-          >
-            <p
-              className={`text-xs font-mono mb-4 ${
-                p.primary ? "text-blue-200" : "text-gray-400"
-              }`}
-            >
-              {p.number}
-            </p>
-            <h3
-              className={`text-2xl font-bold mb-1 ${
-                p.primary ? "text-white" : "text-gray-900"
-              }`}
-            >
-              {p.title}
-            </h3>
-            <p
-              className={`text-sm font-medium mb-4 ${
-                p.primary ? "text-blue-100" : "text-blue-600"
-              }`}
-            >
-              {p.tagline}
-            </p>
-            <p
-              className={`leading-relaxed mb-6 ${
-                p.primary ? "text-white/85" : "text-gray-600"
-              }`}
-            >
-              {p.description}
-            </p>
-            <span
-              className={`inline-flex items-center gap-1.5 text-sm font-semibold ${
-                p.primary ? "text-white" : "text-blue-600"
-              }`}
-            >
-              Lees meer
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </Link>
-        ))}
+    <section id={offerSection.sectionId} className="py-28 md:py-36 surface-canvas">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <p className="eyebrow eyebrow-brand mb-6">{offerSection.eyebrow}</p>
+          <h2 className="font-display font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight text-balance mb-6">
+            {offerSection.heading}
+          </h2>
+          <p className="text-ink-soft text-lg leading-relaxed">
+            {offerSection.intro}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-rule">
+          {offerSection.pillars.map((p, i) => {
+            const isLast = i === offerSection.pillars.length - 1;
+            return (
+              <div
+                key={p.title}
+                className={`py-10 md:py-12 ${i > 0 ? "md:pl-10" : ""} ${
+                  !isLast ? "md:pr-10 md:border-r border-rule" : ""
+                } relative`}
+              >
+                <p
+                  className={`font-mono text-xs uppercase tracking-[0.2em] mb-6 ${
+                    p.primary ? "text-brand" : "text-ink-muted"
+                  }`}
+                >
+                  {p.number} / {p.title}
+                </p>
+                <h3 className="font-display font-bold text-2xl md:text-[1.65rem] tracking-tight text-ink mb-3">
+                  {p.tagline}
+                </h3>
+                <p className="text-ink-soft leading-relaxed mb-6">
+                  {p.description}
+                </p>
+                <Link
+                  href={p.href}
+                  className="inline-flex items-center gap-1.5 font-display font-semibold text-sm text-ink hover:text-brand transition-colors"
+                >
+                  Lees meer
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                {p.primary && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 top-10 md:top-12 h-8 w-0.5 bg-brand"
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </SectionShell>
+    </section>
   );
 }

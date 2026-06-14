@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { Clock, ArrowRight, ArrowLeft } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionShell from "@/components/ui/SectionShell";
@@ -14,7 +15,6 @@ import {
   getRelatedPosts,
   type BlogSection,
 } from "@/lib/blog-posts";
-import { Clock, ArrowRight, ArrowLeft } from "lucide-react";
 
 export async function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -83,14 +83,10 @@ export default async function BlogPostPage({
         />
 
         <article>
-          <header className="relative pt-28 pb-12 md:pt-36 md:pb-16 section-dark overflow-hidden">
+          <header className="relative pt-36 md:pt-44 pb-16 md:pb-20 surface-canvas overflow-hidden">
             <div
-              className="absolute inset-0 pointer-events-none"
               aria-hidden="true"
-              style={{
-                background:
-                  "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(59,130,246,0.18) 0%, transparent 70%)",
-              }}
+              className="absolute inset-0 text-ink grid-dot pointer-events-none"
             />
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               <Breadcrumbs
@@ -100,16 +96,14 @@ export default async function BlogPostPage({
                   { name: post.title, href: `/blog/${post.slug}` },
                 ]}
               />
-              <p className="text-blue-300 font-semibold text-sm uppercase tracking-widest mt-6 mb-4">
-                {post.category}
-              </p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
+              <p className="eyebrow eyebrow-brand mb-6">{post.category}</p>
+              <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-ink leading-[1.05] tracking-tight text-balance mb-8">
                 {post.title}
               </h1>
-              <p className="text-lg text-white/70 leading-relaxed mb-6 max-w-3xl">
+              <p className="text-lg md:text-xl text-ink-soft leading-relaxed mb-8 max-w-3xl">
                 {post.intro}
               </p>
-              <div className="flex items-center gap-6 text-sm text-white/50">
+              <div className="flex flex-wrap items-center gap-6 font-mono text-xs text-ink-muted">
                 <span className="inline-flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" />
                   {post.readingMinutes} min lezen
@@ -120,60 +114,59 @@ export default async function BlogPostPage({
             </div>
           </header>
 
-          <div className="bg-white py-16 md:py-20">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose-content">
+          <div className="surface-white py-20 md:py-24">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
               {post.sections.map((section, i) => (
                 <RenderSection key={i} section={section} />
               ))}
 
-              <div className="mt-12 pt-8 border-t border-gray-200">
-                <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-3">
-                  Tags
-                </p>
-                <div className="flex flex-wrap gap-2">
+              <div className="mt-16 pt-8 border-t border-rule">
+                <p className="eyebrow mb-3">Tags</p>
+                <ul className="flex flex-wrap gap-2">
                   {post.tags.map((t) => (
-                    <span
+                    <li
                       key={t}
-                      className="px-3 py-1 rounded-md bg-gray-100 text-gray-700 text-sm"
+                      className="font-mono text-xs px-2.5 py-1 bg-rule-soft text-ink-soft rounded"
                     >
                       {t}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </div>
         </article>
 
         <SectionShell
-          eyebrow="Verder lezen"
+          eyebrow="VERDER LEZEN"
           heading="Gerelateerde artikelen"
-          variant="light"
+          variant="canvas"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-px bg-rule border border-rule">
             {related.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/blog/${p.slug}`}
-                className="group p-6 rounded-2xl bg-white border border-gray-200 hover:border-blue-200 hover:shadow-md transition-all flex flex-col"
-              >
-                <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider mb-3">
-                  {p.category}
-                </p>
-                <h3 className="text-lg font-bold text-gray-900 leading-snug mb-3 group-hover:text-blue-600 transition-colors flex-1">
-                  {p.title}
-                </h3>
-                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600">
-                  Lees artikel
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
+              <li key={p.slug} className="bg-surface">
+                <Link
+                  href={`/blog/${p.slug}`}
+                  className="block p-8 group h-full flex flex-col"
+                >
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-brand mb-5">
+                    {p.category}
+                  </p>
+                  <h3 className="font-display font-bold text-lg text-ink leading-snug mb-6 group-hover:text-brand transition-colors flex-1">
+                    {p.title}
+                  </h3>
+                  <span className="inline-flex items-center gap-1.5 font-display font-semibold text-sm text-ink group-hover:text-brand transition-colors">
+                    Lees artikel
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </li>
             ))}
-          </div>
-          <div className="mt-10">
+          </ul>
+          <div className="mt-12">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 font-display font-semibold text-base text-ink hover:text-brand transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Terug naar alle artikelen
@@ -192,22 +185,24 @@ function RenderSection({ section }: { section: BlogSection }) {
   switch (section.type) {
     case "heading":
       return section.level === 3 ? (
-        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mt-10 mb-4">
+        <h3 className="font-display font-bold text-xl md:text-2xl text-ink mt-12 mb-4">
           {section.text}
         </h3>
       ) : (
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-5">
+        <h2 className="font-display font-bold text-2xl md:text-3xl text-ink mt-14 mb-6 tracking-tight">
           {section.text}
         </h2>
       );
     case "paragraph":
       return (
-        <p className="text-gray-700 leading-relaxed text-lg my-4">{section.text}</p>
+        <p className="text-ink-soft leading-relaxed text-lg my-5">
+          {section.text}
+        </p>
       );
     case "list":
       if (section.ordered) {
         return (
-          <ol className="my-5 space-y-2 list-decimal pl-6 text-gray-700">
+          <ol className="my-6 space-y-2 list-decimal pl-6 text-ink-soft">
             {section.items.map((it, i) => (
               <li key={i} className="leading-relaxed text-lg pl-1">
                 {it}
@@ -217,7 +212,7 @@ function RenderSection({ section }: { section: BlogSection }) {
         );
       }
       return (
-        <ul className="my-5 space-y-2 list-disc pl-6 text-gray-700">
+        <ul className="my-6 space-y-2 list-disc pl-6 text-ink-soft">
           {section.items.map((it, i) => (
             <li key={i} className="leading-relaxed text-lg pl-1">
               {it}
@@ -227,26 +222,28 @@ function RenderSection({ section }: { section: BlogSection }) {
       );
     case "quote":
       return (
-        <blockquote className="my-8 border-l-4 border-blue-500 pl-6 italic text-gray-700 text-lg">
+        <blockquote className="my-10 border-l-2 border-brand pl-6 italic text-ink-soft text-lg">
           {section.text}
           {section.cite ? (
-            <footer className="text-sm text-gray-500 mt-2 not-italic">— {section.cite}</footer>
+            <footer className="font-mono text-xs not-italic text-ink-muted mt-3 uppercase tracking-[0.18em]">
+              {section.cite}
+            </footer>
           ) : null}
         </blockquote>
       );
     case "callout":
       return (
-        <div className="my-8 p-6 rounded-2xl bg-blue-50 border-l-4 border-blue-500">
-          <p className="text-xs font-semibold uppercase tracking-widest text-blue-700 mb-2">
+        <div className="my-10 p-6 bg-brand-soft border-l-2 border-brand rounded">
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-brand mb-2">
             {section.title}
           </p>
-          <p className="text-gray-800 leading-relaxed">{section.text}</p>
+          <p className="text-ink leading-relaxed">{section.text}</p>
         </div>
       );
     case "code":
       return (
-        <pre className="my-6 p-5 rounded-xl bg-gray-900 text-gray-100 overflow-x-auto text-sm leading-relaxed">
-          <code>{section.text}</code>
+        <pre className="my-8 p-5 rounded surface-night overflow-x-auto text-sm leading-relaxed font-mono">
+          <code className="text-night-ink">{section.text}</code>
         </pre>
       );
   }

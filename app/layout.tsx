@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Manrope, JetBrains_Mono } from "next/font/google";
 import { siteConfig } from "@/lib/site-content";
 import { OrganizationSchema, WebsiteSchema, PersonSchema } from "@/components/SchemaMarkup";
 import "./globals.css";
@@ -7,6 +7,20 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["500", "600", "700", "800"],
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -18,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | DC Data Consultancy",
   },
   description:
-    "Senior data engineering consultancy uit Breda. Schaalbare data pipelines, dbt-implementaties en cloud dataplatforms voor organisaties die meer uit data willen halen. Dennis van Burg — sinds 2016 in data, sinds 2021 zelfstandig.",
+    "Senior data engineering consultancy uit Breda, voor organisaties die meer uit hun data willen halen. Schaalbare data pipelines, dbt implementaties en cloud dataplatforms door Dennis van Burg, sinds 2016 in data.",
   keywords: [
     "data engineering consultancy",
     "data engineer Breda",
@@ -46,13 +60,13 @@ export const metadata: Metadata = {
     title:
       "DC Data Consultancy | Senior Data Engineering Consultancy Breda",
     description:
-      "Schaalbare, betrouwbare en business-driven dataplatforms. Senior data engineering consultancy uit Breda voor opdrachtgevers in heel Nederland.",
+      "Senior data engineering consultancy uit Breda, voor organisaties die meer uit hun data willen halen.",
     images: [
       {
         url: "/images/og-default.png",
         width: 1200,
         height: 630,
-        alt: "DC Data Consultancy — Senior Data Engineering Consultancy",
+        alt: "DC Data Consultancy. Senior Data Engineering Consultancy.",
       },
     ],
   },
@@ -87,8 +101,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl" className={`${inter.variable} h-full scroll-smooth antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-gray-900">
+    <html
+      lang="nl"
+      className={`${inter.variable} ${manrope.variable} ${mono.variable} h-full scroll-smooth antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-canvas text-ink font-sans">
         <OrganizationSchema />
         <WebsiteSchema />
         <PersonSchema />

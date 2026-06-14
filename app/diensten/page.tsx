@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/ui/PageHero";
@@ -7,12 +8,11 @@ import SectionShell from "@/components/ui/SectionShell";
 import CtaBanner from "@/components/ui/CtaBanner";
 import { BreadcrumbSchema } from "@/components/SchemaMarkup";
 import { siteConfig } from "@/lib/site-content";
-import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Diensten | Senior Data Engineering Consultancy",
   description:
-    "Data engineering, analytics, data science, dbt en Azure data engineering — door een senior consultant uit Breda. Bekijk alle diensten van DC Data Consultancy.",
+    "Data engineering, analytics, data science, dbt en Azure data engineering door een senior consultant uit Breda. Bekijk alle diensten van DC Data Consultancy.",
   alternates: { canonical: `${siteConfig.url}/diensten` },
 };
 
@@ -36,39 +36,59 @@ const services = [
     tagline: "Inzicht met onderbouwing",
     description:
       "Van losse rapporten naar één gemodelleerde semantische laag met heldere business metrics.",
-    bullets: ["Power BI, Tableau, Looker", "Semantic layer in dbt", "Self-service enablement"],
+    bullets: [
+      "Power BI, Tableau, Looker",
+      "Semantic layer in dbt",
+      "Self service enablement",
+    ],
   },
   {
     title: "Data Science",
     slug: "data-science",
     tagline: "AI in productie",
     description:
-      "Forecasting, churn prediction, anomaly detection — productie-modellen, geen losse notebooks.",
-    bullets: ["Forecasting & demand planning", "Churn & customer scoring", "MLOps fundamenten"],
+      "Forecasting, churn prediction, anomaly detection. Productiemodellen, geen losse notebooks.",
+    bullets: [
+      "Forecasting en demand planning",
+      "Churn en customer scoring",
+      "MLOps fundamenten",
+    ],
   },
   {
     title: "Modern Data Stack",
     slug: "modern-data-stack",
     tagline: "Architectuur voor schaal",
     description:
-      "Coherente architectuur op Snowflake/Databricks, dbt, Airflow en BI — niet een verzameling losse onderdelen.",
-    bullets: ["End-to-end architectuur", "Tool-selectie", "Cost & governance"],
+      "Coherente architectuur op Snowflake, Databricks, dbt, Airflow en BI. Niet een verzameling losse onderdelen.",
+    bullets: [
+      "End to end architectuur",
+      "Tool selectie",
+      "Cost en governance",
+    ],
   },
   {
     title: "dbt Consultancy",
     slug: "dbt-consultancy",
     tagline: "Analytics engineering",
     description:
-      "dbt-projecten met structuur, tests, documentation en CI/CD. Schaalbaar van 20 naar 500 models.",
-    bullets: ["Project-structuur en naming", "Testing & CI/CD", "Macros & packages"],
+      "dbt projecten met structuur, tests, documentation en CI/CD. Schaalbaar van 20 naar 500 models.",
+    bullets: [
+      "Project structuur en naming",
+      "Testing en CI/CD",
+      "Macros en packages",
+    ],
   },
   {
     title: "Azure Data Engineering",
     slug: "azure-data-engineering",
     tagline: "Azure specialisme",
     description:
-      "ADF, Synapse, Databricks, Microsoft Fabric en moderne lakehouse-architectuur op Azure.",
-    bullets: ["Azure Data Factory pipelines", "Databricks lakehouse", "Microsoft Fabric & Purview"],
+      "ADF, Synapse, Databricks, Microsoft Fabric en moderne lakehouse architectuur op Azure.",
+    bullets: [
+      "Azure Data Factory pipelines",
+      "Databricks lakehouse",
+      "Microsoft Fabric en Purview",
+    ],
   },
 ];
 
@@ -85,98 +105,103 @@ export default function DienstenPage() {
         />
 
         <PageHero
-          eyebrow="Diensten"
+          eyebrow="DIENSTEN"
           heading="Senior data engineering, analytics en science vanuit één consultancy."
-          subheading="Mijn focus ligt op data engineering — analytics en data science werken alleen als die fundering klopt. Hieronder de zes specialismen waarin ik werk."
-          primaryCta={{ label: "Plan een gesprek", href: "/contact" }}
+          subheading="Mijn focus ligt op data engineering. Analytics en data science werken alleen als die fundering klopt. Hieronder de zes specialismen waarin ik werk."
+          primaryCta={{ label: "Plan een kennismaking", href: "/contact" }}
           secondaryCta={{ label: "Bekijk cases", href: "/cases" }}
         />
 
         <SectionShell variant="white">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule">
             {services.map((s) => (
-              <Link
+              <li
                 key={s.slug}
-                href={`/diensten/${s.slug}`}
-                className={`group p-7 rounded-2xl border transition-all hover:-translate-y-1 ${
-                  s.primary
-                    ? "bg-gradient-to-br from-blue-600 to-blue-700 border-blue-700 text-white shadow-xl shadow-blue-500/20"
-                    : "bg-white border-gray-200 hover:border-blue-200 hover:shadow-lg"
-                }`}
+                className={`${
+                  s.primary ? "surface-brand" : "bg-surface"
+                } relative`}
               >
-                <p
-                  className={`text-xs font-semibold uppercase tracking-widest mb-3 ${
-                    s.primary ? "text-blue-200" : "text-blue-600"
-                  }`}
+                <Link
+                  href={`/diensten/${s.slug}`}
+                  className="group block p-8 md:p-10 h-full"
                 >
-                  {s.tagline}
-                </p>
-                <h2
-                  className={`text-2xl font-bold mb-3 ${
-                    s.primary ? "text-white" : "text-gray-900"
-                  }`}
-                >
-                  {s.title}
-                </h2>
-                <p
-                  className={`leading-relaxed mb-5 ${
-                    s.primary ? "text-white/85" : "text-gray-600"
-                  }`}
-                >
-                  {s.description}
-                </p>
-                <ul
-                  className={`space-y-1.5 text-sm mb-5 ${
-                    s.primary ? "text-white/80" : "text-gray-500"
-                  }`}
-                >
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2">
-                      <span
-                        className={`mt-1.5 w-1 h-1 rounded-full shrink-0 ${
-                          s.primary ? "bg-blue-200" : "bg-blue-500"
-                        }`}
-                      />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-                <span
-                  className={`inline-flex items-center gap-1.5 text-sm font-semibold ${
-                    s.primary ? "text-white" : "text-blue-600"
-                  }`}
-                >
-                  Lees meer
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
+                  <p
+                    className={`font-mono text-[10px] uppercase tracking-[0.22em] mb-5 ${
+                      s.primary ? "text-brand-ink/70" : "text-brand"
+                    }`}
+                  >
+                    {s.tagline}
+                  </p>
+                  <h2
+                    className={`font-display font-bold text-2xl mb-3 tracking-tight ${
+                      s.primary ? "text-brand-ink" : "text-ink"
+                    }`}
+                  >
+                    {s.title}
+                  </h2>
+                  <p
+                    className={`leading-relaxed mb-6 ${
+                      s.primary ? "text-brand-ink/85" : "text-ink-soft"
+                    }`}
+                  >
+                    {s.description}
+                  </p>
+                  <ul
+                    className={`space-y-2 text-sm mb-6 ${
+                      s.primary ? "text-brand-ink/80" : "text-ink-muted"
+                    }`}
+                  >
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2.5">
+                        <span
+                          className={`font-mono text-xs leading-5 shrink-0 ${
+                            s.primary ? "text-brand-ink/70" : "text-brand"
+                          }`}
+                          aria-hidden="true"
+                        >
+                          ::
+                        </span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                  <span
+                    className={`inline-flex items-center gap-1.5 font-display font-semibold text-sm ${
+                      s.primary ? "text-brand-ink" : "text-ink group-hover:text-brand"
+                    } transition-colors`}
+                  >
+                    Lees meer
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </SectionShell>
 
         <SectionShell
-          eyebrow="Werkvormen"
+          eyebrow="WERKVORMEN"
           heading="Hoe ik samenwerk"
           intro="Iedere opdracht is anders, maar in de praktijk komen drie werkvormen het meest voor."
-          variant="light"
+          variant="canvas"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
             <WorkType
-              title="Project-gebaseerd"
-              description="Strak afgebakend doel met een duidelijke deliverable. Bijvoorbeeld: architectuur-review, dbt-implementatie of een eerste forecasting-model in productie."
-              duration="2–6 maanden"
+              title="Projectgebaseerd"
+              description="Strak afgebakend doel met een duidelijke deliverable. Bijvoorbeeld een architectuur review, dbt implementatie of een eerste forecasting model in productie."
+              duration="2 tot 6 maanden"
             />
             <WorkType
-              title="Interim / lead rol"
-              description="Senior data engineer of lead data engineer rol bij jouw team, 3–4 dagen per week. Hands-on bouwen plus coaching van het interne team."
-              duration="3–9 maanden"
+              title="Interim of lead rol"
+              description="Senior data engineer of lead data engineer rol bij jouw team, 3 tot 4 dagen per week. Hands on bouwen plus coaching van het interne team."
+              duration="3 tot 9 maanden"
             />
             <WorkType
               title="Strategisch advies"
-              description="Korte intensieve trajecten: architectuur op één A4, technologie-keuze, vendor-selectie of dbt-audit. Geen consultancy-rapporten van 80 pagina's."
-              duration="1–4 weken"
+              description="Korte intensieve trajecten. Architectuur op één A4, technologiekeuze, vendor selectie of dbt audit. Geen consultancy rapporten van 80 paginas."
+              duration="1 tot 4 weken"
             />
-          </div>
+          </ul>
         </SectionShell>
 
         <CtaBanner />
@@ -196,12 +221,12 @@ function WorkType({
   duration: string;
 }) {
   return (
-    <div className="p-7 rounded-2xl bg-white border border-gray-200">
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed mb-5">{description}</p>
-      <p className="text-xs uppercase tracking-widest text-blue-600 font-semibold">
+    <li className="border-t border-rule pt-6">
+      <h3 className="font-display font-bold text-xl text-ink mb-3">{title}</h3>
+      <p className="text-ink-soft leading-relaxed mb-5">{description}</p>
+      <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand">
         Typische doorlooptijd: {duration}
       </p>
-    </div>
+    </li>
   );
 }

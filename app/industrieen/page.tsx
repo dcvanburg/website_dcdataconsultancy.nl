@@ -6,7 +6,6 @@ import SectionShell from "@/components/ui/SectionShell";
 import CtaBanner from "@/components/ui/CtaBanner";
 import { BreadcrumbSchema } from "@/components/SchemaMarkup";
 import { industriesPage, siteConfig } from "@/lib/site-content";
-import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: industriesPage.metaTitle,
@@ -33,60 +32,60 @@ export default function IndustriesPage() {
         />
 
         <PageHero
-          eyebrow={industriesPage.hero.eyebrow}
+          eyebrow={industriesPage.hero.eyebrow.toUpperCase()}
           heading={industriesPage.hero.heading}
           subheading={industriesPage.hero.intro}
-          primaryCta={{ label: "Plan een gesprek", href: "/contact" }}
+          primaryCta={{ label: "Plan een kennismaking", href: "/contact" }}
           secondaryCta={{ label: "Bekijk cases", href: "/cases" }}
         />
 
         <SectionShell variant="white">
-          <div className="space-y-6">
+          <ul className="divide-y divide-rule border-y border-rule">
             {industriesPage.industries.map((ind) => (
-              <article
-                key={ind.slug}
-                id={ind.slug}
-                className="p-8 md:p-10 rounded-3xl border border-gray-200 bg-gray-50"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <li key={ind.slug} id={ind.slug} className="py-12 md:py-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
                   <div className="lg:col-span-4">
-                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                    <h2 className="font-display font-bold text-2xl md:text-3xl text-ink tracking-tight mb-4">
                       {ind.name}
                     </h2>
-                    <p className="text-gray-600 leading-relaxed">{ind.summary}</p>
+                    <p className="text-ink-soft leading-relaxed">{ind.summary}</p>
                   </div>
                   <div className="lg:col-span-5">
-                    <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-3">
-                      Typische uitdagingen
-                    </p>
-                    <ul className="space-y-2">
+                    <p className="eyebrow mb-4">Typische uitdagingen</p>
+                    <ul className="space-y-2.5">
                       {ind.challenges.map((ch) => (
-                        <li key={ch} className="flex items-start gap-2 text-gray-700 text-sm">
-                          <CheckCircle2
-                            className="w-4 h-4 text-blue-600 shrink-0 mt-0.5"
+                        <li
+                          key={ch}
+                          className="flex items-start gap-3 text-ink-soft text-base leading-relaxed"
+                        >
+                          <span
                             aria-hidden="true"
-                          />
+                            className="font-mono text-xs text-brand leading-6 shrink-0"
+                          >
+                            ::
+                          </span>
                           {ch}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="lg:col-span-3">
-                    <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-3">
-                      Ervaring met o.a.
-                    </p>
+                    <p className="eyebrow mb-4">Ervaring met o.a.</p>
                     <ul className="space-y-2">
                       {ind.experience.map((c) => (
-                        <li key={c} className="text-gray-700 text-sm font-medium">
+                        <li
+                          key={c}
+                          className="font-display font-semibold text-ink text-base"
+                        >
                           {c}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-              </article>
+              </li>
             ))}
-          </div>
+          </ul>
         </SectionShell>
 
         <CtaBanner />

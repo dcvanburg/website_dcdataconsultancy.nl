@@ -9,59 +9,70 @@ import {
 } from "lucide-react";
 import { services } from "@/lib/site-content";
 
-const iconMap: Record<string, LucideIcon> = { Database, BarChart2, Cpu, Layers };
+const ICONS: Record<string, LucideIcon> = {
+  Database,
+  BarChart2,
+  Cpu,
+  Layers,
+};
 
 export default function ServicesSection() {
   return (
-    <section id={services.sectionId} className="py-20 md:py-28 section-dark">
+    <section id={services.sectionId} className="py-28 md:py-36 surface-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-12 md:mb-16">
-          <p className="text-blue-300 font-semibold text-sm uppercase tracking-widest mb-3">
-            Diensten
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
-            {services.subheading}
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <p className="eyebrow eyebrow-brand mb-6">Diensten</p>
+          <h2 className="font-display font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight text-balance mb-6">
+            {services.heading}
           </h2>
+          <p className="text-ink-soft text-lg leading-relaxed">
+            {services.subheading}
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule border border-rule">
           {services.items.map((item) => {
-            const Icon = iconMap[item.icon];
-            const isPrimary = "primary" in item && item.primary;
+            const Icon = ICONS[item.icon] ?? Database;
             return (
-              <Link
-                key={item.title}
-                href={item.href}
-                className={`group relative p-7 rounded-2xl border transition-all hover:-translate-y-1 ${
-                  isPrimary
-                    ? "bg-blue-600/10 border-blue-500/40"
-                    : "bg-white/[0.03] border-white/10 hover:bg-white/[0.06]"
-                }`}
-              >
-                <div className="flex items-start gap-4 mb-4">
+              <li key={item.title} className="bg-surface p-8 md:p-10">
+                <div className="flex items-start gap-5 mb-5">
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
-                      isPrimary
-                        ? "bg-blue-500 text-white"
-                        : "bg-white/10 text-blue-300"
+                    className={`shrink-0 w-11 h-11 rounded-md flex items-center justify-center ${
+                      "primary" in item && item.primary
+                        ? "bg-brand text-brand-ink"
+                        : "bg-rule-soft text-ink-soft"
                     }`}
+                    aria-hidden="true"
                   >
-                    {Icon ? <Icon className="w-5 h-5" aria-hidden="true" /> : null}
+                    <Icon className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{item.title}</h3>
-                    <p className="text-blue-300/90 text-sm">{item.tagline}</p>
+                    <p
+                      className={`font-mono text-[10px] uppercase tracking-[0.22em] mb-1 ${
+                        "primary" in item && item.primary ? "text-brand" : "text-ink-muted"
+                      }`}
+                    >
+                      {item.tagline}
+                    </p>
+                    <h3 className="font-display font-bold text-2xl text-ink tracking-tight">
+                      {item.title}
+                    </h3>
                   </div>
                 </div>
-                <p className="text-white/70 leading-relaxed mb-5">{item.description}</p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-300">
+                <p className="text-ink-soft leading-relaxed mb-6">
+                  {item.description}
+                </p>
+                <Link
+                  href={item.href}
+                  className="inline-flex items-center gap-1.5 font-display font-semibold text-sm text-ink hover:text-brand transition-colors"
+                >
                   Bekijk dienst
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
     </section>
   );

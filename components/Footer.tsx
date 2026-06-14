@@ -3,28 +3,27 @@ import { footer, footerNav, siteConfig } from "@/lib/site-content";
 
 export default function Footer() {
   return (
-    <footer className="section-dark-2 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+    <footer className="surface-white border-t border-rule">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2 md:col-span-2">
             <Link
               href="/"
-              className="text-white font-bold text-xl tracking-tight hover:text-blue-400 transition-colors flex items-center gap-2"
+              className="font-display font-bold text-lg tracking-tight text-ink hover:text-brand transition-colors"
             >
-              <span className="inline-block w-2.5 h-2.5 rounded-sm bg-blue-500" aria-hidden="true" />
               {siteConfig.name}
             </Link>
-            <p className="mt-4 text-white/60 text-sm leading-relaxed max-w-xs">
+            <p className="mt-4 text-ink-soft text-sm leading-relaxed max-w-xs">
               {footer.tagline}
             </p>
-            <div className="mt-5 text-white/50 text-sm leading-relaxed">
+            <div className="mt-6 text-ink-muted text-sm leading-relaxed">
               <p>{siteConfig.city}, {siteConfig.country}</p>
               <p className="mt-1">
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="hover:text-white transition-colors"
+                  className="font-mono text-xs hover:text-brand transition-colors"
                 >
-                  {siteConfig.email}
+                  MAIL_:: {siteConfig.email}
                 </a>
               </p>
             </div>
@@ -33,7 +32,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="mt-5 inline-flex items-center gap-2 text-white/60 hover:text-blue-400 transition-colors text-sm"
+              className="mt-6 inline-flex items-center gap-2 text-ink-soft hover:text-brand transition-colors text-sm font-display font-semibold"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -49,12 +48,11 @@ export default function Footer() {
 
           <FooterColumn title="Diensten" links={footerNav.diensten} />
           <FooterColumn title="Bedrijf" links={footerNav.bedrijf} />
-          <FooterColumn title="Locatie" links={footerNav.locatie} />
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white/40 text-sm">
-          <p>{footer.copyright}</p>
-          <p className="text-xs">
+        <div className="mt-14 pt-8 border-t border-rule flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-ink-muted text-xs">
+          <p className="font-mono">{footer.copyright}</p>
+          <p className="font-mono">
             Sinds {siteConfig.foundedYear} · Ervaring sinds {siteConfig.experienceSince}
           </p>
         </div>
@@ -72,15 +70,13 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h3 className="text-white font-semibold text-sm uppercase tracking-widest mb-5">
-        {title}
-      </h3>
+      <h3 className="eyebrow mb-5">{title}</h3>
       <nav className="flex flex-col gap-3">
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="text-white/60 hover:text-white text-sm transition-colors w-fit"
+            className="text-ink-soft hover:text-brand text-sm transition-colors w-fit"
           >
             {link.label}
           </Link>

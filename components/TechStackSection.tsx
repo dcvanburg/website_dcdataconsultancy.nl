@@ -1,37 +1,39 @@
 import { techStack } from "@/lib/site-content";
-import SectionShell from "@/components/ui/SectionShell";
 
 export default function TechStackSection() {
   return (
-    <SectionShell
-      id={techStack.sectionId}
-      eyebrow={techStack.eyebrow}
-      heading={techStack.heading}
-      intro={techStack.intro}
-      variant="dark-2"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {techStack.categories.map((cat) => (
-          <div
-            key={cat.name}
-            className="p-6 rounded-2xl bg-white/[0.03] border border-white/10"
-          >
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">
-              {cat.name}
-            </h3>
-            <ul className="flex flex-wrap gap-2">
-              {cat.items.map((item) => (
-                <li
-                  key={item}
-                  className="px-3 py-1.5 rounded-lg bg-white/[0.05] text-white/80 text-sm border border-white/10"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <section id={techStack.sectionId} className="py-28 md:py-36 surface-canvas">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mb-16 md:mb-20">
+          <p className="eyebrow eyebrow-brand mb-6">{techStack.eyebrow}</p>
+          <h2 className="font-display font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight text-balance mb-6">
+            {techStack.heading}
+          </h2>
+          <p className="text-ink-soft text-lg leading-relaxed">
+            {techStack.intro}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule">
+          {techStack.categories.map((cat) => (
+            <div key={cat.name} className="bg-surface p-8 md:p-10">
+              <h4 className="font-mono text-[10px] tracking-[0.22em] text-ink-muted uppercase mb-6">
+                {cat.name}
+              </h4>
+              <ul className="flex flex-wrap gap-2">
+                {cat.items.map((it) => (
+                  <li
+                    key={it}
+                    className="font-mono text-xs px-2.5 py-1 bg-rule-soft text-ink-soft rounded"
+                  >
+                    {it}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
-    </SectionShell>
+    </section>
   );
 }
