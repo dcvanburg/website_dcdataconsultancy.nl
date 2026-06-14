@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { siteConfig, footerNav } from "@/lib/site-content";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 
 const topNav = [
   { label: "Diensten", href: "/diensten", dropdown: footerNav.diensten },
@@ -20,7 +20,8 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,34 +31,55 @@ export default function Header() {
     setOpenDropdown(null);
   };
 
+  // "solid" = light header on canvas. Otherwise transparent over the dark hero.
+  const solid = isScrolled || isMobileOpen;
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-        isScrolled
-          ? "bg-canvas/90 backdrop-blur-md border-b border-rule"
-          : "bg-canvas/70 backdrop-blur-sm"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        solid
+          ? "bg-canvas/85 backdrop-blur-xl border-b border-rule"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center gap-5 min-w-0">
+          <div className="flex items-center gap-4 min-w-0">
             <Link
               href="/"
-              className="font-display font-bold text-base md:text-lg tracking-tight text-ink hover:text-brand transition-colors"
+              className={`font-display font-bold text-base md:text-lg tracking-tight transition-colors ${
+                solid ? "text-ink hover:text-brand" : "text-night-ink hover:text-brand-bright"
+              }`}
               onClick={closeMobile}
             >
               {siteConfig.name}
             </Link>
-            <span className="hidden lg:inline-flex items-center gap-2 px-2.5 py-1 rounded-full border border-emerald-200 bg-emerald-50">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-emerald-700">
-                Beschikbaar voor nieuwe opdrachten
+            <span
+              className={`hidden lg:inline-flex items-center gap-2 px-2.5 py-1 rounded-md border transition-colors ${
+                solid
+                  ? "border-rule bg-surface"
+                  : "border-white/10 bg-white/5"
+              }`}
+            >
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-success opacity-60 animate-ping" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-success" />
+              </span>
+              <span
+                className={`font-mono text-[10px] uppercase tracking-[0.16em] ${
+                  solid ? "text-ink-muted" : "text-night-soft-ink"
+                }`}
+              >
+                Beschikbaar
               </span>
             </span>
           </div>
 
           <nav className="hidden lg:flex items-center gap-1">
             {topNav.map((item) => {
+              const linkColor = solid
+                ? "text-ink-soft hover:text-ink"
+                : "text-night-soft-ink hover:text-night-ink";
               if ("dropdown" in item) {
                 return (
                   <div
@@ -68,19 +90,19 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className="flex items-center gap-1 px-3 py-2 text-ink-soft hover:text-ink text-sm font-medium transition-colors"
+                      className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors ${linkColor}`}
                     >
                       {item.label}
                       <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />
                     </Link>
                     {openDropdown === item.label && (
-                      <div className="absolute top-full left-0 pt-2 min-w-[260px]">
-                        <div className="bg-surface border border-rule rounded-lg shadow-xl p-2">
+                      <div className="absolute top-full left-0 pt-2 min-w-[280px]">
+                        <div className="bg-surface border border-rule rounded-xl shadow-2xl shadow-ink/10 p-2">
                           {item.dropdown.map((sub) => (
                             <Link
                               key={sub.href}
                               href={sub.href}
-                              className="block px-3 py-2.5 rounded-md text-ink-soft hover:text-ink hover:bg-rule-soft text-sm transition-colors"
+                              className="block px-3 py-2.5 rounded-lg text-ink-soft hover:text-brand hover:bg-rule-soft text-sm transition-colors"
                             >
                               {sub.label}
                             </Link>
@@ -95,7 +117,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="px-3 py-2 text-ink-soft hover:text-ink text-sm font-medium transition-colors"
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${linkColor}`}
                 >
                   {item.label}
                 </Link>
@@ -103,16 +125,23 @@ export default function Header() {
             })}
             <Link
               href="/contact"
-              className="ml-3 px-4 py-2 text-brand font-display font-semibold text-sm hover:bg-brand-soft rounded-md transition-colors"
+              className={`group ml-3 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all ${
+                solid
+                  ? "bg-brand text-brand-ink hover:shadow-lg hover:shadow-brand/25"
+                  : "bg-white/10 text-night-ink border border-white/15 hover:bg-white/15"
+              }`}
             >
               Plan kennismaking
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </nav>
 
           <button
-            className="lg:hidden text-ink p-2 rounded-md hover:bg-rule-soft transition-colors"
+            className={`lg:hidden p-2 rounded-md transition-colors ${
+              solid ? "text-ink hover:bg-rule-soft" : "text-night-ink hover:bg-white/10"
+            }`}
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            aria-label="Toggle menu"
+            aria-label="Menu"
             aria-expanded={isMobileOpen}
           >
             {isMobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -138,7 +167,7 @@ export default function Header() {
                       <Link
                         key={sub.href}
                         href={sub.href}
-                        className="py-1.5 text-ink-soft hover:text-ink text-sm"
+                        className="py-1.5 text-ink-soft hover:text-brand text-sm"
                         onClick={closeMobile}
                       >
                         {sub.label}
@@ -150,7 +179,7 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="mt-4 w-full text-center px-5 py-3 bg-brand text-brand-ink font-display font-semibold rounded-lg transition-colors"
+              className="mt-4 w-full text-center px-5 py-3 bg-brand text-brand-ink font-display font-semibold rounded-lg"
               onClick={closeMobile}
             >
               Plan een kennismaking

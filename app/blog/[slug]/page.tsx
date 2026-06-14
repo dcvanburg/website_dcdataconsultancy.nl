@@ -83,27 +83,30 @@ export default async function BlogPostPage({
         />
 
         <article>
-          <header className="relative pt-36 md:pt-44 pb-16 md:pb-20 surface-canvas overflow-hidden">
+          <header className="relative isolate overflow-hidden bg-night-field text-night-ink">
+            <div aria-hidden="true" className="absolute inset-0 text-night-ink grid-lines pointer-events-none" />
             <div
               aria-hidden="true"
-              className="absolute inset-0 text-ink grid-dot pointer-events-none"
+              className="glow-brand absolute -top-24 right-0 w-[34rem] h-[26rem] opacity-50 pointer-events-none"
             />
-            <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-px rule-glow pointer-events-none" />
+            <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-44 pb-16 md:pb-20">
               <Breadcrumbs
+                tone="dark"
                 items={[
                   { name: "Home", href: "/" },
                   { name: "Insights", href: "/blog" },
                   { name: post.title, href: `/blog/${post.slug}` },
                 ]}
               />
-              <p className="eyebrow eyebrow-brand mb-6">{post.category}</p>
-              <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-ink leading-[1.05] tracking-tight text-balance mb-8">
+              <p className="eyebrow text-brand-bright mb-6">{post.category}</p>
+              <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-night-ink leading-[1.05] tracking-tight text-balance mb-7">
                 {post.title}
               </h1>
-              <p className="text-lg md:text-xl text-ink-soft leading-relaxed mb-8 max-w-3xl">
+              <p className="text-lg md:text-xl text-night-soft-ink leading-relaxed mb-8 max-w-3xl">
                 {post.intro}
               </p>
-              <div className="flex flex-wrap items-center gap-6 font-mono text-xs text-ink-muted">
+              <div className="flex flex-wrap items-center gap-6 font-mono text-xs text-night-muted-ink">
                 <span className="inline-flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" />
                   {post.readingMinutes} min lezen

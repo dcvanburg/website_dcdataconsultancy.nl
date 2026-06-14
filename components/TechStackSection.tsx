@@ -1,36 +1,51 @@
 import { techStack } from "@/lib/site-content";
+import Reveal from "@/components/ui/Reveal";
 
 export default function TechStackSection() {
   return (
-    <section id={techStack.sectionId} className="py-28 md:py-36 surface-canvas">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-16 md:mb-20">
-          <p className="eyebrow eyebrow-brand mb-6">{techStack.eyebrow}</p>
-          <h2 className="font-display font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight text-balance mb-6">
+    <section
+      id={techStack.sectionId}
+      className="relative isolate overflow-hidden py-24 md:py-32 bg-night-field text-night-ink"
+    >
+      <div aria-hidden="true" className="absolute inset-0 text-night-ink grid-lines pointer-events-none" />
+      <div
+        aria-hidden="true"
+        className="glow-brand absolute -right-32 top-0 w-[34rem] h-[34rem] opacity-60 pointer-events-none"
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mb-14 md:mb-20">
+          <Reveal as="p" className="eyebrow text-brand-bright mb-6">{techStack.eyebrow}</Reveal>
+          <Reveal
+            as="h2"
+            delay={60}
+            className="font-display font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance text-night-ink mb-6"
+          >
             {techStack.heading}
-          </h2>
-          <p className="text-ink-soft text-lg leading-relaxed">
+          </Reveal>
+          <Reveal as="p" delay={120} className="text-night-soft-ink text-lg leading-relaxed">
             {techStack.intro}
-          </p>
+          </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule">
-          {techStack.categories.map((cat) => (
-            <div key={cat.name} className="bg-surface p-8 md:p-10">
-              <h4 className="font-mono text-[10px] tracking-[0.22em] text-ink-muted uppercase mb-6">
-                {cat.name}
-              </h4>
-              <ul className="flex flex-wrap gap-2">
-                {cat.items.map((it) => (
-                  <li
-                    key={it}
-                    className="font-mono text-xs px-2.5 py-1 bg-rule-soft text-ink-soft rounded"
-                  >
-                    {it}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/8 border border-white/10 rounded-xl overflow-hidden">
+          {techStack.categories.map((cat, i) => (
+            <Reveal key={cat.name} delay={(i % 3) * 70} className="h-full">
+              <div className="h-full bg-night-soft/80 p-7 md:p-8">
+                <h3 className="font-mono text-[10px] tracking-[0.22em] text-brand-bright uppercase mb-5">
+                  {cat.name}
+                </h3>
+                <ul className="flex flex-wrap gap-2">
+                  {cat.items.map((it) => (
+                    <li
+                      key={it}
+                      className="font-mono text-xs px-2.5 py-1 rounded-md bg-night-elevated border border-white/8 text-night-soft-ink"
+                    >
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

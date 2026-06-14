@@ -4,27 +4,43 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  /* Brand palette. Light mode is the design canvas. */
-  --color-canvas: #FAFAF7;        /* warm off white background */
-  --color-surface: #FFFFFF;       /* neutral surface for white sections */
-  --color-ink: #0A0A0B;           /* near black for body text */
-  --color-ink-soft: #3F3F46;      /* secondary text */
-  --color-ink-muted: #71717A;     /* tertiary text */
-  --color-ink-faint: #A1A1AA;     /* hairline labels */
-  --color-rule: #E4E4E7;          /* hairlines, dividers */
-  --color-rule-soft: #F4F4F5;     /* very faint dividers */
-  --color-brand: #0B5FFF;         /* deep technical blue, primary action */
-  --color-brand-ink: #FFFFFF;     /* text on brand fill */
-  --color-brand-soft: #E6EEFF;    /* blue tint backgrounds */
-  --color-accent: #FFB347;        /* warm amber, used sparingly */
-  --color-success: #16A34A;       /* available indicator */
+/* ─────────────────────────────────────────────────────────────────────────
+   DC Data Consultancy 2.0 — dark-led hybrid design system.
+   Cool editorial neutrals for reading sections, a deep blue-black for the
+   dramatic dark bands, one technical blue (#0B5FFF) carried throughout with
+   a brighter variant + glow reserved for the dark surfaces.
+   ───────────────────────────────────────────────────────────────────────── */
 
-  /* Dark band (Herkenbaar?, quote fallback) */
-  --color-night: #0A0A0B;
-  --color-night-soft: #18181B;
-  --color-night-ink: #FAFAF7;
-  --color-night-rule: #27272A;
+@theme inline {
+  /* Light reading surfaces (cool, sharper than the previous warm canvas) */
+  --color-canvas: #F6F7F9;        /* cool off white page background */
+  --color-surface: #FFFFFF;       /* white content slabs */
+  --color-surface-2: #FBFBFD;     /* faint raised panel */
+  --color-ink: #0A0D14;           /* cool near black, body + headings */
+  --color-ink-soft: #3B4150;      /* secondary text */
+  --color-ink-muted: #697186;     /* tertiary text, metadata */
+  --color-ink-faint: #A1A8B8;     /* placeholders, hairline labels */
+  --color-rule: #E4E7EC;          /* hairlines, dividers */
+  --color-rule-soft: #F0F2F5;     /* tag backgrounds, soft dividers */
+
+  /* Brand — one technical blue, kept from 1.0, plus a brighter on-dark tone */
+  --color-brand: #0B5FFF;         /* primary action, accents */
+  --color-brand-ink: #FFFFFF;     /* text on brand fill */
+  --color-brand-soft: #E7EEFF;    /* blue tint backgrounds on light */
+  --color-brand-bright: #4C82FF;  /* brand on dark surfaces, glow source */
+  --color-brand-faint: #1B2740;   /* brand tint on dark surfaces */
+
+  --color-accent: #FFB347;        /* warm amber, active data node only */
+  --color-success: #22C55E;       /* availability indicator */
+
+  /* Dark bands — deep blue-black, the signature surface of 2.0 */
+  --color-night: #080B14;         /* primary dark background */
+  --color-night-soft: #0E1320;    /* raised dark panel */
+  --color-night-elevated: #141A2A;/* card / input on dark */
+  --color-night-ink: #F4F6FB;     /* primary text on dark */
+  --color-night-soft-ink: #AEB7CA;/* secondary text on dark */
+  --color-night-muted-ink: #707B92;/* tertiary text on dark */
+  --color-night-rule: #1F2638;    /* dividers on dark */
 
   /* Font tokens (loaded as Next/Font variables in layout.tsx) */
   --font-sans: var(--font-sans);
@@ -51,12 +67,15 @@
   --color-ring: var(--color-brand);
 
   /* Radii */
-  --radius: 0.5rem;
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 :root {
@@ -89,9 +108,7 @@
     color: var(--color-ink);
     font-family: var(--font-sans), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
-  }
-  html {
-    scroll-smooth: smooth;
+    text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
@@ -111,32 +128,124 @@
     font-family: var(--font-mono), ui-monospace, monospace;
   }
 
+  /* Surfaces */
   .surface-canvas { background-color: var(--color-canvas); color: var(--color-ink); }
-  .surface-white { background-color: var(--color-surface); color: var(--color-ink); }
-  .surface-night { background-color: var(--color-night); color: var(--color-night-ink); }
-  .surface-brand { background-color: var(--color-brand); color: var(--color-brand-ink); }
+  .surface-white  { background-color: var(--color-surface); color: var(--color-ink); }
+  .surface-night  { background-color: var(--color-night); color: var(--color-night-ink); }
+  .surface-brand  { background-color: var(--color-brand); color: var(--color-brand-ink); }
 
-  /* Subtle radial dot grid used in hero + quote sections */
+  /* Signature dark gradient field for hero + dark feature bands */
+  .bg-night-field {
+    background-color: var(--color-night);
+    background-image:
+      radial-gradient(60% 55% at 18% 0%, rgba(76, 130, 255, 0.16), transparent 70%),
+      radial-gradient(50% 50% at 100% 100%, rgba(11, 95, 255, 0.10), transparent 70%);
+  }
+
+  /* Soft brand glow blob, absolutely positioned behind content */
+  .glow-brand {
+    background: radial-gradient(closest-side, rgba(76, 130, 255, 0.35), transparent);
+    filter: blur(40px);
+  }
+
+  /* Technical grids ------------------------------------------------------- */
   .grid-dot {
     background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.04;
+    opacity: 0.05;
   }
   .grid-dot-dense {
     background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-size: 22px 22px;
     opacity: 0.06;
   }
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px),
+      linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.06;
+    -webkit-mask-image: radial-gradient(80% 70% at 50% 0%, #000 30%, transparent 100%);
+    mask-image: radial-gradient(80% 70% at 50% 0%, #000 30%, transparent 100%);
+  }
 
-  /* Editorial label, used for monospace eyebrows / tags */
+  /* Editorial mono eyebrow */
   .eyebrow {
     font-family: var(--font-mono), ui-monospace, monospace;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     font-size: 0.6875rem;
+    font-weight: 500;
     color: var(--color-ink-muted);
   }
-  .eyebrow-brand {
-    color: var(--color-brand);
+  .eyebrow-brand { color: var(--color-brand); }
+
+  /* Hairline tag / chip */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-rule);
+    color: var(--color-ink-muted);
+    background-color: var(--color-surface);
   }
+
+  /* Gradient hairline used to delimit dark bands */
+  .rule-glow {
+    background-image: linear-gradient(90deg, transparent, rgba(76, 130, 255, 0.5), transparent);
+  }
+}
+
+/* ─── Motion ─────────────────────────────────────────────────────────────
+   Scroll reveals (added by the Reveal component), the animated hero lineage
+   and a slow drift. All disabled under prefers-reduced-motion.
+   ──────────────────────────────────────────────────────────────────────── */
+@layer utilities {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s var(--ease-out-expo),
+      transform 0.7s var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .lineage-dash {
+    stroke-dasharray: 5 7;
+    animation: lineage-flow 1.4s linear infinite;
+  }
+  .node-pulse { animation: node-pulse 2.4s ease-in-out infinite; }
+  .drift-slow { animation: drift 18s ease-in-out infinite alternate; }
+}
+
+@keyframes lineage-flow {
+  to { stroke-dashoffset: -24; }
+}
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.35); }
+}
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, -24px, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, [data-reveal] {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
 }

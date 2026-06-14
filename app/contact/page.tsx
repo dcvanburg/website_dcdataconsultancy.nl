@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
+import PageHero from "@/components/ui/PageHero";
 import SectionShell from "@/components/ui/SectionShell";
 import { BreadcrumbSchema } from "@/components/SchemaMarkup";
-import { siteConfig } from "@/lib/site-content";
+import { contactSection, siteConfig } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Contact | DC Data Consultancy",
@@ -32,9 +33,17 @@ export default function ContactPage() {
           ]}
         />
 
-        <div className="pt-20 surface-canvas">
-          <ContactSection />
-        </div>
+        <PageHero
+          breadcrumbs={[
+            { name: "Home", href: "/" },
+            { name: "Contact", href: "/contact" },
+          ]}
+          eyebrow="Contact"
+          heading={contactSection.heading}
+          subheading="Geen verkooppraatjes. Een korte kennismaking, een eerlijke read op waar je staat, en de mogelijkheid om binnen weken een eerste resultaat te leveren."
+        />
+
+        <ContactSection bare />
 
         <SectionShell
           eyebrow="WAT VERWACHT JE"
