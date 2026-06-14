@@ -34,54 +34,58 @@ export default function OverDennisPage() {
           ]}
         />
 
-        <section className="relative pt-36 md:pt-44 pb-20 md:pb-28 surface-canvas overflow-hidden">
+        <section className="relative isolate overflow-hidden bg-night-field text-night-ink">
+          <div aria-hidden="true" className="absolute inset-0 text-night-ink grid-lines pointer-events-none" />
           <div
             aria-hidden="true"
-            className="absolute inset-0 text-ink grid-dot pointer-events-none"
+            className="glow-brand absolute -top-24 right-0 w-[34rem] h-[28rem] opacity-50 pointer-events-none"
           />
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-px rule-glow pointer-events-none" />
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-44 pb-20 md:pb-24">
             <Breadcrumbs
+              tone="dark"
               items={[
                 { name: "Home", href: "/" },
                 { name: "Over Dennis", href: "/over-dennis" },
               ]}
             />
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               <div className="lg:col-span-5">
-                <div className="relative overflow-hidden border border-rule aspect-[4/5] max-w-md bg-rule-soft">
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 aspect-[4/5] max-w-md bg-night-soft">
                   <Image
                     src={aboutSection.profileImage}
                     alt={aboutSection.profileImageAlt}
                     fill
-                    className="object-cover grayscale"
+                    className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     priority
                   />
                 </div>
               </div>
               <div className="lg:col-span-7">
-                <p className="eyebrow eyebrow-brand mb-6">{aboutPage.hero.eyebrow}</p>
-                <h1 className="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl text-ink leading-[1.0] tracking-tight text-balance mb-8">
+                <p className="eyebrow text-brand-bright mb-6">{aboutPage.hero.eyebrow}</p>
+                <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-night-ink leading-[1.0] tracking-tight text-balance mb-7">
                   {aboutPage.hero.heading}
                 </h1>
-                <p className="text-lg md:text-xl text-ink-soft leading-relaxed mb-10">
+                <p className="text-lg md:text-xl text-night-soft-ink leading-relaxed mb-9">
                   {aboutPage.hero.intro}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center px-7 py-3.5 bg-brand text-brand-ink font-display font-semibold rounded-lg shadow-md shadow-brand/15 hover:shadow-lg hover:shadow-brand/25 hover:-translate-y-0.5 transition-all"
+                    className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-brand text-brand-ink font-display font-semibold rounded-lg shadow-lg shadow-brand/30 hover:shadow-xl hover:shadow-brand/40 hover:-translate-y-0.5 transition-all"
                   >
                     Plan een kennismaking
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <a
                     href={siteConfig.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-2 px-2 py-3 font-display font-semibold text-base text-ink hover:text-brand transition-colors"
+                    className="group inline-flex items-center justify-center gap-2 px-6 py-4 font-display font-semibold text-base text-night-ink border border-white/15 rounded-lg hover:bg-white/5 transition-colors"
                   >
                     Bekijk LinkedIn
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-brand-bright group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>

@@ -1,19 +1,23 @@
-# DC Data Consultancy Design System
+# DC Data Consultancy Design System — 2.0
 
 Source of truth for the visual and verbal identity of dcdataconsultancy.nl.
-Originated from a Google Stitch design (project `5319704438672755105`, design
-system `assets/9513113575026205990`) and applied across the Next.js codebase.
 
-The tokens below are the contract. Components should consume them via the
-Tailwind utilities defined in `app/globals.css`, not hard coded values.
+2.0 is a **dark-led hybrid** system: every page opens on a dramatic deep
+blue-black hero, dark feature bands carry the quote, the modern data stack and
+the closing CTA, and the long-form reading sections sit on cool light surfaces.
+One technical blue (`#0B5FFF`) is carried throughout, with a brighter variant
+and a soft glow reserved for the dark surfaces.
+
+Tokens below are the contract. Components consume them through the Tailwind
+utilities defined in `app/globals.css`, never hard coded values.
 
 ## 1. Positioning
 
-DC Data Consultancy is a senior data engineering consultancy from Breda, run by
-Dennis van Burg. Data engineering is the primary positioning. Analytics and
-data science are derivatives that depend on a solid engineering foundation.
+Senior data engineering consultancy from Breda, run by Dennis van Burg. Data
+engineering is the primary positioning. Analytics and data science are
+derivatives that depend on a solid engineering foundation.
 
-Pay off line, present on the homepage hero and the footer:
+Pay off line (hero subheading, footer):
 
 > Senior data engineering consultancy uit Breda, voor organisaties die meer uit
 > hun data willen halen.
@@ -21,155 +25,174 @@ Pay off line, present on the homepage hero and the footer:
 ## 2. Brand voice
 
 Confident, direct, no nonsense, pragmatic. Short sentences, concrete over
-vague, no marketing fluff. The narrator is a senior engineer talking to a CTO,
-not an agency pitching.
-
-Five tone of voice anchors must remain present somewhere on the site, verbatim
-or near verbatim. They appear in `lib/site-content.ts`.
-
-- "Techniek is altijd een middel, nooit een doel. Wat de business kan met de
-  oplossing telt zwaarder dan welke tool we kiezen."
-- "Liever een eerste werkend resultaat na vier weken dan een perfect plan na
-  vier maanden. Iteratie boven big bang."
-- "Ik bouw zo dat jouw team het overneemt. Geen afhankelijkheid van DC Data
-  Consultancy, wel een goede samenwerking als je dat wilt."
-- "Geen verkooppraatjes. Eén aanspreekpunt, korte lijnen, en de mogelijkheid om
-  binnen weken een eerste resultaat op te leveren in plaats van na maanden."
-- "Die brug slaan, tussen techniek en business, is een groot deel van mijn
-  werk."
+vague, no marketing fluff. A senior engineer talking to a CTO, not an agency
+pitching. Five tone of voice anchors live in `lib/site-content.ts` and must
+remain present (verbatim or near verbatim).
 
 ### Writing rules
 
-- Do not use hyphens (`-`) or em dashes (`—`) inside body copy. Write full
-  sentences with periods and commas. Use the merged or open form for compound
-  words (data architectuur, self service, end to end, realtime).
-- Slugs, URLs, file paths and code identifiers may keep their hyphens. Those
-  are not rendered as prose.
-- Numbers ranges use the word "tot" (`2 tot 6 maanden`), not an en dash.
-- Avoid the word "powerpoint" outside the literal sense.
+- No hyphens (`-`) or em dashes (`—`) inside body copy. Full sentences with
+  periods and commas. Open or merged compound words (data architectuur, self
+  service, end to end, realtime).
+- Slugs, URLs, file paths and code identifiers keep their hyphens.
+- Number ranges use the word "tot", not an en dash.
 - Avoid hype. "AI is geen knop" is on brand. "Revolutionair platform" is not.
 
 ## 3. Color palette
 
-Warm light editorial. Strong contrast. One technical blue primary, one warm
-accent for sparing highlights.
+Cool editorial light for reading, deep blue-black for the signature dark bands.
 
-| Token              | Value     | Use                                  |
-| ------------------ | --------- | ------------------------------------ |
-| `canvas`           | `#FAFAF7` | Page background, hero, calm bands.   |
-| `surface`          | `#FFFFFF` | Cards, content slabs.                |
-| `ink`              | `#0A0A0B` | Body text, headings.                 |
-| `ink-soft`         | `#3F3F46` | Secondary body text.                 |
-| `ink-muted`        | `#71717A` | Tertiary text, metadata, mono tags.  |
-| `ink-faint`        | `#A1A1AA` | Placeholders, hairline labels.       |
-| `rule`             | `#E4E4E7` | Hairlines, table dividers.           |
-| `rule-soft`        | `#F4F4F5` | Pill/tag backgrounds, soft dividers. |
-| `brand`            | `#0B5FFF` | Primary action, eyebrow accent.      |
-| `brand-ink`        | `#FFFFFF` | Text on `brand` fill.                |
-| `brand-soft`       | `#E6EEFF` | Brand tinted backgrounds, callouts.  |
-| `accent`           | `#FFB347` | Used sparingly for active data nodes.|
-| `success`          | `#16A34A` | Availability indicator dot only.     |
-| `night`            | `#0A0A0B` | "Herkenbaar?" dark band background.  |
-| `night-soft`       | `#18181B` | Secondary dark slabs.                |
-| `night-ink`        | `#FAFAF7` | Text on `night`.                     |
-| `night-rule`       | `#27272A` | Dividers on `night`.                 |
+### Light surfaces
+
+| Token         | Value     | Use                                   |
+| ------------- | --------- | ------------------------------------- |
+| `canvas`      | `#F6F7F9` | Cool page background, calm bands.     |
+| `surface`     | `#FFFFFF` | White content slabs, cards.           |
+| `ink`         | `#0A0D14` | Body text, headings.                  |
+| `ink-soft`    | `#3B4150` | Secondary body text.                  |
+| `ink-muted`   | `#697186` | Tertiary text, metadata, mono tags.   |
+| `ink-faint`   | `#A1A8B8` | Placeholders, hairline labels.        |
+| `rule`        | `#E4E7EC` | Hairlines, dividers.                  |
+| `rule-soft`   | `#F0F2F5` | Tag/pill backgrounds, soft dividers.  |
+
+### Brand
+
+| Token          | Value     | Use                                    |
+| -------------- | --------- | -------------------------------------- |
+| `brand`        | `#0B5FFF` | Primary action, eyebrow accent.        |
+| `brand-ink`    | `#FFFFFF` | Text on `brand` fill.                  |
+| `brand-soft`   | `#E7EEFF` | Brand tinted backgrounds on light.     |
+| `brand-bright` | `#4C82FF` | Brand on dark surfaces, glow source.   |
+| `accent`       | `#FFB347` | Warm amber, active data node only.     |
+| `success`      | `#22C55E` | Availability indicator dot.            |
+
+### Dark bands (the signature surface of 2.0)
+
+| Token             | Value     | Use                                  |
+| ----------------- | --------- | ------------------------------------ |
+| `night`           | `#080B14` | Primary dark background.             |
+| `night-soft`      | `#0E1320` | Raised dark panel.                   |
+| `night-elevated`  | `#141A2A` | Card / input / node on dark.         |
+| `night-ink`       | `#F4F6FB` | Primary text on dark.                |
+| `night-soft-ink`  | `#AEB7CA` | Secondary text on dark.             |
+| `night-muted-ink` | `#707B92` | Tertiary text on dark.               |
+| `night-rule`      | `#1F2638` | Dividers on dark.                    |
 
 Pair colors high contrast. Never tint body text with brand color, only
-accents, eyebrows and the active state of links.
+accents, eyebrows and active link states.
 
-## 4. Typography
+## 4. Surfaces and rhythm
 
-- Display, headings: **Manrope** (`var(--font-display)`), weight 600 to 800,
-  tight tracking (`tracking-tight`), `text-balance` on long headlines.
-- Body, UI text: **Inter** (`var(--font-sans)`), comfortable reading sizes,
-  `leading-relaxed` for paragraphs.
-- Mono, labels, tags, KPI numbers, code references: **JetBrains Mono**
-  (`var(--font-mono)`), small caps style via uppercase + tracking.
+Four surface utilities drive every section:
+
+- `surface-canvas` — cool light reading sections.
+- `surface-white` — white slabs (cards, alternating bands).
+- `bg-night-field` — deep dark band with a built in brand glow gradient. Use
+  with `text-night-ink`. The signature dark surface.
+- `surface-brand` — solid brand fill (sparingly).
+
+Homepage surface order (alternation, dark used as accent, never two light in a
+visually flat row): dark hero → canvas → white → canvas → white → **dark quote**
+→ canvas → **dark stack** → canvas → white → canvas → white → canvas →
+**dark CTA** → dark footer.
+
+Every page (home and all subpages) opens on a `bg-night-field` hero so the
+fixed `Header` renders transparent with light text at the top, then turns
+solid (`bg-canvas/85` + blur + hairline) once scrolled past 16px.
+
+Section vertical rhythm: `py-24 md:py-32`. Dark hero/CTA bands run taller.
+
+## 5. Typography
+
+Trio unchanged from 1.0; only scale and rhythm evolved.
+
+- Display, headings: **Manrope** (`var(--font-display)`), 600 to 800, tight
+  tracking, `text-balance` on long headlines.
+- Body, UI: **Inter** (`var(--font-sans)`), `leading-relaxed` for paragraphs.
+- Mono, labels, tags, KPI numbers, code refs: **JetBrains Mono**
+  (`var(--font-mono)`), uppercase + wide tracking.
 
 ### Type ramp
 
-| Use            | Class hints                                                   |
-| -------------- | ------------------------------------------------------------- |
-| Hero H1        | `font-display font-extrabold text-6xl md:text-8xl leading-[0.95] tracking-tight text-balance` |
-| Section H2     | `font-display font-bold text-4xl md:text-5xl leading-[1.05] tracking-tight text-balance` |
-| Card H3        | `font-display font-bold text-xl md:text-2xl tracking-tight`   |
-| Body paragraph | `text-ink-soft text-lg leading-relaxed`                       |
-| Lead intro     | `text-ink-soft text-xl leading-relaxed`                       |
-| Eyebrow / tag  | `eyebrow` (utility in `globals.css`). Brand accent: `eyebrow-brand` |
-| Big stat       | `font-display font-extrabold text-5xl md:text-6xl tracking-tight` |
-| Mono prefix    | `font-mono text-xs uppercase tracking-[0.18em] text-ink-muted` |
+| Use            | Class hints                                                                 |
+| -------------- | --------------------------------------------------------------------------- |
+| Hero H1        | `font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl xl:text-[5.25rem] leading-[0.98] tracking-tight text-balance` |
+| Page H1        | `font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.0] tracking-tight` |
+| Section H2     | `font-display font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance` |
+| Card H3        | `font-display font-bold text-xl md:text-2xl tracking-tight`                 |
+| Lead / body    | `text-lg leading-relaxed` (`text-ink-soft` on light, `text-night-soft-ink` on dark) |
+| Eyebrow        | `eyebrow` utility. `eyebrow-brand` on light, `text-brand-bright` on dark.    |
+| Big stat       | `font-display font-extrabold text-3xl md:text-4xl tracking-tight`           |
 
-## 5. Spacing and layout
+## 6. Shape, surface, decoration
 
-- Page container: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`.
-- Section vertical rhythm: `py-28 md:py-36`. Calm bands `py-32 md:py-40`.
-- Editorial grid: prefer `grid-cols-12` with content in `lg:col-span-5` and
-  `lg:col-span-7` for two column reads.
-- Section intros: max width `max-w-3xl mb-16 md:mb-20`.
-- Avoid card overload. Use `border-t border-rule pt-6` to delimit list items
-  instead of boxed cards where possible.
-- Subtle dot grid for hero and quote sections: `grid-dot` and
-  `grid-dot-dense` utilities. They inherit color from `currentColor`.
+- Radius: `--radius` is `0.625rem`. Cards use `rounded-xl` / `rounded-2xl`,
+  chips `rounded-md`/`rounded-lg`.
+- Borders: hairline `border border-rule` on light, `border-white/10` on dark.
+  Grids use the `gap-px bg-rule border border-rule rounded-xl overflow-hidden`
+  trick to render a one pixel grid with rounded outer corners.
+- Decoration utilities (all `aria-hidden`, inherit `currentColor`):
+  - `grid-dot` / `grid-dot-dense` — radial dot field.
+  - `grid-lines` — technical line grid, top masked. Used on dark bands.
+  - `glow-brand` — blurred brand glow blob, position absolutely behind content.
+  - `rule-glow` — gradient hairline to delimit dark bands.
+  - `chip` — hairline mono tag.
+- Shadows only on primary CTA hover and floating cards (`shadow-brand/30`).
 
-## 6. Shape and surface
+## 7. Motion
 
-- Border radius: `0.5rem` default (`rounded-lg`). KPI badges and small chips
-  may be smaller (`rounded`). No pill shapes except the availability indicator.
-- Borders: hairline `border border-rule`. Cells in grids use the
-  `gap-px bg-rule border border-rule` trick to render a one pixel grid.
-- Shadows used only on the primary CTA hover state. No drop shadows on
-  general cards.
+Subtle and purposeful. Disabled under `prefers-reduced-motion` (handled in
+`globals.css`).
 
-## 7. Components reference
-
-| Component                | File                                  | Notes |
-| ------------------------ | ------------------------------------- | ----- |
-| Header                   | `components/Header.tsx`               | Translucent canvas backdrop, optional availability chip. |
-| Hero                     | `components/Hero.tsx`                 | Massive headline, mono eyebrow, decorative lineage SVG on `xl`. |
-| Problem ("Herkenbaar?")  | `components/WhyDataSection.tsx`       | Full bleed `surface-night`, mono `::` bullets. |
-| Wat ik doe               | `components/OfferSection.tsx`         | Three column editorial, first column gets the brand bar. |
-| Process                  | `components/ProcessSection.tsx`       | Numbered circles, first step filled, others outlined. |
-| Quote                    | `components/QuoteSection.tsx`         | Full bleed `surface-brand`, large display text, mono attribution. |
-| About                    | `components/AboutSection.tsx`         | Two column with four large stat numbers. |
-| Stack                    | `components/TechStackSection.tsx`     | Six cell grid, mono tag chips. |
-| Track record             | `components/ProjectsSection.tsx`      | Greyscale client wordmarks in a grid. |
-| Testimonials             | `components/TestimonialsSection.tsx`  | Two or three column quotes, left border, first is brand. |
-| Insights                 | `components/BlogSection.tsx`          | Three column editorial teasers. |
-| Contact form             | `components/ContactSection.tsx`       | Two column, form on right inside a canvas card. |
-| Final CTA banner         | `components/ui/CtaBanner.tsx`         | Centered, primary CTA plus mono mail link. |
-| Footer                   | `components/Footer.tsx`               | Minimal, mono labels. |
-| Section shell            | `components/ui/SectionShell.tsx`      | Variants `canvas`, `white`, `night`. |
-| Page hero                | `components/ui/PageHero.tsx`          | Used by every subpage. |
-| FAQ list                 | `components/ui/FaqList.tsx`           | Accordion with hairline dividers. |
-| Breadcrumbs              | `components/ui/Breadcrumbs.tsx`       | Mono uppercase, brand on the active item. |
-| Service detail template  | `components/ServicePageTemplate.tsx`  | Drives all `app/diensten/<slug>/page.tsx` pages. |
+- `components/ui/Reveal.tsx` — wraps content, fades + rises it in on scroll via
+  IntersectionObserver (`[data-reveal]` + `.is-visible`). `as`, `delay`
+  (stagger, ms) and `className` props. Stagger grids by `i * 70`ish.
+- Hero lineage: `lineage-dash` (flowing connectors), `node-pulse` (pulsing
+  nodes), `drift-slow` (slow glow drift). See `components/ui/LineageDiagram.tsx`.
 
 ## 8. Iconography
 
-- Use `lucide-react` icons at `w-4 h-4` or `w-5 h-5`. Default color `text-brand`
-  for emphasized elements, `text-ink-muted` for incidental ones.
-- Mono characters `::` and `->` may stand in for icons in list bullets.
-- The hero lineage SVG is decorative; mark `aria-hidden="true"`.
+- `lucide-react` at `w-4 h-4` / `w-5 h-5`. `text-brand` for emphasis,
+  `text-ink-muted` / `text-night-muted-ink` for incidental.
+- Brand icons (LinkedIn) are hand rolled SVG; lucide dropped brand glyphs.
+- Mono `::` and `->` may stand in for list bullets.
 
-## 9. Verbal punctuation patterns
+## 9. Components reference
 
-- Section eyebrow: ALL CAPS mono, brand colored on light surfaces.
-  `WAT IK DOE`, `WERKPRINCIPES`, `INSIGHTS`.
-- Mail address: `MAIL_:: dennis@dcdataconsultancy.nl`.
-- List bullets in editorial sections: `::`.
-- Status indicator: small dot plus mono label, `Beschikbaar voor nieuwe
-  opdrachten`.
+| Component               | File                                  | Notes |
+| ----------------------- | ------------------------------------- | ----- |
+| Header                  | `components/Header.tsx`               | Transparent over the dark hero, solid on scroll, availability chip. |
+| Hero                    | `components/Hero.tsx`                 | Dark, glow, animated lineage panel, trust bar. |
+| Lineage diagram         | `components/ui/LineageDiagram.tsx`    | Decorative SVG DAG, CSS animated. |
+| Reveal                  | `components/ui/Reveal.tsx`            | Scroll reveal wrapper. |
+| Problem ("Herkenbaar?") | `components/WhyDataSection.tsx`       | Canvas, sticky intro + hairline two column list. |
+| Wat ik doe              | `components/OfferSection.tsx`         | White, three pillar link grid, primary gets brand bar. |
+| Process                 | `components/ProcessSection.tsx`       | Canvas, numbered steps, first filled. |
+| Quote                   | `components/QuoteSection.tsx`         | Dark band, glow, large display quote. |
+| Services                | `components/ServicesSection.tsx`      | Canvas, two cell link grid, primary highlighted. |
+| Stack                   | `components/TechStackSection.tsx`     | Dark band, six category cells, mono chips. |
+| AI use cases            | `components/AiUseCasesSection.tsx`    | Canvas, hairline icon grid. |
+| Track record            | `components/ProjectsSection.tsx`      | White, greyscale client logos (hover to color). |
+| Testimonials            | `components/TestimonialsSection.tsx`  | Canvas, three quote cells, first brand filled. |
+| Insights                | `components/BlogSection.tsx`          | White, three editorial teasers. |
+| Contact form            | `components/ContactSection.tsx`       | Canvas, two column, `bare` prop drops its own heading. |
+| Final CTA               | `components/ui/CtaBanner.tsx`         | Dark band, glow, centered. |
+| Footer                  | `components/Footer.tsx`               | Dark, mono labels. |
+| Section shell           | `components/ui/SectionShell.tsx`      | Variants `canvas`, `white`, `night`. Reveals its own header. |
+| Page hero               | `components/ui/PageHero.tsx`          | Dark hero for subpages, optional breadcrumbs/CTAs. |
+| FAQ list                | `components/ui/FaqList.tsx`           | Accordion, animated grid rows, plus/close toggle. |
+| Breadcrumbs             | `components/ui/Breadcrumbs.tsx`       | `tone` light/dark; dark by default (sits on dark heroes). |
+| Service detail template | `components/ServicePageTemplate.tsx`  | Drives all `app/diensten/<slug>` pages. Dark hero. |
 
 ## 10. Content sources
 
-All copy lives in `lib/site-content.ts`. There should be no inline page copy
-beyond labels in buttons, form fields and breadcrumbs. When editing, run the
-"no dashes" check by greping for `—` and `–`; both should return zero matches
-inside string literals.
+All copy lives in `lib/site-content.ts` and `lib/blog-posts.ts`. No inline page
+copy beyond labels in buttons, form fields and breadcrumbs. Run the "no dashes"
+check (`—` / `–` should return zero matches inside string literals).
 
-## 11. Updating the design system
+## 11. Verbal punctuation patterns
 
-The Stitch project ID is `5319704438672755105`. To regenerate a section, use
-the Stitch MCP tools (`mcp__stitch__generate_screen_from_text` with the design
-system asset `assets/9513113575026205990`). Translate the resulting HTML into
-the existing component structure, never bypass the tokens in this document.
+- Section eyebrow: ALL CAPS mono. `eyebrow-brand` on light, `text-brand-bright`
+  on dark.
+- List bullets in editorial sections: `::`.
+- Status indicator: small `success` dot plus mono label, `Beschikbaar`.
