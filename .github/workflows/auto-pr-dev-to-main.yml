@@ -1,0 +1,33 @@
+name: Auto PR dev to main
+
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  ensure-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure an open PR exists from dev to main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          existing=$(gh pr list --base main --head dev --state open --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            echo "PR #$existing already open. Nothing to do."
+            exit 0
+          fi
+          gh pr create \
+            --base main \
+            --head dev \
+            --title "dev to main" \
+            --body "Auto opened by .github/workflows/auto-pr-dev-to-main.yml. Merge when ready to deploy to production. Vercel will auto deploy main on merge."
