@@ -14,7 +14,7 @@ utilities defined in `app/globals.css`, never hard coded values.
 ## 1. Positioning
 
 Senior data engineering consultancy from Breda, run by Dennis van Burg. Data
-engineering is the primary positioning. Analytics and data science are
+engineering is the primary positioning. Analytics engineering and data analytics are
 derivatives that depend on a solid engineering foundation.
 
 Pay off line (hero subheading, footer):

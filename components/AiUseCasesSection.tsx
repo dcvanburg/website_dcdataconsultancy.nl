@@ -1,20 +1,21 @@
 import {
-  TrendingUp,
-  Users,
-  AlertTriangle,
-  Star,
+  BookOpen,
   MessageSquare,
+  FileSearch,
+  Bot,
+  Sparkles,
+  Star,
   type LucideIcon,
 } from "lucide-react";
 import { aiUseCases } from "@/lib/site-content";
 import Reveal from "@/components/ui/Reveal";
 
 const ICONS: Record<string, LucideIcon> = {
-  TrendingUp,
-  Users,
-  AlertTriangle,
-  Star,
+  BookOpen,
   MessageSquare,
+  FileSearch,
+  Bot,
+  Sparkles,
 };
 
 export default function AiUseCasesSection() {

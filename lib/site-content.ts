@@ -5,9 +5,9 @@
 export const siteConfig = {
   name: "DC Data Consultancy",
   shortName: "DC Data",
-  tagline: "Senior Data Engineering Consultancy",
+  tagline: "Senior Data Consultancy",
   proposition:
-    "Schaalbare, betrouwbare dataplatforms voor organisaties die meer uit hun data willen halen.",
+    "Freelance senior data specialist voor organisaties die meer uit hun data willen halen.",
   url: "https://www.dcdataconsultancy.nl",
   email: "dennis@dcdataconsultancy.nl",
   linkedin: "https://www.linkedin.com/in/dennisvanburg/",
@@ -34,7 +34,7 @@ export const footerNav = {
   diensten: [
     { label: "Data Engineering", href: "/diensten/data-engineering" },
     { label: "Data Analytics", href: "/diensten/data-analytics" },
-    { label: "Data Science", href: "/diensten/data-science" },
+    { label: "Analytics Engineering", href: "/diensten/analytics-engineering" },
     { label: "Modern Data Stack", href: "/diensten/modern-data-stack" },
     { label: "dbt Consultancy", href: "/diensten/dbt-consultancy" },
     { label: "Azure Data Engineering", href: "/diensten/azure-data-engineering" },
@@ -47,6 +47,7 @@ export const footerNav = {
     { label: "Contact", href: "/contact" },
   ],
   locatie: [
+    { label: "Data Consultant Randstad", href: "/data-consultant-randstad" },
     { label: "Data Consultant Breda", href: "/data-consultant-breda" },
   ],
 } as const;
@@ -56,12 +57,12 @@ export const footerNav = {
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const hero = {
-  badge: "SENIOR DATA ENGINEERING · BREDA · NL",
+  badge: "SENIOR ANALYTICS ENGINEERING · NL",
   heading: "Een dataplatform dat doet wat het belooft.",
   subheading:
-    "Ik ben Dennis: freelance senior data specialist uit Breda. Al meer dan tien jaar bouw ik datapipelines en platforms waar BI, analytics en AI op kunnen draaien. Hands-on, samen met je team, met het resultaat voor ogen.",
+    "Freelance senior data specialist en al meer dan tien jaar bouw ik datapipelines en platforms waar BI, analytics en AI op kunnen draaien. Hands-on, samen met een team, met het resultaat voor ogen.",
   primaryCta: { label: "Plan een kennismaking", href: "/contact" },
-  secondaryCta: { label: "Lees over data engineering", href: "/diensten/data-engineering" },
+  secondaryCta: { label: "Lees over analytics engineering", href: "/diensten/analytics-engineering" },
   trustBar: {
     label: "Gewerkt voor o.a.",
     clients: ["Rabobank", "de Volksbank", "Achmea", "PostNL", "Mileway", "Gulf", "Brandweer"],
@@ -71,9 +72,9 @@ export const hero = {
 export const problemSection = {
   sectionId: "uitdagingen",
   eyebrow: "Herkenbaar?",
-  heading: "Data zou moeten helpen. Vaak kost het vooral tijd.",
+  heading: "Data zou tijd moeten besparen en belangrijke beslissingen moeten ondersteunen.",
   intro:
-    "In vrijwel elke kennismaking hoor ik dezelfde verhalen. Niet omdat teams niet hard werken, maar omdat de fundering onder de dataomgeving nooit goed is gelegd.",
+    "Niet omdat teams niet hard werken, maar omdat de fundering onder de dataomgeving nooit goed is gelegd.",
   problems: [
     {
       title: "Cijfers die niet kloppen",
@@ -113,14 +114,14 @@ export const offerSection = {
   eyebrow: "Wat ik doe",
   heading: "Een dataplatform dat meegroeit met je organisatie.",
   intro:
-    "Geen losse projecten, maar een fundering die jaren meegaat. Mijn focus ligt op data engineering: analytics en data science werken alleen als die basis klopt.",
+    "Geen losse projecten, maar een fundering die jaren meegaat. Mijn focus ligt op analytics engineering: analytics en AI werken alleen als die basis klopt.",
   pillars: [
     {
       number: "01",
       title: "Data Engineering",
       tagline: "Pipelines en architectuur die je vertrouwt",
       description:
-        "Schaalbare ELT/ETL, datawarehousing, data modelling, orchestration en data quality. Op moderne stacks: Azure, Snowflake, Databricks, dbt en Airflow.",
+        "Data die op tijd, compleet en betrouwbaar binnenkomt. Geen handmatige fixes meer op maandagochtend.",
       href: "/diensten/data-engineering",
       primary: true,
     },
@@ -129,17 +130,17 @@ export const offerSection = {
       title: "Data Analytics",
       tagline: "Business metrics waar de directie op stuurt",
       description:
-        "Heldere KPI definities, gemodelleerde semantische lagen en dashboards die niemand meer hoeft uit te leggen. Power BI, Tableau, Looker.",
+        "Cijfers waar de hele organisatie op vertrouwt, zonder discussie vooraf over wiens dashboard gelijk heeft.",
       href: "/diensten/data-analytics",
       primary: false,
     },
     {
       number: "03",
-      title: "Data Science",
-      tagline: "AI die landt in de operatie",
+      title: "Analytics Engineering",
+      tagline: "De brug die engineering en analytics verbindt",
       description:
-        "Forecasting, churn prediction en anomaly detection, gebouwd op een platform dat productie aankan. Niet een notebook dat alleen lokaal draait.",
-      href: "/diensten/data-science",
+        "Data die niet alleen technisch klopt, maar ook betekenis heeft voor het business. Eén bron van waarheid, getest en gedocumenteerd, zodat iedereen dezelfde taal spreekt.",
+      href: "/diensten/analytics-engineering",
       primary: false,
     },
   ],
@@ -154,27 +155,27 @@ export const techStack = {
   categories: [
     {
       name: "Cloud platforms",
-      items: ["Microsoft Azure", "AWS", "Google Cloud Platform"],
+      items: ["Microsoft Azure", "Amazon Web Services (AWS)", "Google Cloud Platform (GCP)"],
     },
     {
       name: "Data warehousing & lakehouse",
-      items: ["Snowflake", "Databricks", "Azure Synapse", "BigQuery"],
+      items: ["Snowflake", "Databricks", "Azure Synapse", "BigQuery", "Redshift", "ADLS", "S3", "Delta Lake", "Postgres"],
     },
     {
       name: "Transformation & modelling",
-      items: ["dbt Core", "dbt Cloud", "SQL", "Python"],
+      items: ["dbt Core", "dbt Cloud", "SQL", "Python", "Pyspark", "R"],
     },
     {
       name: "Orchestration",
-      items: ["Azure Data Factory", "Apache Airflow", "Prefect"],
+      items: ["Azure Data Factory", "Apache Airflow", "dbt Cloud"],
     },
     {
       name: "BI & visualisatie",
-      items: ["Power BI", "Tableau", "Looker"],
+      items: ["Power BI"],
     },
     {
       name: "Data quality & governance",
-      items: ["Great Expectations", "Monte Carlo", "dbt tests", "Unity Catalog"],
+      items: ["Great Expectations", "dbt tests", "Unity Catalog"],
     },
   ],
 } as const;
@@ -185,7 +186,7 @@ export const aboutSection = {
   heading: "Dennis van Burg, senior data specialist.",
   role: "Eigenaar · Senior Data Specialist",
   bio: [
-    "Sinds 2016 werk ik aan datavraagstukken die ertoe doen. In 2021 startte ik DC Data Consultancy, om opdrachtgevers te helpen die niet zoeken naar een paar extra handen, maar naar iemand die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
+    "Sinds 2016 werk ik aan datavraagstukken die ertoe doen. In 2021 startte ik DC Data Consultancy, om opdrachtgevers te helpen die niet alleen zoeken naar een paar extra handen, maar naar iemand die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
     "Mijn werk zit op het snijvlak van engineering en business. Ik bouw geen pipelines om de pipelines, maar omdat finance op maandag op de cijfers moet kunnen rekenen, omdat marketing wil weten wat werkt en omdat de directie wil sturen op data in plaats van op aannames.",
     "Ik werk graag over afdelingen heen, met het teamresultaat voor ogen. Daar haal ik energie uit: samen complexe vraagstukken aanpakken en dingen voor elkaar krijgen. Vanuit Breda werk ik door heel Nederland, vooral in financial services, logistiek, vastgoed, energie en publieke sector.",
   ],
@@ -248,40 +249,40 @@ export const quote = {
 
 export const aiUseCases = {
   sectionId: "ai",
-  eyebrow: "AI & Data Science",
-  heading: "Wat een goed dataplatform mogelijk maakt.",
+  eyebrow: "AI & LLM",
+  heading: "LLM-toepassingen die werken, omdat het dataplatform klopt.",
   intro:
-    "AI is geen knop die je omzet. Het is wat je krijgt als je dataplatform op orde is. Een paar toepassingen waar ik voor opdrachtgevers aan heb gewerkt:",
+    "Een LLM is geen shortcut voor rommelige data. Zonder betrouwbare pipelines, schone context en geteste metrics krijg je hallucinaties in plaats van antwoorden. Data engineering levert de bronnen; analytics engineering levert de betekenis. Een paar toepassingen waar dat verschil zichtbaar wordt:",
   cases: [
     {
-      title: "Demand & sales forecasting",
+      title: "RAG & kennisassistenten",
       description:
-        "Voorspel toekomstige vraag of omzet op basis van historische patronen, seizoenseffecten en externe factoren, om voorraad, planning en budgettering aan te scherpen.",
-      icon: "TrendingUp",
+        "Een LLM die antwoord geeft uit interne documentatie, handleidingen of kennisbanken. Werkt alleen met betrouwbare ingestion, chunking, embeddings en een vector store. Dat is data engineering, niet prompt engineering.",
+      icon: "BookOpen",
     },
     {
-      title: "Churn prediction",
+      title: "Natuurlijke taal over je cijfers",
       description:
-        "Identificeer klanten met een hoog vertrekrisico voordat ze opzeggen. Direct gekoppeld aan retentie acties in de operatie.",
-      icon: "Users",
-    },
-    {
-      title: "Anomaly detection",
-      description:
-        "Spot afwijkingen, fraude of operationele incidenten realtime. Werkt alleen als je datakwaliteit en monitoring solide zijn.",
-      icon: "AlertTriangle",
-    },
-    {
-      title: "Recommendation engines",
-      description:
-        "Persoonlijke aanbevelingen voor klanten op basis van gedrag, voorkeuren en context, die ook daadwerkelijk in productie draaien.",
-      icon: "Star",
-    },
-    {
-      title: "Natural Language Processing",
-      description:
-        "Analyse van klantfeedback, klachten, contracten en interne documenten op schaal, zonder weken handmatig labelen.",
+        "Medewerkers stellen vragen in gewone taal en krijgen antwoord uit betrouwbare business metrics. Dat vraagt om geteste marts, duidelijke definities en een semantic layer, precies waar analytics engineering voor bedoeld is.",
       icon: "MessageSquare",
+    },
+    {
+      title: "Document intelligence",
+      description:
+        "Contracten, klachten, compliance-documenten of klantfeedback analyseren op schaal. LLM's kunnen lezen, maar iemand moet de documenten betrouwbaar binnenhalen, structureren en beveiligen. Dat is data engineering.",
+      icon: "FileSearch",
+    },
+    {
+      title: "AI-agents met bedrijfscontext",
+      description:
+        "Agents die niet alleen tekst genereren, maar acties uitvoeren op basis van actuele operationele data. Dat lukt alleen als pipelines tijdig draaien en marts één consistente waarheid leveren.",
+      icon: "Bot",
+    },
+    {
+      title: "Interne copilots",
+      description:
+        "Copilots voor sales, support of finance die productdata, policies en cases kunnen raadplegen. Zonder governance, lineage en actuele gestructureerde data wordt het een speeltje dat je niet kunt vertrouwen.",
+      icon: "Sparkles",
     },
   ],
 } as const;
@@ -289,7 +290,7 @@ export const aiUseCases = {
 export const services = {
   sectionId: "diensten",
   heading: "Diensten",
-  subheading: "Data engineering staat centraal, analytics en science bouwen daarop voort.",
+  subheading: "Data engineering staat centraal, analytics engineering bouwt daar betrouwbare metrics op.",
   items: [
     {
       title: "Data Engineering",
@@ -309,12 +310,12 @@ export const services = {
       href: "/diensten/data-analytics",
     },
     {
-      title: "Data Science",
-      tagline: "AI in productie, niet in PoC-land",
+      title: "Analytics Engineering",
+      tagline: "Betrouwbare metrics, getest en gedocumenteerd",
       description:
-        "Forecasting, classificatie en anomaly detection, geïntegreerd in een productiewaardig dataplatform.",
-      icon: "Cpu",
-      href: "/diensten/data-science",
+        "Gelaagde modellering, dbt marts en semantic layers. Eén bron van waarheid waar BI en stakeholders op vertrouwen.",
+      icon: "GitBranch",
+      href: "/diensten/analytics-engineering",
     },
     {
       title: "Modern Data Stack",
@@ -351,19 +352,23 @@ export const testimonialsSection = {
   eyebrow: "Wat opdrachtgevers zeggen",
   heading: "Senior, hands-on en met oog voor de business.",
   intro:
-    "Een greep uit de feedback die ik de afgelopen jaren van opdrachtgevers en collega's kreeg.",
+    "Aanbevelingen van opdrachtgevers en collega's op LinkedIn, woordelijk overgenomen.",
   quotes: [
     {
-      text: "Dennis denkt vanuit de business én bouwt zelf de oplossing. Die combinatie is zeldzaam, en exact wat we nodig hadden om ons data domein op te zetten.",
-      role: "Data & Analytics lead, financial services",
+      text: "Dennis is energiek, onderzoekend en een volwaardig sparringpartner die snel kan schakelen en oplossingen levert. De combinatie van analytische vaardigheden en conceptueel denkvermogen stelt hem in staat om complexe data uitdagingen met gemak aan te pakken. Als teamplayer blinkt hij uit door zijn social skills en heldere communicatie. Dennis is stressbestendig en pragmatisch wat hem slagvaardig maakt, zelfs onder de druk. Ik ben er zeker van dat Dennis een waardevolle aanwinst is voor ieder team dat op zoek is naar data expertise.",
+      role: "Product Manager, financial services",
     },
     {
-      text: "Pragmatisch, technisch sterk en geen ego. We hadden binnen drie maanden een werkend dbt project met tests, documentatie en een CI/CD pipeline.",
-      role: "Engineering manager, logistiek",
+      text: "De afgelopen periode heb ik met veel plezier met Dennis samengewerkt. Samen hebben we een automatische document tagging systeem ontwikkeld dat gebruik maakt van AI. Dit systeem heeft ons in staat gesteld om documenten sneller en efficiënter te taggen, waardoor we onze processen konden versnellen en de nauwkeurigheid van onze data konden verhogen. Dennis is zeer ervaren in het gebruik van AI technologie en heeft veel kennis op het gebied van data analyse. Hij is een goede teamspeler die altijd bereid is om te helpen en te ondersteunen. Ik kan hem van harte aanbevelen aan iedereen die op zoek is naar een data analist met ervaring in AI technologie.",
+      role: "Product Owner, vastgoed",
     },
     {
-      text: "Eindelijk iemand die kan vertalen tussen onze financeafdeling en het engineering team. Dat scheelde maanden discussie.",
-      role: "Finance director, vastgoed",
+      text: "I worked with Dennis on a complicated data migration project. Dennis showed good communication skills and he looks at problems from different angles. I enjoyed working together with Dennis, he is a real teamplayer. Also, I gained more programming experience because of his good explanations. Highly recommend Dennis in any fast-paced environment!",
+      role: "Collega, data engineering",
+    },
+    {
+      text: "Dennis heeft 1,5 jaar voor ons gewerkt als Data Scientist in een hoog complexe, zeer dynamische omgeving. Hij is extreem kundig, communicatief sterk, denkt in oplossingen, neemt het team mee vooruit en zorgt zelf dat zijn werk er op tijd ligt. Als je de kans krijgt om Dennis in te huren als Data Scientist, en je laat die kans lopen ben je gek (in mijn ogen).",
+      role: "Program manager, financial services",
     },
   ],
 } as const;
@@ -384,7 +389,7 @@ export const contactSection = {
     },
   },
   submitLabel: "Stuur bericht",
-  responseTime: "Reactie binnen één werkdag, vaak sneller.",
+  responseTime: "Reageert zo snel mogelijk.",
   alternative: "Liever direct?",
   alternativeOptions: [
     { label: "Mail dennis@dcdataconsultancy.nl", href: "mailto:dennis@dcdataconsultancy.nl" },
@@ -411,12 +416,12 @@ export const dataEngineeringPage = {
   title: "Data Engineering Consultancy",
   metaTitle: "Data Engineering Consultancy | DC Data Consultancy Breda",
   metaDescription:
-    "Senior data engineering consultancy uit Breda. Schaalbare data pipelines, cloud datawarehousing, dbt en Azure architectuur, gebouwd om jaren mee te gaan.",
+    "Senior data engineering consultancy. Schaalbare data pipelines, cloud datawarehousing, dbt en Azure architectuur, gebouwd om jaren mee te gaan.",
   hero: {
     eyebrow: "Hoofdspecialisatie",
     heading: "Data engineering die de basis legt voor alles wat erna komt.",
     subheading:
-      "Een dashboard is net zo goed als de pipeline eronder. Ik bouw schaalbare, betrouwbare data architectuur waar je BI, analytics en AI op kunt vertrouwen.",
+      "Een dashboard is nooit beter dan de pipeline eronder. Ik bouw schaalbare, betrouwbare data-architectuur waar je BI, analytics en AI op kunt vertrouwen.",
   },
   problems: [
     "Pipelines breken regelmatig en er is geen alerting.",
@@ -428,8 +433,9 @@ export const dataEngineeringPage = {
   solution: {
     heading: "Een fundering die schaalt, niet weer een set losse oplossingen.",
     paragraphs: [
-      "Ik ontwerp en bouw moderne data architectuur op basis van bewezen patronen: ELT op een cloud datawarehouse, transformaties in dbt, orchestration via Azure Data Factory of Airflow, en geautomatiseerde tests en monitoring.",
-      "Het resultaat is een platform waar pipelines voorspelbaar lopen, business metrics één bron hebben, en jouw eigen team in staat is om verder te bouwen zonder afhankelijk te blijven van consultants.",
+      "Ik ontwerp en bouw moderne data-architectuur op basis van bewezen patronen: een gelaagde Medallion-architectuur (bronze, silver, gold), ELT op een cloud datawarehouse, geautomatiseerde tests en monitoring.",
+      "De tool maakt me niet zoveel uit. Het patroon eronder wel. Of je nu op Azure, AWS, Snowflake of Databricks zit: een goede laagopbouw, betrouwbare pipelines en heldere business definities zijn belangrijker dan welk logo op de stack staat. Ik adviseer wat in jouw situatie werkt en sluit aan op wat je al hebt.",
+      "Dat doe ik al meer dan tien jaar, onder andere bij Rabobank, waar de pipelines miljarden transacties verwerken. Het resultaat is een platform waar pipelines voorspelbaar lopen, business metrics één bron hebben, en je eigen team verder kan bouwen zonder afhankelijk te blijven van consultants.",
     ],
   },
   capabilities: [
@@ -439,19 +445,19 @@ export const dataEngineeringPage = {
         "Robuuste ingestion en transformatie van bronsystemen naar het datawarehouse, met idempotente runs, retries en alerting.",
     },
     {
-      title: "Cloud datawarehousing",
+      title: "Lakehouse",
       description:
-        "Architectuur en implementatie op Snowflake, Databricks, Azure Synapse of BigQuery, inclusief cost management en performance tuning.",
+        "Een gelaagde opbouw in bronze, silver en gold, zodat ruwe data, geschoonde data en business-klare modellen netjes gescheiden blijven. Het warehouse zelf is een keuze, het patroon staat vast.",
     },
     {
-      title: "Data modelling met dbt",
+      title: "Data modelling met Medallion-architectuur",
       description:
-        "Een gelaagd model (staging → intermediate → marts) met sources, tests, snapshots en documentatie. Eén centrale plek voor business metrics.",
+        "Een gelaagd model (bronze → silver → gold) met sources, tests, snapshots en documentatie. Eén centrale plek voor business metrics.",
     },
     {
       title: "Orchestration",
       description:
-        "DAG gedreven orchestration met Azure Data Factory, Airflow of Prefect. Inclusief observability en SLA bewaking.",
+        "DAG-gedreven orchestration met Azure Data Factory, dbt, Airflow of Prefect, inclusief observability en SLA-bewaking.",
     },
     {
       title: "Data quality & testing",
@@ -461,7 +467,7 @@ export const dataEngineeringPage = {
     {
       title: "CI/CD voor data",
       description:
-        "Git-gebaseerde workflows, automatische deploys, environment scheiding (dev/staging/prod) en peer review op datamodellen.",
+        "Git-gebaseerde workflows, automatische deploys, environment scheiding (dev/prod) en peer review op datamodellen.",
     },
     {
       title: "Documentation & lineage",
@@ -478,12 +484,12 @@ export const dataEngineeringPage = {
     {
       title: "Architectuur-review",
       description:
-        "We brengen in 1, 2 sessies je huidige stack, pijnpunten en doelarchitectuur in kaart.",
+        "In één of twee sessies brengen we je huidige stack, pijnpunten en doelarchitectuur in kaart.",
     },
     {
-      title: "Doel-architectuur op één A4",
+      title: "Doel-architectuur",
       description:
-        "Concrete blueprint, fasering en technologiekeuze, gericht op meetbare business outcomes per sprint.",
+        "Concrete blueprint, fasering en technologiekeuze, gericht op meetbare business outcomes.",
     },
     {
       title: "Iteratief bouwen",
@@ -493,7 +499,7 @@ export const dataEngineeringPage = {
     {
       title: "Overdracht",
       description:
-        "Documentatie, hands on coaching en pair engineering met je interne team. Zodat je het zelf overneemt.",
+        "Documentatie, hands-on coaching en pair engineering met je interne team, zodat je het zelf overneemt.",
     },
   ],
   outcomes: [
@@ -504,36 +510,50 @@ export const dataEngineeringPage = {
     "Een intern team dat zelfstandig kan doorbouwen, zonder vendor lock-in op consultants.",
   ],
   stack: [
-    "Azure (ADF, Synapse, Data Lake)",
-    "AWS (Glue, Redshift, S3)",
+    "Azure (ADF, Synapse, Fabric, ADLS Gen2)",
+    "AWS (Glue, Redshift, Athena, S3, SageMaker)",
+    "Google Cloud (BigQuery)",
     "Snowflake",
     "Databricks",
+    "Spark & PySpark",
     "dbt Core & dbt Cloud",
     "Airflow",
-    "Python & SQL",
+    "Python, SQL & R",
     "Terraform",
     "GitHub Actions / Azure DevOps",
   ],
   faqs: [
     {
-      q: "Wat is het verschil tussen ETL en ELT, en wat raad je aan?",
-      a: "Klassieke ETL transformeert data voordat hij in het warehouse landt. ELT laadt eerst de ruwe data in een cloud warehouse en doet de transformaties dáár, met SQL en dbt. Voor moderne cloudplatforms is ELT bijna altijd te prefereren: het is goedkoper, beter testbaar en sluit beter aan op moderne tooling.",
+      q: "Wat onderscheidt jouw aanpak van een grote consultancy?",
+      a: "Je werkt direct met de persoon die ontwerpt én bouwt. Geen partner op afstand, geen team van junioren achter een accountmanager. Mijn focus ligt op wat de business ermee kan, niet op welke tool het mooiste in een deck staat. We leveren iteratief werkende oplossingen, geen dik rapport dat na drie maanden in een la verdwijnt. En ik bouw bewust zó dat jouw team het zelfstandig kan voortzetten, zonder blijvende afhankelijkheid van DC Data Consultancy.",
     },
     {
-      q: "Welke cloud raad je aan: Azure, AWS of GCP?",
-      a: "Meestal volg ik de bestaande cloudstrategie van de organisatie. Bij financial services en publieke sector in Nederland is dat vaak Azure. Voor data intensieve workloads zijn Snowflake en Databricks cloud agnostisch en blijven ze een sterke keuze, ongeacht de onderliggende cloud.",
+      q: "Hoe ziet de start van een opdracht eruit?",
+      a: "Eerst stel ik de juiste vragen: waar zit de échte bottleneck, wat moet het opleveren voor finance, marketing of operations? Daarna volgt een korte discovery en een concreet plan op één A4: doelarchitectuur, fasering en verwacht resultaat per fase. Vervolgens ga ik hands-on bouwen in korte sprints. Liever na vier weken een werkende pipeline dan na vier maanden een perfect ontwerp op papier.",
+    },
+    {
+      q: "Kan mijn interne team het platform daarna zelf draaien?",
+      a: "Dat is expliciet het doel. Ik documenteer, review code samen met je team, doe pair engineering en geef kennisoverdracht waar dat nodig is. Geen black box, geen vendor lock-in. Als ik klaar ben, moet een ander data engineer het platform kunnen oppakken en blijven uitbreiden zonder mij.",
+    },
+    {
+      q: "Hoe kies je welke technologie past bij onze situatie?",
+      a: "Techniek is middel, geen doel. Ik kijk eerst naar jullie bestaande stack, skills in het team, volumes, budget en wat de business concreet nodig heeft. Daarna adviseer ik wat werkt, niet wat het meeste hype heeft. Vaak volg ik de cloudstrategie die er al is (in financial services vaak Azure), en kies ik voor cloud-agnostische tools als Snowflake of dbt waar dat de flexibiliteit vergroot.",
+    },
+    {
+      q: "Wat is het verschil tussen ETL en ELT, en wat raad je aan?",
+      a: "Bij klassieke ETL transformeer je data vóórdat hij in het warehouse landt. Bij ELT laad je eerst ruwe data in en transformeer je dáár met SQL en dbt. Voor moderne cloudplatforms is ELT vrijwel altijd de betere keuze: goedkoper, beter testbaar en makkelijker te onderhouden. De keuze hangt altijd af van jullie situatie. Ik leg uit waarom iets past, niet alleen wat de standaard is.",
+    },
+    {
+      q: "Doe je ook interim- of detacheringsrollen?",
+      a: "Ja. Naast projecten neem ik interim-rollen aan als senior of lead data engineer, meestal 4 tot 5 dagen per week, voor 3 tot 9 maanden. Dan zit ik midden in het team: bouwen, richting geven en collega's meenemen, zonder een laag consultants eromheen.",
     },
     {
       q: "Hoe zit het met data governance en privacy (AVG/GDPR)?",
-      a: "Governance is geen apart project, maar een eigenschap van het platform. Ik werk standaard met rolgebaseerde toegang, audit logs, encryptie at rest en in transit, en data classificatie via tools als Unity Catalog of Microsoft Purview. Voor PII werk ik met masking, tokenisatie en strikte access policies.",
+      a: "Governance hoort bij het platform, niet ernaast. Ik werk standaard met rolgebaseerde toegang, audit logs, encryptie en data classificatie via tools als Unity Catalog of Microsoft Purview. Voor persoonsgegevens: masking, tokenisatie en strikte access policies. Geen compliance-theater, wel afspraken die in de praktijk werken voor jullie team.",
     },
     {
-      q: "Doe je ook interim of detachering rollen?",
-      a: "Ja. Naast project gebaseerde opdrachten doe ik ook interim rollen als senior data engineer of lead data engineer. Typisch 3, 4 dagen per week voor 3, 9 maanden.",
-    },
-    {
-      q: "Wat onderscheidt jouw aanpak van een grote consultancy?",
-      a: "Je krijgt direct een senior aan tafel die zowel ontwerpt als bouwt. Geen team van junioren met een partner op afstand, maar één aanspreekpunt, kortere lijnen en lagere kosten.",
+      q: "Wat als we al een bestaand dataplatform hebben dat niet lekker loopt?",
+      a: "Dat is vaker de situatie dan een greenfield. Ik begin met een eerlijke review: wat houden, wat refactoren, wat stoppen. Geen rip-and-replace tenzij dat echt nodig is. Vaak levert gericht opschonen van pipelines, metrics en governance al snel vertrouwen terug, en scheelt het maanden discussie.",
     },
   ],
 } as const;
@@ -545,7 +565,7 @@ export const dataEngineeringPage = {
 export const dataAnalyticsPage = {
   slug: "data-analytics",
   title: "Data Analytics Consultancy",
-  metaTitle: "Data Analytics Consultancy | Power BI, Tableau & Semantic Layers",
+  metaTitle: "Data Analytics Consultancy | Power BI & Semantic Layers",
   metaDescription:
     "Data analytics consultancy gericht op heldere business metrics, self service dashboards en analytics engineering met dbt en Power BI.",
   hero: {
@@ -564,7 +584,7 @@ export const dataAnalyticsPage = {
   solution: {
     heading: "Analytics engineering: BI met software engineering discipline.",
     paragraphs: [
-      "Ik bouw een gemodelleerde laag in dbt waarin business metrics één keer worden gedefinieerd, en die door Power BI, Tableau of Looker wordt gebruikt. Zo voorkom je dat dezelfde KPI in vijf tools vijf verschillende waardes heeft.",
+      "Ik bouw een gemodelleerde laag in dbt waarin business metrics één keer worden gedefinieerd, en die door dashboards worden gebruikt. Zo voorkom je dat dezelfde KPI in vijf tools vijf verschillende waardes heeft.",
       "Het resultaat: dashboards die betrouwbaar zijn, een semantische laag die getest en gedocumenteerd is, en self service dat daadwerkelijk werkt.",
     ],
   },
@@ -580,9 +600,9 @@ export const dataAnalyticsPage = {
         "Van losse PBIX bestanden naar een schaalbare workspace structuur, met datasets, Apps en row level security.",
     },
     {
-      title: "Tableau & Looker",
+      title: "Management reporting",
       description:
-        "Implementatie en optimalisatie van Tableau Server, Tableau Cloud of Looker, inclusief LookML modellering.",
+        "KPI-dashboards voor directie en MT op dezelfde gemodelleerde metrics als operationele rapportages, zodat het board dezelfde cijfers ziet als finance en sales.",
     },
     {
       title: "KPI definitie & data dictionary",
@@ -626,110 +646,126 @@ export const dataAnalyticsPage = {
     "Geen handmatige Excel rapportages meer in de maandafsluiting.",
     "Self-service dat schaalt zonder data chaos.",
   ],
-  stack: ["Power BI", "Tableau", "Looker", "dbt", "Snowflake", "Databricks", "Azure Synapse"],
+  stack: ["Power BI", "dbt", "Snowflake", "Databricks", "Azure Synapse"],
   faqs: [
     {
-      q: "Werk je liever met Power BI of Tableau?",
-      a: "Allebei prima, ik kies wat past bij de organisatie. In Nederland, en zeker bij financial services, zie ik vaker Power BI vanwege de Microsoft stack. Voor zware visualisatie en data exploration heeft Tableau historisch een voorsprong.",
+      q: "Waarom modelleren in dbt vóór je Power BI dashboards bouwt?",
+      a: "Omdat business logic dan één keer in code staat (getest, gedocumenteerd en geversioneerd) in plaats van verspreid over tien PBIX-bestanden. Power BI wordt de presentatielaag; dbt is de plek waar je definieert wat omzet, marge of churn precies betekent. Zo voorkom je dat finance en sales elk hun eigen versie van de waarheid hebben.",
     },
     {
-      q: "Wat is analytics engineering precies?",
-      a: "Het toepassen van software engineering principes (versiebeheer, testing, CI/CD, modulariteit) op het transformeren en modelleren van data voor analytics. dbt is hierin de standaard geworden.",
+      q: "Hoe pak je conflicterende KPI-definities aan?",
+      a: "Niet met een tool, maar met mensen. In werksessies met finance, sales en operations brengen we eerst de definities op één lijn: grain, uitsluitingen, timing. Pas als iedereen het eens is, leggen we het vast in dbt. Techniek is zelden het probleem; misverstand over wat een metric betekent wel.",
     },
     {
-      q: "Hoe pak je conflicterende KPI definities aan?",
-      a: "In werksessies met stakeholders. Het gaat zelden om de techniek, maar erom dat finance, sales en operations het eens worden over de definitie. Pas dan leggen we het vast in code.",
+      q: "We hebben al tientallen Power BI-rapporten. Moet alles opnieuw?",
+      a: "Nee. Ik begin met een inventarisatie: welke rapporten worden echt gebruikt, welke metrics zitten erin, en waar conflicteren ze? Vaak is het slim om te starten met één kritieke KPI-set (bijvoorbeeld omzet of pipeline) en daar de semantic layer op te bouwen. Bestaande dashboards migreren we gefaseerd, niet in één big bang.",
+    },
+    {
+      q: "Kunnen business users zelf rapporten maken zonder de data te corrumperen?",
+      a: "Ja, mits de onderliggende laag goed is ingericht. Met geteste marts, duidelijke documentatie en row level security kunnen analisten en afdelingen zelfstandig werken, binnen de kaders die we afspreken. Self-service werkt alleen als de fundering klopt; anders krijg je weer losse Excel-varianten.",
+    },
+    {
+      q: "Wat is analytics engineering, en wat levert het ons op?",
+      a: "Analytics engineering is data modelleren met de discipline van software engineering: versiebeheer, tests, CI/CD en documentatie. In de praktijk betekent dat: één betrouwbare set business metrics, minder discussie over cijfers, en dashboards waar je op kunt sturen in plaats van alleen mooie visualisaties.",
+    },
+    {
+      q: "Moeten onze data pipelines eerst op orde zijn?",
+      a: "Idealiter wel. Analytics op rommelige of onbetrouwbare data levert dashboards op die niemand vertrouwt. Soms pak ik beide parallel aan: de eerste metrics en dashboards voor directe waarde, én gerichte verbeteringen aan de pipelines eronder. Ik ben eerlijk over waar de bottleneck zit. Dat scheelt verrassingen later.",
+    },
+    {
+      q: "Hoe snel zien we iets werkends?",
+      a: "Na een korte KPI-inventarisatie en een eerste gemodelleerde laag in dbt kan er binnen enkele weken een dashboard staan dat de directie daadwerkelijk gebruikt. Liever iteratief opleveren dan maanden modelleren zonder iets te tonen. Het eerste resultaat is vaak klein, maar wel betrouwbaar.",
     },
   ],
 } as const;
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SERVICE PAGE — DATA SCIENCE
+// SERVICE PAGE — ANALYTICS ENGINEERING
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const dataSciencePage = {
-  slug: "data-science",
-  title: "Data Science & AI Consultancy",
-  metaTitle: "Data Science Consultancy | AI in productie, niet in PoC-land",
+export const analyticsEngineeringPage = {
+  slug: "analytics-engineering",
+  title: "Analytics Engineering Consultancy",
+  metaTitle: "Analytics Engineering Consultancy | Betrouwbare metrics en marts",
   metaDescription:
-    "Data science en AI consultancy gericht op productiewaardige forecasting, churn-, anomaly- en NLP modellen op een solide dataplatform.",
+    "Senior analytics engineering consultant. dbt modellering, geteste marts, semantic layers en business metrics die BI en stakeholders vertrouwen.",
   hero: {
-    eyebrow: "AI in productie",
-    heading: "Data science die landt in de operatie, niet alleen in een notebook.",
+    eyebrow: "Analytics engineering",
+    heading: "Data die niet alleen technisch klopt, maar ook betekenis heeft voor de business.",
     subheading:
-      "Forecasting, churn prediction en anomaly detection, gebouwd op een dataplatform dat productie aankan en geïntegreerd in jouw bestaande processen.",
+      "De brug tussen raw data en betrouwbare business metrics: modulair, getest, gedocumenteerd en klaar voor BI, self-service en downstream analytics.",
   },
   problems: [
-    "Notebooks die lokaal draaien maar nergens in productie staan.",
-    "Modellen die elke maand handmatig worden hertraind.",
-    "Geen monitoring op model drift of data quality issues.",
-    "Slechte features omdat de onderliggende data niet getransformeerd is.",
-    "Business adoptie blijft uit: het model bestaat, maar wordt niet gebruikt.",
+    "Twee dashboards, twee omzetten, en niemand weet welk cijfer klopt.",
+    "SQL-spagetti in losse scripts zonder versiebeheer, tests of documentatie.",
+    "Business logic leeft in Power BI of Excel, niet in een gedeelde modellaag.",
+    "Data engineers leveren tabellen die analytics niet begrijpt; analytics kopieert data opnieuw.",
+    "KPI-definities zitten in hoofden en Slack-threads, niet in code.",
   ],
   solution: {
-    heading: "MLOps light: model in productie, business in de lead.",
+    heading: "Analytics engineering als discipline, niet als afterthought.",
     paragraphs: [
-      "Ik bouw data science oplossingen die direct gekoppeld zijn aan het dataplatform, met versiebeheer, automatische retraining en monitoring. Zo voorkom je dat een model na drie maanden stilletjes irrelevant wordt.",
-      "Belangrijker nog: de modellen zijn ontworpen rondom een concrete businessbeslissing. Geen ‘AI-omdat-het-kan’, maar voorspellingen die direct in operationele processen worden gebruikt.",
+      "Ik modelleer data in gelaagde, geteste tabellen volgens de Medallion-architectuur (van bronze via silver naar gold), waar business logic één keer wordt vastgelegd en overal hetzelfde uitkomt.",
+      "Met dbt, CI/CD en documentatie krijg je een single source of truth waar finance, marketing en operations op kunnen sturen, zonder elke maand opnieuw te discussiëren over definities.",
     ],
   },
   capabilities: [
     {
-      title: "Forecasting & demand planning",
+      title: "Metric & KPI modellering",
       description:
-        "Tijdreeksen op basis van historie, seizoenseffecten en externe drivers, voor sales, vraag, voorraad of capaciteit.",
+        "Business metrics vastleggen in code, met duidelijke definities, grain en aggregatielogica die stakeholders begrijpen.",
     },
     {
-      title: "Churn & retention modeling",
+      title: "Gelaagde modellering",
       description:
-        "Voorspellen welke klanten gaan vertrekken en welke acties impact hebben, met heldere business logic eromheen.",
+        "Bronze → silver → gold: modulair, herbruikbaar en schaalbaar van tientallen naar honderden modellen.",
     },
     {
-      title: "Anomaly detection",
+      title: "dbt project design",
       description:
-        "Realtime of batch anomalie detectie voor fraude, monitoring of operationele incidenten.",
+        "Projectstructuur, naming conventions, sources, exposures en packages. Een codebase die andere engineers snel oppakken.",
     },
     {
-      title: "Classificatie & scoring",
+      title: "Testing & data quality",
       description:
-        "Klantscoring, lead scoring en credit scoring: productiemodellen met explainability.",
+        "Generic tests, singular tests, freshness checks en Great Expectations. Regressies vangen voordat ze in BI landen.",
     },
     {
-      title: "MLOps fundamenten",
+      title: "Semantic layer & BI-aansluiting",
       description:
-        "Model versioning, automatische retraining, monitoring op drift en performance, en duidelijke incident response.",
+        "Marts en exposures die naadloos aansluiten op Power BI, Looker of Tableau, zonder dubbele logica in het dashboard.",
     },
     {
-      title: "NLP & document intelligence",
+      title: "Documentation & lineage",
       description:
-        "Tekstanalyse op klantfeedback, contracten en interne documenten, inclusief moderne LLM-gebaseerde aanpakken waar dat past.",
+        "dbt docs als interne data catalog: waar komt een metric vandaan, wie is de eigenaar, welke downstream rapporten hangen eraan?",
     },
   ],
   process: [
-    { title: "Business case", description: "Welke beslissing moet het model ondersteunen?" },
-    { title: "Feature engineering", description: "Modellering vanuit het dataplatform, geen losse exports." },
-    { title: "Model & validatie", description: "Iteratief modelleren, met statistisch verantwoorde validatie." },
-    { title: "Productie & monitoring", description: "Deployment, monitoring en herhalingsproces." },
+    { title: "Metrics audit", description: "Welke KPI's bestaan er, waar leven ze nu en waar conflicteren ze?" },
+    { title: "Modellering & conventies", description: "Folderstructuur, naming, grain en tests: de spelregels voor het team." },
+    { title: "Bouwen & migreren", description: "Marts opbouwen of legacy SQL migreren, met peer review en CI/CD." },
+    { title: "Enablement", description: "Workshops zodat het interne team zelfstandig analytics engineering toepast." },
   ],
   outcomes: [
-    "Concrete businessbeslissingen ondersteund door modellen die werken.",
-    "Voorspellingen die niet stilletjes verouderen.",
-    "Engineering-discipline rondom data science, niet alleen losse experimenten.",
-    "Een team dat snapt wat het model doet en wanneer je het niet moet vertrouwen.",
+    "Eén set cijfers waar de hele organisatie op vertrouwt.",
+    "Business logic die getest, geversioneerd en gedocumenteerd is.",
+    "Minder tijd aan definities-discussies, meer tijd aan sturen op data.",
+    "Een team dat zelfstandig marts en metrics kan uitbreiden.",
   ],
-  stack: ["Python", "scikit-learn", "PyTorch", "MLflow", "Databricks", "Azure ML", "dbt"],
+  stack: ["dbt Core", "dbt Cloud", "Snowflake", "Databricks", "BigQuery", "Redshift", "Power BI", "Looker", "GitHub Actions"],
   faqs: [
     {
-      q: "Wanneer is AI een goede investering, en wanneer niet?",
-      a: "AI loont wanneer een beslissing herhaald wordt, voldoende data beschikbaar is en de kosten van een fout te kwantificeren zijn. Zonder die drie ingrediënten is investeren in een goed dataplatform vaak waardevoller.",
+      q: "Wat is analytics engineering precies?",
+      a: "Analytics engineering is het transformeren van ruwe data naar betrouwbare, business-georiënteerde tabellen met engineering-discipline: versiebeheer, testing, documentatie en CI/CD. Het is de brug tussen data engineering (pipelines) en data analytics (BI en rapportages).",
     },
     {
-      q: "Hoe zit het met generatieve AI / LLM's?",
-      a: "Voor klassieke voorspelproblemen (forecasting, churn, scoring) blijven tabulaire ML modellen vaak superieur. Voor tekstanalyse, document intelligence en chatbots zijn LLM's de juiste keuze. Ik help met de afweging.",
+      q: "Hoe verschilt dit van dbt consultancy?",
+      a: "dbt consultancy richt zich op het dbt-project zelf: structuur, macros, CI/CD. Analytics engineering is breder: metric-definities met stakeholders, modelleringstrategie, BI-aansluiting en het opzetten van analytics engineering als manier van werken in je team. Vaak overlap, want dbt is mijn primaire tool.",
     },
     {
-      q: "Moeten we eerst onze data op orde hebben?",
-      a: "Voor een PoC niet altijd. Voor productie absoluut. Anders bouw je een model dat constant breekt op datakwaliteit. In de praktijk doe ik vaak parallel: een eerste model én een fundament onder het platform.",
+      q: "Hebben we eerst data engineering nodig?",
+      a: "Ideaal wel: analytics engineering bouwt op betrouwbare, tijdige data. Zonder solide pipelines en een warehouse wordt modelleren een constant vechten tegen datakwaliteit. In de praktijk pak ik beide vaak in één traject aan.",
     },
   ],
 } as const;
@@ -821,13 +857,13 @@ export const dbtConsultancyPage = {
   solution: {
     heading: "Een dbt project dat als professionele codebase werkt.",
     paragraphs: [
-      "Ik implementeer dbt projecten volgens bewezen best practices: gelaagde modellering (staging, intermediate, marts), naming conventions, geautomatiseerde tests, CI/CD pipelines en duidelijke documentatie.",
-      "Zo wordt dbt geen bottleneck, maar de centrale plek waar business logic getest en gedocumenteerd ligt.",
+      "Ik implementeer dbt projecten volgens bewezen best practices: een gelaagde modellering volgens de Medallion-architectuur (bronze, silver, gold), naming conventions, geautomatiseerde tests, CI/CD pipelines en duidelijke documentatie.",
+      "Welk warehouse eronder ligt maakt niet uit. dbt draait net zo goed op Snowflake, Databricks, BigQuery, Synapse of Redshift. Het gaat om de laagopbouw en de discipline, niet om de tool. Zo wordt dbt geen bottleneck, maar de centrale plek waar business logic getest en gedocumenteerd ligt.",
     ],
   },
   capabilities: [
     { title: "Project bootstrapping", description: "Setup van dbt Core of dbt Cloud, profile management, environment scheiding." },
-    { title: "Modelleer-strategie", description: "Staging → intermediate → marts aanpak. Sources, snapshots, exposures." },
+    { title: "Medallion-modellering", description: "Bronze → silver → gold, met sources, snapshots en exposures." },
     { title: "Testing", description: "Generic tests, singular tests, freshness tests, Great Expectations." },
     { title: "CI/CD", description: "GitHub Actions / Azure DevOps pipelines voor build, test en deploy van dbt." },
     { title: "Documentation", description: "dbt docs als interne data catalog, met sources en exposures." },
@@ -847,7 +883,7 @@ export const dbtConsultancyPage = {
     "Eén plek voor business metrics, gedocumenteerd en geversioneerd.",
     "Een team dat zelfstandig analytics engineering kan toepassen.",
   ],
-  stack: ["dbt Core", "dbt Cloud", "Snowflake", "Databricks", "BigQuery", "Redshift", "GitHub Actions", "Azure DevOps"],
+  stack: ["dbt Core", "dbt Cloud", "Snowflake", "Databricks", "BigQuery", "Azure Synapse", "Redshift", "Airflow", "GitHub Actions", "Azure DevOps"],
   faqs: [
     {
       q: "dbt Core of dbt Cloud?",
@@ -855,11 +891,27 @@ export const dbtConsultancyPage = {
     },
     {
       q: "Hoe structureer je een dbt project goed?",
-      a: "De dbt best practice is een gelaagde aanpak: 'staging' (1:1 cleaning per bron), 'intermediate' (herbruikbare berekeningen), 'marts' (business-georiënteerde tabellen). Hou folders per bron en per business domein, gebruik consistente naming en zorg voor tests op iedere mart.",
+      a: "Met een gelaagde aanpak volgens de Medallion-architectuur: bronze (1:1 cleaning per bron), silver (herbruikbare berekeningen) en gold (business-georiënteerde tabellen). Hou folders per bron en per business domein, gebruik consistente naming en zorg voor tests op iedere laag.",
     },
     {
       q: "Heeft dbt zin als we al een datawarehouse hebben?",
-      a: "Vaak juist dan. dbt vervangt geen warehouse. het is de transformatielaag erop. Je krijgt versiebeheer, testing en documentatie, terwijl je bestaande Snowflake, Databricks of Synapse blijft gebruiken.",
+      a: "Vaak juist dan. dbt vervangt geen warehouse, het is de transformatielaag erop. Je krijgt versiebeheer, testing en documentatie, terwijl je bestaande Snowflake, Databricks of Synapse blijft gebruiken.",
+    },
+    {
+      q: "Hoe zorg je dat een dbt project betrouwbaar blijft?",
+      a: "Met tests die meelopen op iedere run: uniqueness, niet-null, referentiële integriteit en freshness, aangevuld met singular tests op kritieke business logic. Een wijziging die iets stuk maakt, valt door de CI heen en komt niet in productie. Zo blijft het project betrouwbaar, ook als het team groeit.",
+    },
+    {
+      q: "Kun je CI/CD opzetten voor ons dbt project?",
+      a: "Ja. Ik richt pipelines in op GitHub Actions of Azure DevOps die bij iedere pull request de modellen bouwen en testen, met aparte omgevingen voor dev, staging en productie. Deploys worden voorspelbaar en herhaalbaar, geen handmatig draaien meer op de productie-database.",
+    },
+    {
+      q: "Kun je een bestaand dbt project overnemen of opschonen?",
+      a: "Dat is vaak de situatie. Ik begin met een audit: wat houden, wat refactoren, wat weg. Daarna breng ik structuur, tests en documentatie aan, stap voor stap, zonder dat het team stilvalt. Het doel is dat je eigen mensen er daarna zelfstandig op verder kunnen.",
+    },
+    {
+      q: "Werk je dbt projecten zelf uit of leer je ons team het ook?",
+      a: "Allebei. Ik bouw hands-on mee, maar werk bewust zo dat je team het overneemt: pair programming, code reviews en korte workshops over modellering, testing en conventies. Geen afhankelijkheid van mij als ik weer weg ben.",
     },
   ],
 } as const;
@@ -913,7 +965,7 @@ export const azureDataEngineeringPage = {
   outcomes: [
     "Een Azure platform met overzicht en voorspelbare kosten.",
     "Pipelines die getest en gedeployd worden via CI/CD.",
-    "Een lakehouse waar BI, data science en data engineering op samenkomen.",
+    "Een lakehouse waar BI, analytics engineering en data engineering op samenkomen.",
     "Een team dat zelfstandig op Azure verder kan bouwen.",
   ],
   stack: [
@@ -1006,12 +1058,13 @@ export const aboutPage = {
       ],
     },
     {
-      area: "Data Science",
+      area: "Analytics Engineering",
       items: [
-        "Forecasting & demand planning",
-        "Churn prediction & customer scoring",
-        "Anomaly & fraud detection",
-        "MLOps fundamenten (MLflow, retraining, monitoring)",
+        "dbt modellering (Medallion: bronze, silver, gold)",
+        "Metric & KPI definitie met stakeholders",
+        "Testing, documentatie en CI/CD",
+        "Semantic layers voor Power BI en Looker",
+        "Data quality en lineage",
       ],
     },
     {
@@ -1078,7 +1131,7 @@ export const bredaPage = {
       "dbt implementatie en analytics engineering",
       "Azure en Databricks data engineering",
       "Power BI architectuur en semantic layers",
-      "Data science (forecasting, churn, anomaly detection)",
+      "Analytics engineering (dbt, marts, semantic layers)",
       "Interim rollen als senior of lead data engineer",
     ],
   },

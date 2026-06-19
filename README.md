@@ -70,7 +70,7 @@ app/
     page.tsx                      # Services index
     data-engineering/page.tsx     # Flagship service
     data-analytics/page.tsx
-    data-science/page.tsx
+    analytics-engineering/page.tsx
     modern-data-stack/page.tsx
     dbt-consultancy/page.tsx
     azure-data-engineering/page.tsx
@@ -124,7 +124,7 @@ Alle teksten staan centraal in [lib/site-content.ts](lib/site-content.ts). Blogi
 ## Positionering
 
 - **Primary:** senior data engineering consultancy
-- **Secondary:** data analytics, data science
+- **Secondary:** data analytics, analytics engineering
 - Locatie: **Breda**, Nederland
 - Actief sinds: **2021** (ervaring sinds 2016)
 

@@ -180,7 +180,7 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
   const all = [
     { slug: "data-engineering", title: "Data Engineering", desc: "Schaalbare pipelines en cloud datawarehousing." },
     { slug: "data-analytics", title: "Data Analytics", desc: "Heldere business metrics en self service BI." },
-    { slug: "data-science", title: "Data Science", desc: "Forecasting, churn en anomaly detection in productie." },
+    { slug: "analytics-engineering", title: "Analytics Engineering", desc: "Geteste marts, metrics en semantic layers voor BI." },
     { slug: "modern-data-stack", title: "Modern Data Stack", desc: "Coherente architectuur, geen verzameling losse tools." },
     { slug: "dbt-consultancy", title: "dbt Consultancy", desc: "Analytics engineering met dbt best practices." },
     { slug: "azure-data-engineering", title: "Azure Data Engineering", desc: "ADF, Synapse, Databricks en Fabric." },

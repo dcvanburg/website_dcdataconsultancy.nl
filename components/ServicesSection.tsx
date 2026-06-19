@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   Database,
   BarChart2,
-  Cpu,
+  GitBranch,
   Layers,
   ArrowRight,
   type LucideIcon,
@@ -13,7 +13,7 @@ import Reveal from "@/components/ui/Reveal";
 const ICONS: Record<string, LucideIcon> = {
   Database,
   BarChart2,
-  Cpu,
+  GitBranch,
   Layers,
 };
 

@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Diensten | Senior Data Engineering Consultancy",
   description:
-    "Data engineering, analytics, data science, dbt en Azure data engineering door een senior consultant uit Breda. Bekijk alle diensten van DC Data Consultancy.",
+    "Data engineering, analytics engineering, dbt en Azure data engineering door een senior consultant uit Breda. Bekijk alle diensten van DC Data Consultancy.",
   alternates: { canonical: `${siteConfig.url}/diensten` },
 };
 
@@ -43,15 +43,15 @@ const services = [
     ],
   },
   {
-    title: "Data Science",
-    slug: "data-science",
-    tagline: "AI in productie",
+    title: "Analytics Engineering",
+    slug: "analytics-engineering",
+    tagline: "Betrouwbare metrics",
     description:
-      "Forecasting, churn prediction, anomaly detection. Productiemodellen, geen losse notebooks.",
+      "Gelaagde modellering, dbt marts en semantic layers. Eén bron van waarheid waar BI op vertrouwt.",
     bullets: [
-      "Forecasting en demand planning",
-      "Churn en customer scoring",
-      "MLOps fundamenten",
+      "Metric & KPI modellering",
+      "Staging → intermediate → marts",
+      "Testing, docs en CI/CD",
     ],
   },
   {
@@ -106,8 +106,8 @@ export default function DienstenPage() {
 
         <PageHero
           eyebrow="DIENSTEN"
-          heading="Senior data engineering, analytics en science vanuit één consultancy."
-          subheading="Mijn focus ligt op data engineering. Analytics en data science werken alleen als die fundering klopt. Hieronder de zes specialismen waarin ik werk."
+          heading="Senior data engineering en analytics engineering vanuit één consultancy."
+          subheading="Mijn focus ligt op data engineering. Analytics engineering werkt alleen als die fundering klopt. Hieronder de zes specialismen waarin ik werk."
           primaryCta={{ label: "Plan een kennismaking", href: "/contact" }}
           secondaryCta={{ label: "Bekijk cases", href: "/cases" }}
         />

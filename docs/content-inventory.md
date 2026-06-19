@@ -59,7 +59,7 @@ Crawled: 2026-06-13
 - Data Engineering (Extract Transform Load — ETL)
 - Data Analyse
 - Dashboarding
-- Data Science (AI)
+- Analytics Engineering (dbt, marts, semantic layers)
 
 ### Mijn projecten
 - Gulf

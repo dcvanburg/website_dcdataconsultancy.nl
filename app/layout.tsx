@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     "Databricks consultant",
     "data analytics consultancy",
     "Power BI consultant",
-    "data science consultant",
+    "analytics engineering consultant",
   ],
   authors: [{ name: "Dennis van Burg", url: siteConfig.linkedin }],
   creator: "Dennis van Burg",
