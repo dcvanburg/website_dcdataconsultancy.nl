@@ -7,7 +7,7 @@ export const siteConfig = {
   shortName: "DC Data",
   tagline: "Senior Data Engineering Consultancy",
   proposition:
-    "Schaalbare, betrouwbare en business driven dataplatforms voor organisaties die meer uit data willen halen.",
+    "Schaalbare, betrouwbare dataplatforms voor organisaties die meer uit hun data willen halen.",
   url: "https://www.dcdataconsultancy.nl",
   email: "dennis@dcdataconsultancy.nl",
   linkedin: "https://www.linkedin.com/in/dennisvanburg/",
@@ -57,9 +57,9 @@ export const footerNav = {
 
 export const hero = {
   badge: "SENIOR DATA ENGINEERING · BREDA · NL",
-  heading: "Dataplatforms waar je écht op kunt bouwen.",
+  heading: "Een dataplatform dat doet wat het belooft.",
   subheading:
-    "Senior data engineering consultancy uit Breda, voor organisaties die meer uit hun data willen halen. Ik bouw schaalbare, betrouwbare data architectuur waar je BI, analytics en AI op kunt vertrouwen.",
+    "Ik ben Dennis: freelance senior data specialist uit Breda. Al meer dan tien jaar bouw ik datapipelines en platforms waar BI, analytics en AI op kunnen draaien. Hands-on, samen met je team, met het resultaat voor ogen.",
   primaryCta: { label: "Plan een kennismaking", href: "/contact" },
   secondaryCta: { label: "Lees over data engineering", href: "/diensten/data-engineering" },
   trustBar: {
@@ -71,9 +71,9 @@ export const hero = {
 export const problemSection = {
   sectionId: "uitdagingen",
   eyebrow: "Herkenbaar?",
-  heading: "Data zou een asset moeten zijn. Vaak is het een hoofdpijndossier.",
+  heading: "Data zou moeten helpen. Vaak kost het vooral tijd.",
   intro:
-    "Tijdens elke kennismaking kom ik dezelfde verhalen tegen. Niet omdat teams niet hard werken, wel omdat de fundering onder de dataomgeving nooit goed is gelegd.",
+    "In vrijwel elke kennismaking hoor ik dezelfde verhalen. Niet omdat teams niet hard werken, maar omdat de fundering onder de dataomgeving nooit goed is gelegd.",
   problems: [
     {
       title: "Cijfers die niet kloppen",
@@ -88,7 +88,7 @@ export const problemSection = {
     {
       title: "Trage analyses",
       description:
-        "Een simpele vraag van de business kost twee weken. terwijl de markt al verder is.",
+        "Een simpele vraag uit de business kost twee weken, terwijl de markt allang verder is.",
     },
     {
       title: "Versplinterde data",
@@ -111,9 +111,9 @@ export const problemSection = {
 export const offerSection = {
   sectionId: "aanpak",
   eyebrow: "Wat ik doe",
-  heading: "Ik help je bouwen aan een dataplatform dat schaalt met je business.",
+  heading: "Een dataplatform dat meegroeit met je organisatie.",
   intro:
-    "Geen losse projecten of speeltjes, maar een fundering die jaren meegaat. Mijn focus ligt op data engineering. analytics en data science werken alleen als die fundering klopt.",
+    "Geen losse projecten, maar een fundering die jaren meegaat. Mijn focus ligt op data engineering: analytics en data science werken alleen als die basis klopt.",
   pillars: [
     {
       number: "01",
@@ -138,7 +138,7 @@ export const offerSection = {
       title: "Data Science",
       tagline: "AI die landt in de operatie",
       description:
-        "Forecasting, churn prediction en anomaly detection. gebouwd op een dataplatform dat productie aankan, niet op een notebook dat lokaal draait.",
+        "Forecasting, churn prediction en anomaly detection, gebouwd op een platform dat productie aankan. Niet een notebook dat alleen lokaal draait.",
       href: "/diensten/data-science",
       primary: false,
     },
@@ -148,9 +148,9 @@ export const offerSection = {
 export const techStack = {
   sectionId: "stack",
   eyebrow: "Modern Data Stack",
-  heading: "Technologie die de business ondersteunt, niet andersom.",
+  heading: "Technologie in dienst van de business, niet andersom.",
   intro:
-    "Ik werk technologie agnostisch, maar adviseer wat in jouw context werkt. Geen hype, geen vendor lock in zonder reden.",
+    "Ik ben niet aan één tool getrouwd en adviseer wat in jouw situatie werkt. Geen hype, geen vendor lock-in zonder goede reden.",
   categories: [
     {
       name: "Cloud platforms",
@@ -181,13 +181,13 @@ export const techStack = {
 
 export const aboutSection = {
   sectionId: "over-dennis",
-  eyebrow: "Wie staat er achter DC Data Consultancy?",
-  heading: "Dennis van Burg. senior data engineering consultant.",
-  role: "Founder · Senior Data Engineering Consultant",
+  eyebrow: "Wie ben ik",
+  heading: "Dennis van Burg, senior data specialist.",
+  role: "Eigenaar · Senior Data Specialist",
   bio: [
-    "Sinds 2016 werk ik aan dataproblemen die er écht toe doen. In 2021 ben ik DC Data Consultancy gestart om als zelfstandige senior consultant opdrachtgevers te helpen die niet zomaar een paar handjes nodig hebben, maar iemand die kan ontwerpen, bouwen, vragen stellen en richting geven.",
-    "Mijn werk speelt zich af op het snijvlak van engineering en business. Ik bouw geen pipelines om de pipelines. ik bouw ze omdat de financeafdeling op maandag op de juiste cijfers moet kunnen vertrouwen, omdat marketing wil weten welke campagnes werken en omdat de directie de strategie wil onderbouwen met data in plaats van met aannames.",
-    "Vanuit Breda werk ik door heel Nederland, vooral voor opdrachtgevers in financial services, logistiek, vastgoed, energie en publieke sector. Hands-on, technisch sterk, en met de communicatieve vaardigheden om stakeholders mee te nemen.",
+    "Sinds 2016 werk ik aan datavraagstukken die ertoe doen. In 2021 startte ik DC Data Consultancy, om opdrachtgevers te helpen die niet zoeken naar een paar extra handen, maar naar iemand die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
+    "Mijn werk zit op het snijvlak van engineering en business. Ik bouw geen pipelines om de pipelines, maar omdat finance op maandag op de cijfers moet kunnen rekenen, omdat marketing wil weten wat werkt en omdat de directie wil sturen op data in plaats van op aannames.",
+    "Ik werk graag over afdelingen heen, met het teamresultaat voor ogen. Daar haal ik energie uit: samen complexe vraagstukken aanpakken en dingen voor elkaar krijgen. Vanuit Breda werk ik door heel Nederland, vooral in financial services, logistiek, vastgoed, energie en publieke sector.",
   ],
   highlights: [
     { value: "10+", label: "jaar ervaring in data" },
@@ -202,17 +202,17 @@ export const aboutSection = {
     "Energie",
     "Publieke sector",
   ],
-  profileImage: "/images/profile-dennis.jpg",
-  profileImageAlt: "Dennis van Burg. senior data engineering consultant bij DC Data Consultancy",
+  profileImage: "/images/profile-dennis.png",
+  profileImageAlt: "Dennis van Burg, senior data specialist bij DC Data Consultancy",
   cta: { label: "Lees meer over Dennis", href: "/over-dennis" },
 } as const;
 
 export const processSection = {
   sectionId: "proces",
   eyebrow: "Aanpak",
-  heading: "Geen powerpoint-strategie. Werkende oplossingen.",
+  heading: "Geen powerpoint-strategie, maar werkende oplossingen.",
   intro:
-    "Strategie en uitvoering zijn één ding bij mij. Ik schrijf niet eerst een dik adviesrapport om vervolgens te verdwijnen. ik ontwerp, bouw, draag over en zorg dat je team het overneemt.",
+    "Bij mij zijn strategie en uitvoering hetzelfde traject. Ik schrijf geen dik adviesrapport om daarna te verdwijnen, maar ontwerp, bouw, draag over en zorg dat je team het overneemt.",
   steps: [
     {
       number: "01",
@@ -230,7 +230,7 @@ export const processSection = {
       number: "03",
       title: "Bouwen",
       description:
-        "Hands-on engineering. Iteratief opleveren in sprints, met directe waarde. geen big bang na zes maanden.",
+        "Hands-on engineering. Iteratief opleveren in sprints met directe waarde, geen big bang na zes maanden.",
     },
     {
       number: "04",
@@ -242,7 +242,7 @@ export const processSection = {
 } as const;
 
 export const quote = {
-  text: "Techniek is altijd een middel, nooit een doel. Wat de business kan met de oplossing telt zwaarder dan welke tool we kiezen.",
+  text: "To ask the right question is harder than to answer it.",
   attribution: "DENNIS VAN BURG · WERKPRINCIPE",
 } as const;
 
@@ -251,12 +251,12 @@ export const aiUseCases = {
   eyebrow: "AI & Data Science",
   heading: "Wat een goed dataplatform mogelijk maakt.",
   intro:
-    "AI is geen knop. Het is wat je krijgt als je dataplatform op orde is. Een paar concrete toepassingen waar ik voor opdrachtgevers aan heb gewerkt:",
+    "AI is geen knop die je omzet. Het is wat je krijgt als je dataplatform op orde is. Een paar toepassingen waar ik voor opdrachtgevers aan heb gewerkt:",
   cases: [
     {
       title: "Demand & sales forecasting",
       description:
-        "Voorspel toekomstige vraag of omzet op basis van historische patronen, seizoenseffecten en externe factoren. om voorraad, planning en budgettering aan te scherpen.",
+        "Voorspel toekomstige vraag of omzet op basis van historische patronen, seizoenseffecten en externe factoren, om voorraad, planning en budgettering aan te scherpen.",
       icon: "TrendingUp",
     },
     {
@@ -274,7 +274,7 @@ export const aiUseCases = {
     {
       title: "Recommendation engines",
       description:
-        "Persoonlijke aanbevelingen voor klanten op basis van gedrag, voorkeuren en context. die ook daadwerkelijk in productie draaien.",
+        "Persoonlijke aanbevelingen voor klanten op basis van gedrag, voorkeuren en context, die ook daadwerkelijk in productie draaien.",
       icon: "Star",
     },
     {
@@ -289,7 +289,7 @@ export const aiUseCases = {
 export const services = {
   sectionId: "diensten",
   heading: "Diensten",
-  subheading: "Data engineering staat centraal. Analytics en science bouwen daarop.",
+  subheading: "Data engineering staat centraal, analytics en science bouwen daarop voort.",
   items: [
     {
       title: "Data Engineering",
@@ -312,7 +312,7 @@ export const services = {
       title: "Data Science",
       tagline: "AI in productie, niet in PoC-land",
       description:
-        "Forecasting, classificatie en anomaly detection. geïntegreerd in een productiewaardig dataplatform.",
+        "Forecasting, classificatie en anomaly detection, geïntegreerd in een productiewaardig dataplatform.",
       icon: "Cpu",
       href: "/diensten/data-science",
     },
@@ -332,7 +332,7 @@ export const projects = {
   eyebrow: "Track record",
   heading: "Gewerkt voor partijen die data serieus nemen.",
   intro:
-    "Een greep uit de opdrachtgevers van de afgelopen jaren. van retailbanken en verzekeraars tot logistieke en publieke organisaties.",
+    "Een greep uit de opdrachtgevers van de afgelopen jaren, van retailbanken en verzekeraars tot logistieke en publieke organisaties.",
   clients: [
     { name: "Gulf", logo: "/images/logo-gulf.png" },
     { name: "de Volksbank", logo: "/images/logo-volksbank.jpg" },
@@ -348,10 +348,10 @@ export const projects = {
 } as const;
 
 export const testimonialsSection = {
-  eyebrow: "Hoe klanten DC Data Consultancy ervaren",
-  heading: "Senior, hands on en business aware.",
+  eyebrow: "Wat opdrachtgevers zeggen",
+  heading: "Senior, hands-on en met oog voor de business.",
   intro:
-    "Een korte greep uit de feedback die ik in de afgelopen jaren van opdrachtgevers en collega's heb gekregen.",
+    "Een greep uit de feedback die ik de afgelopen jaren van opdrachtgevers en collega's kreeg.",
   quotes: [
     {
       text: "Dennis denkt vanuit de business én bouwt zelf de oplossing. Die combinatie is zeldzaam, en exact wat we nodig hadden om ons data domein op te zetten.",
@@ -373,7 +373,7 @@ export const contactSection = {
   eyebrow: "Aan de slag",
   heading: "Klaar voor een dataplatform dat staat?",
   intro:
-    "Geen verkooppraatjes. Eén aanspreekpunt, korte lijnen, en de mogelijkheid om binnen weken een eerste resultaat op te leveren in plaats van na maanden. Een review van je huidige architectuur, het opzetten van een dbt project of een interim rol als senior data engineer. Neem contact op en ik denk vrijblijvend mee.",
+    "Eén aanspreekpunt, korte lijnen en een eerste resultaat binnen weken in plaats van maanden. Of het nu gaat om een review van je architectuur, het opzetten van een dbt project of een interim rol als senior data engineer: neem contact op, dan denk ik vrijblijvend mee.",
   fields: {
     name: { label: "Naam", placeholder: "Voor en achternaam" },
     email: { label: "Zakelijk emailadres", placeholder: "naam@bedrijf.nl" },
@@ -396,9 +396,9 @@ export const contactSection = {
 } as const;
 
 export const finalCta = {
-  heading: "Klaar om je data fundering serieus te nemen?",
+  heading: "Klaar om je datafundering serieus te nemen?",
   subheading:
-    "Korte kennismaking van 30 minuten. Geen verkooppraatje, wel een eerlijke read op waar je nu staat en wat haalbaar is.",
+    "Een kennismaking van 30 minuten: een eerlijke blik op waar je nu staat en wat realistisch haalbaar is.",
   cta: { label: "Plan een kennismaking", href: "/contact" },
 } as const;
 
@@ -411,7 +411,7 @@ export const dataEngineeringPage = {
   title: "Data Engineering Consultancy",
   metaTitle: "Data Engineering Consultancy | DC Data Consultancy Breda",
   metaDescription:
-    "Senior data engineering consultancy uit Breda. Schaalbare data pipelines, cloud datawarehousing, dbt en Azure architectuur. gebouwd om jaren mee te gaan.",
+    "Senior data engineering consultancy uit Breda. Schaalbare data pipelines, cloud datawarehousing, dbt en Azure architectuur, gebouwd om jaren mee te gaan.",
   hero: {
     eyebrow: "Hoofdspecialisatie",
     heading: "Data engineering die de basis legt voor alles wat erna komt.",
@@ -441,7 +441,7 @@ export const dataEngineeringPage = {
     {
       title: "Cloud datawarehousing",
       description:
-        "Architectuur en implementatie op Snowflake, Databricks, Azure Synapse of BigQuery. inclusief cost management en performance tuning.",
+        "Architectuur en implementatie op Snowflake, Databricks, Azure Synapse of BigQuery, inclusief cost management en performance tuning.",
     },
     {
       title: "Data modelling met dbt",
@@ -466,12 +466,12 @@ export const dataEngineeringPage = {
     {
       title: "Documentation & lineage",
       description:
-        "Self-service documentatie, end to end lineage en heldere business glossaries. zodat nieuwe teamleden binnen een week productief zijn.",
+        "Self-service documentatie, end-to-end lineage en heldere business glossaries, zodat nieuwe teamleden binnen een week productief zijn.",
     },
     {
       title: "Cost & performance",
       description:
-        "Slimme partitionering, clustering, materialisatiestrategie en monitoring. zodat je dataplatform betaalbaar blijft naarmate volumes groeien.",
+        "Slimme partitionering, clustering, materialisatiestrategie en monitoring, zodat je dataplatform betaalbaar blijft naarmate volumes groeien.",
     },
   ],
   process: [
@@ -483,7 +483,7 @@ export const dataEngineeringPage = {
     {
       title: "Doel-architectuur op één A4",
       description:
-        "Concrete blueprint, fasering en technologiekeuze. gericht op meetbare business outcomes per sprint.",
+        "Concrete blueprint, fasering en technologiekeuze, gericht op meetbare business outcomes per sprint.",
     },
     {
       title: "Iteratief bouwen",
@@ -497,11 +497,11 @@ export const dataEngineeringPage = {
     },
   ],
   outcomes: [
-    "Eén bron van waarheid voor business metrics. gedefinieerd in code, getest en gedocumenteerd.",
+    "Eén bron van waarheid voor business metrics, gedefinieerd in code, getest en gedocumenteerd.",
     "Pipelines die voorspelbaar draaien, met alerting en duidelijke ownership.",
-    "Verkorte time to insight: van weken naar dagen voor nieuwe vragen uit de business.",
+    "Verkorte time-to-insight: van weken naar dagen voor nieuwe vragen uit de business.",
     "Een platform dat schaalt naar nieuwe bronnen en nieuwe gebruikers zonder herontwerp.",
-    "Een intern team dat zelfstandig kan doorbouwen. geen vendor lock in op consultants.",
+    "Een intern team dat zelfstandig kan doorbouwen, zonder vendor lock-in op consultants.",
   ],
   stack: [
     "Azure (ADF, Synapse, Data Lake)",
@@ -533,7 +533,7 @@ export const dataEngineeringPage = {
     },
     {
       q: "Wat onderscheidt jouw aanpak van een grote consultancy?",
-      a: "Je krijgt direct een senior aan tafel die zowel kan ontwerpen als bouwen. Geen team van junioren met een partner op afstand. Eén aanspreekpunt, kortere lijnen, lagere kosten en geen verkooppitches.",
+      a: "Je krijgt direct een senior aan tafel die zowel ontwerpt als bouwt. Geen team van junioren met een partner op afstand, maar één aanspreekpunt, kortere lijnen en lagere kosten.",
     },
   ],
 } as const;
@@ -572,7 +572,7 @@ export const dataAnalyticsPage = {
     {
       title: "Semantic layer in dbt",
       description:
-        "Een centrale plek voor metrics, dimensies en relaties. gebruikt door alle BI tools.",
+        "Eén centrale plek voor metrics, dimensies en relaties, gebruikt door alle BI tools.",
     },
     {
       title: "Power BI architectuur",
@@ -582,7 +582,7 @@ export const dataAnalyticsPage = {
     {
       title: "Tableau & Looker",
       description:
-        "Implementatie en optimalisatie van Tableau Server, Tableau Cloud of Looker. inclusief LookML modellering.",
+        "Implementatie en optimalisatie van Tableau Server, Tableau Cloud of Looker, inclusief LookML modellering.",
     },
     {
       title: "KPI definitie & data dictionary",
@@ -630,7 +630,7 @@ export const dataAnalyticsPage = {
   faqs: [
     {
       q: "Werk je liever met Power BI of Tableau?",
-      a: "Allebei prima. ik kies wat past bij de organisatie. In Nederland, en zeker bij financial services, zie ik vaker Power BI vanwege de Microsoft stack. Voor zware visualisatie en data exploration heeft Tableau historisch een voorsprong.",
+      a: "Allebei prima, ik kies wat past bij de organisatie. In Nederland, en zeker bij financial services, zie ik vaker Power BI vanwege de Microsoft stack. Voor zware visualisatie en data exploration heeft Tableau historisch een voorsprong.",
     },
     {
       q: "Wat is analytics engineering precies?",
@@ -638,7 +638,7 @@ export const dataAnalyticsPage = {
     },
     {
       q: "Hoe pak je conflicterende KPI definities aan?",
-      a: "In werksessies met stakeholders. Het gaat zelden om de techniek. het gaat erom dat finance, sales en operations het eens worden over de definitie. Pas dan kunnen we het in code vastleggen.",
+      a: "In werksessies met stakeholders. Het gaat zelden om de techniek, maar erom dat finance, sales en operations het eens worden over de definitie. Pas dan leggen we het vast in code.",
     },
   ],
 } as const;
@@ -692,7 +692,7 @@ export const dataSciencePage = {
     {
       title: "Classificatie & scoring",
       description:
-        "Klantscoring, lead scoring, credit scoring. productie-modellen met explainability.",
+        "Klantscoring, lead scoring en credit scoring: productiemodellen met explainability.",
     },
     {
       title: "MLOps fundamenten",
@@ -702,19 +702,19 @@ export const dataSciencePage = {
     {
       title: "NLP & document intelligence",
       description:
-        "Tekstanalyse op klantfeedback, contracten en interne documenten. inclusief moderne LLM gebaseerde aanpakken waar dat past.",
+        "Tekstanalyse op klantfeedback, contracten en interne documenten, inclusief moderne LLM-gebaseerde aanpakken waar dat past.",
     },
   ],
   process: [
     { title: "Business case", description: "Welke beslissing moet het model ondersteunen?" },
-    { title: "Feature engineering", description: "Modellering vanuit het dataplatform. geen losse exports." },
+    { title: "Feature engineering", description: "Modellering vanuit het dataplatform, geen losse exports." },
     { title: "Model & validatie", description: "Iteratief modelleren, met statistisch verantwoorde validatie." },
     { title: "Productie & monitoring", description: "Deployment, monitoring en herhalingsproces." },
   ],
   outcomes: [
     "Concrete businessbeslissingen ondersteund door modellen die werken.",
     "Voorspellingen die niet stilletjes verouderen.",
-    "engineering discipline rondom data science, niet alleen experimenten.",
+    "Engineering-discipline rondom data science, niet alleen losse experimenten.",
     "Een team dat snapt wat het model doet en wanneer je het niet moet vertrouwen.",
   ],
   stack: ["Python", "scikit-learn", "PyTorch", "MLflow", "Databricks", "Azure ML", "dbt"],
@@ -743,7 +743,7 @@ export const modernDataStackPage = {
   title: "Modern Data Stack Consultancy",
   metaTitle: "Modern Data Stack Consultancy | Snowflake, dbt, Airflow",
   metaDescription:
-    "Implementatie en architectuur van de Modern Data Stack: Snowflake, Databricks, dbt, Airflow, Fivetran en BI. door een senior consultant uit Breda.",
+    "Implementatie en architectuur van de Modern Data Stack: Snowflake, Databricks, dbt, Airflow, Fivetran en BI, door een senior consultant uit Breda.",
   hero: {
     eyebrow: "Modern Data Stack",
     heading: "De Modern Data Stack, zonder de hype.",
@@ -757,7 +757,7 @@ export const modernDataStackPage = {
     "Iedereen heeft een eigen mening, niemand een coherente architectuur.",
   ],
   solution: {
-    heading: "Eén samenhangende architectuur. geen verzameling losse onderdelen.",
+    heading: "Eén samenhangende architectuur, geen verzameling losse onderdelen.",
     paragraphs: [
       "Ik help bij het ontwerpen, implementeren en aanscherpen van een Modern Data Stack die past bij jouw schaal en team. Dat betekent bewuste keuzes: welke ingestion, welk warehouse, hoe transformeren, hoe orchestreren, en hoe governance inrichten.",
       "Bij voorkeur incrementeel: bouwen op wat er al staat, zonder een rip and replace van een jaar.",
@@ -767,9 +767,9 @@ export const modernDataStackPage = {
     { title: "Architectuur-design", description: "End-to-end stack: ingestion, warehouse, transformation, BI, governance." },
     { title: "Tool-selectie", description: "Onafhankelijk advies tussen Snowflake / Databricks / Synapse en tussen Fivetran / Airbyte / custom." },
     { title: "dbt implementatie", description: "Project-structuur, naming conventions, tests, snapshots, exposures." },
-    { title: "Orchestration", description: "Airflow, Prefect of Azure Data Factory. pragmatisch ingericht." },
-    { title: "Cost management", description: "Resource monitor, query tuning en query tagging. voorkomen dat de Snowflake rekening explodeert." },
-    { title: "Data governance", description: "Unity Catalog, Snowflake Horizon, Microsoft Purview. gekozen op basis van use case." },
+    { title: "Orchestration", description: "Airflow, Prefect of Azure Data Factory, pragmatisch ingericht." },
+    { title: "Cost management", description: "Resource monitors, query tuning en query tagging, om te voorkomen dat de Snowflake-rekening explodeert." },
+    { title: "Data governance", description: "Unity Catalog, Snowflake Horizon of Microsoft Purview, gekozen op basis van de use case." },
   ],
   process: [
     { title: "Stack-assessment", description: "Waar staat de huidige stack? Wat werkt, wat niet?" },
@@ -836,22 +836,22 @@ export const dbtConsultancyPage = {
     { title: "Migration", description: "Migreren van Looker PDT's, Power BI dataflows of legacy SQL naar dbt." },
   ],
   process: [
-    { title: "dbt-audit", description: "Review van bestaande dbt codebase (indien aanwezig). wat houden, wat refactoren." },
+    { title: "dbt-audit", description: "Review van de bestaande dbt codebase (indien aanwezig): wat houden, wat refactoren." },
     { title: "Project setup", description: "Folder-structuur, naming, conventies, sources en tests." },
     { title: "Bouwen", description: "Modellen migreren of opbouwen, met peer review." },
-    { title: "Enablement", description: "Workshops voor het interne team. focus op zelfstandig dbt schrijven." },
+    { title: "Enablement", description: "Workshops voor het interne team, met focus op zelfstandig dbt schrijven." },
   ],
   outcomes: [
     "Een dbt codebase die andere data engineers binnen een week kunnen oppakken.",
     "Automatische tests die regressies voorkomen.",
-    "Eén plek voor business metrics. gedocumenteerd en geversioneerd.",
+    "Eén plek voor business metrics, gedocumenteerd en geversioneerd.",
     "Een team dat zelfstandig analytics engineering kan toepassen.",
   ],
   stack: ["dbt Core", "dbt Cloud", "Snowflake", "Databricks", "BigQuery", "Redshift", "GitHub Actions", "Azure DevOps"],
   faqs: [
     {
       q: "dbt Core of dbt Cloud?",
-      a: "Voor kleinere teams of teams met beperkte DevOps capaciteit is dbt Cloud een goede keuze. minder ops, ingebouwde scheduling en IDE. Voor grotere organisaties met een sterke engineering cultuur is dbt Core (zelf gehost in Airflow/Azure DevOps) vaak goedkoper en flexibeler. Ik help met de afweging.",
+      a: "Voor kleinere teams of teams met beperkte DevOps-capaciteit is dbt Cloud een goede keuze: minder ops, ingebouwde scheduling en een IDE. Voor grotere organisaties met een sterke engineering-cultuur is dbt Core (zelf gehost in Airflow/Azure DevOps) vaak goedkoper en flexibeler. Ik help met de afweging.",
     },
     {
       q: "Hoe structureer je een dbt project goed?",
@@ -895,7 +895,7 @@ export const azureDataEngineeringPage = {
     ],
   },
   capabilities: [
-    { title: "Azure Data Factory", description: "Pipelines, datasets, linked services, integration runtimes. gestructureerd en herhaalbaar." },
+    { title: "Azure Data Factory", description: "Pipelines, datasets, linked services en integration runtimes, gestructureerd en herhaalbaar." },
     { title: "Synapse Analytics", description: "Dedicated en serverless SQL pools, Spark pools en pipelines binnen één workspace." },
     { title: "Databricks", description: "Workspaces, clusters, Delta Lake, Unity Catalog en workflows." },
     { title: "Microsoft Fabric", description: "Architectuur en migratie naar Fabric Lakehouse, OneLake en Direct Lake mode in Power BI." },
@@ -949,36 +949,36 @@ export const aboutPage = {
     "Dennis van Burg is senior data engineering consultant en oprichter van DC Data Consultancy in Breda. Sinds 2016 actief in data, sinds 2021 als zelfstandig consultant.",
   hero: {
     eyebrow: "Over Dennis van Burg",
-    heading: "Senior data engineering consultant. Hands-on, business aware, geen ego.",
+    heading: "Senior data specialist. Hands-on, met oog voor de business en zonder ego.",
     intro:
-      "Ik werk sinds 2016 aan data architectuur en analytics. In 2021 startte ik DC Data Consultancy om opdrachtgevers te kunnen helpen die niet zomaar een paar handjes zoeken, maar een senior die kan ontwerpen, bouwen, vragen stellen en richting geven.",
+      "Ik werk sinds 2016 aan data-architectuur en analytics. In 2021 startte ik DC Data Consultancy om opdrachtgevers te helpen die niet zoeken naar een paar extra handen, maar naar een senior die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
   },
   story: [
     {
       heading: "Van analytics naar engineering",
       paragraphs: [
-        "Mijn carrière begon aan de analytics kant: rapportages bouwen, KPI's definiëren, dashboards opleveren. Maar bij elke opdracht kwam ik tegen hetzelfde aan: de werkelijke bottleneck zat niet in BI, maar in de fundering eronder.",
-        "Pipelines die elke nacht halverwege braken. Datawarehouses zonder structuur. Business logic die in vijf verschillende dashboards op vijf verschillende manieren stond. Dat heeft mijn focus richting data engineering verschoven. want zonder een betrouwbare fundering blijft alles erboven net zo betrouwbaar als die fundering.",
+        "Mijn carrière begon aan de analytics-kant: rapportages bouwen, KPI's definiëren, dashboards opleveren. Bij elke opdracht liep ik tegen hetzelfde aan: de echte bottleneck zat niet in BI, maar in de fundering eronder.",
+        "Pipelines die elke nacht halverwege braken. Datawarehouses zonder structuur. Business logic die in vijf dashboards op vijf manieren stond. Dat verschoof mijn focus richting data engineering, want zonder betrouwbare fundering is alles daarboven net zo wankel als die fundering.",
       ],
     },
     {
       heading: "Eigen consultancy sinds 2021",
       paragraphs: [
-        "In 2021 ben ik DC Data Consultancy gestart. De drijfveer: ik wilde rechtstreeks bij opdrachtgevers aan tafel kunnen zitten, zonder de overhead van een groot bureau, en met volledige eigenaarschap over de kwaliteit van wat ik oplever.",
-        "Sindsdien werk ik vanuit Breda voor opdrachtgevers door heel Nederland. financial services, logistiek, vastgoed, energie, publieke sector. Meestal als senior consultant of lead, vaak op het snijvlak van engineering en business.",
+        "In 2021 startte ik DC Data Consultancy. De drijfveer: rechtstreeks bij opdrachtgevers aan tafel zitten, zonder de overhead van een groot bureau, met volledige eigenaarschap over de kwaliteit van wat ik oplever.",
+        "Sindsdien werk ik vanuit Breda door heel Nederland: financial services, logistiek, vastgoed, energie en publieke sector. Meestal als senior consultant of lead, vaak op het snijvlak van engineering en business.",
       ],
     },
     {
       heading: "Hoe ik werk",
       paragraphs: [
-        "Ik geloof in werkende oplossingen boven powerpoints. Dat betekent: niet eerst zes weken een adviesrapport schrijven om vervolgens te verdwijnen, maar samen met je team meebouwen. Sprint voor sprint, met directe waarde.",
-        "Ik praat net zo makkelijk met de CFO over wat de echte business metrics zijn, als met een junior engineer over hoe een dbt model gestructureerd moet worden. Die brug slaan, tussen techniek en business, is een groot deel van mijn werk.",
+        "Ik geloof in werkende oplossingen boven powerpoints. Dus niet eerst zes weken een adviesrapport schrijven en dan verdwijnen, maar samen met je team meebouwen. Sprint voor sprint, met directe waarde. Daar haal ik energie uit: dingen voor elkaar krijgen, met het teamresultaat voor ogen.",
+        "Techniek is voor mij altijd een middel, nooit een doel. Wat de business met de oplossing kan, telt zwaarder dan welke tool we kiezen. Ik praat net zo makkelijk met de CFO over de echte business metrics als met een junior engineer over de structuur van een dbt model. Die brug slaan tussen techniek en business is een groot deel van mijn werk.",
       ],
     },
     {
       heading: "Waarom DC Data?",
       paragraphs: [
-        "Je krijgt direct een senior aan tafel. Geen team van junioren met een partner op afstand. Geen verkooppraatjes. Eén aanspreekpunt, korte lijnen, en de mogelijkheid om binnen weken een eerste resultaat op te leveren in plaats van na maanden.",
+        "Je krijgt direct een senior aan tafel. Geen team van junioren met een partner op afstand, maar één aanspreekpunt, korte lijnen en een eerste resultaat binnen weken in plaats van maanden.",
       ],
     },
   ],
@@ -1062,13 +1062,13 @@ export const bredaPage = {
     eyebrow: "Data consultancy in Breda",
     heading: "Senior data engineering consultancy vanuit Breda, voor heel Nederland.",
     intro:
-      "DC Data Consultancy is gevestigd in Breda, Noord Brabant. Ik werk voor opdrachtgevers in de regio West Brabant, Tilburg, Eindhoven, Rotterdam, maar ook door heel Nederland en remote.",
+      "DC Data Consultancy is gevestigd in Breda, Noord-Brabant. Ik werk voor opdrachtgevers in West-Brabant, Tilburg, Eindhoven en Rotterdam, maar net zo goed door heel Nederland en remote.",
   },
   whyBreda: {
     heading: "Waarom Breda?",
     paragraphs: [
-      "Breda zit strategisch tussen de Randstad en Brabant. uitstekend bereikbaar via de A16, A27 en A58, en op een uur per HSL van Amsterdam, Rotterdam, Antwerpen en Brussel. Voor Brabantse opdrachtgevers (Tilburg, Eindhoven, Den Bosch, Roosendaal) ben ik bovendien lokaal aanspreekbaar.",
-      "Een groot deel van mijn opdrachten draait remote of hybride. Voor sessies op locatie. zoals workshops met stakeholders, architectuur reviews of pair engineering. ben ik flexibel en kom ik graag langs.",
+      "Breda zit strategisch tussen de Randstad en Brabant: uitstekend bereikbaar via de A16, A27 en A58, en op een uur per HSL van Amsterdam, Rotterdam, Antwerpen en Brussel. Voor Brabantse opdrachtgevers (Tilburg, Eindhoven, Den Bosch, Roosendaal) ben ik bovendien lokaal aanspreekbaar.",
+      "Een groot deel van mijn opdrachten draait remote of hybride. Voor sessies op locatie, zoals workshops met stakeholders, architectuur-reviews of pair engineering, ben ik flexibel en kom ik graag langs.",
     ],
   },
   servicesInBreda: {
@@ -1097,7 +1097,7 @@ export const bredaPage = {
   localTrust: {
     heading: "Wat opdrachtgevers in Brabant en daarbuiten waarderen",
     items: [
-      "Direct senior aanspreekpunt. geen accountmanager als tussenlaag",
+      "Direct een senior aanspreekpunt, geen accountmanager als tussenlaag",
       "Nederlandstalig en in Nederland gevestigd (geen offshoring)",
       "Korte lijnen voor onsite werk of werksessies",
       "Werk volgens Nederlandse standaarden voor privacy en governance (AVG)",
@@ -1112,7 +1112,7 @@ export const bredaPage = {
 export const casesPage = {
   metaTitle: "Cases | DC Data Consultancy",
   metaDescription:
-    "Een selectie van geanonimiseerde cases uit financial services, logistiek, vastgoed en energie. van dataplatform architectuur tot dbt implementaties.",
+    "Een selectie van geanonimiseerde cases uit financial services, logistiek, vastgoed en energie, van dataplatform-architectuur tot dbt-implementaties.",
   hero: {
     eyebrow: "Cases",
     heading: "Wat ik concreet heb gebouwd.",
@@ -1209,7 +1209,7 @@ export const industriesPage = {
     eyebrow: "Sectoren",
     heading: "Waar mijn ervaring zit.",
     intro:
-      "In meer dan tien jaar werk in data heb ik in vijf sectoren ervaring opgedaan. Elke sector heeft zijn eigen data uitdagingen en zijn eigen patronen die je alleen leert door er meerdere keren te zijn geweest.",
+      "In meer dan tien jaar werk in data heb ik in vijf sectoren ervaring opgebouwd. Elke sector heeft zijn eigen data-uitdagingen en eigen patronen, die je alleen leert kennen door er meerdere keren te zijn geweest.",
   },
   industries: [
     {

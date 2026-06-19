@@ -40,15 +40,15 @@ export default function ContactPage() {
           ]}
           eyebrow="Contact"
           heading={contactSection.heading}
-          subheading="Geen verkooppraatjes. Een korte kennismaking, een eerlijke read op waar je staat, en de mogelijkheid om binnen weken een eerste resultaat te leveren."
+          subheading="Een korte kennismaking, een eerlijke blik op waar je staat en de mogelijkheid om binnen weken een eerste resultaat te leveren."
         />
 
         <ContactSection bare />
 
         <SectionShell
-          eyebrow="WAT VERWACHT JE"
+          eyebrow="WAT JE KUNT VERWACHTEN"
           heading="Hoe een eerste gesprek eruitziet"
-          intro="Geen verkooppraatje, wel een eerlijke read op waar je nu staat en wat haalbaar is."
+          intro="Een eerlijke blik op waar je nu staat en wat realistisch haalbaar is."
           variant="canvas"
         >
           <ol className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12 max-w-5xl">
@@ -59,8 +59,8 @@ export default function ContactPage() {
             />
             <Step
               number="02"
-              title="Eerste read"
-              description="Ik deel mijn eerste observaties. Waar zit denk ik de échte bottleneck, en wat zijn realistische opties."
+              title="Eerste indruk"
+              description="Ik deel mijn eerste observaties: waar de échte bottleneck zit, en wat realistische opties zijn."
             />
             <Step
               number="03"
