@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig, footerNav } from "@/lib/site-content";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 
@@ -47,12 +48,22 @@ export default function Header() {
           <div className="flex items-center gap-4 min-w-0">
             <Link
               href="/"
-              className={`font-display font-bold text-base md:text-lg tracking-tight transition-colors ${
-                solid ? "text-ink hover:text-brand" : "text-night-ink hover:text-brand-bright"
-              }`}
+              className="flex items-center gap-2.5 shrink-0"
               onClick={closeMobile}
             >
-              {siteConfig.name}
+              <Image
+                src="/images/logo.png"
+                alt={siteConfig.name}
+                width={32}
+                height={32}
+                className="w-7 h-7 md:w-8 md:h-8 object-contain"
+                priority
+              />
+              <span className={`font-display font-bold text-base md:text-lg tracking-tight transition-colors ${
+                solid ? "text-ink hover:text-brand" : "text-night-ink hover:text-brand-bright"
+              }`}>
+                {siteConfig.name}
+              </span>
             </Link>
             <span
               className={`hidden lg:inline-flex items-center gap-2 px-2.5 py-1 rounded-md border transition-colors ${

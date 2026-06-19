@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { footer, footerNav, siteConfig } from "@/lib/site-content";
 
 export default function Footer() {
@@ -9,9 +10,18 @@ export default function Footer() {
           <div className="col-span-2">
             <Link
               href="/"
-              className="font-display font-bold text-lg tracking-tight text-night-ink hover:text-brand-bright transition-colors"
+              className="flex items-center gap-2.5 w-fit"
             >
-              {siteConfig.name}
+              <Image
+                src="/images/logo.png"
+                alt={siteConfig.name}
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain"
+              />
+              <span className="font-display font-bold text-lg tracking-tight text-night-ink hover:text-brand-bright transition-colors">
+                {siteConfig.name}
+              </span>
             </Link>
             <p className="mt-4 text-night-soft-ink text-sm leading-relaxed max-w-xs">
               {footer.tagline}

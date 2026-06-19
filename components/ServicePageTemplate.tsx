@@ -92,7 +92,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
         <SectionShell
           eyebrow="Probleem"
           heading="Herken je dit?"
-          intro="De volgende patronen kom ik in vrijwel iedere intake tegen. Niet omdat teams niet hard werken, wel omdat de fundering nooit goed is gelegd."
+          intro="Deze patronen kom ik in vrijwel iedere intake tegen. Zelden door gebrek aan inzet, vaak doordat de fundering nooit goed is gelegd."
           variant="canvas"
         >
           <ul className="grid md:grid-cols-2 gap-x-12 gap-y-5 max-w-4xl">
@@ -113,7 +113,7 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
           </div>
         </SectionShell>
 
-        <SectionShell eyebrow="Wat ik concreet doe" heading="Capabilities" variant="canvas">
+        <SectionShell eyebrow="Wat ik concreet doe" heading="Waar ik mee help" variant="canvas">
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
             {data.capabilities.map((c, i) => (
               <Reveal as="li" key={c.title} delay={(i % 3) * 60} className="border-t border-rule pt-5">
