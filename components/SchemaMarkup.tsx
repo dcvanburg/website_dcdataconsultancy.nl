@@ -51,7 +51,7 @@ export function OrganizationSchema() {
     knowsAbout: [
       "Data Engineering",
       "Data Analytics",
-      "Data Science",
+      "Analytics Engineering",
       "Modern Data Stack",
       "dbt",
       "Snowflake",
@@ -59,12 +59,11 @@ export function OrganizationSchema() {
       "Azure Data Engineering",
       "Power BI",
       "Apache Airflow",
-      "Analytics Engineering",
     ],
     serviceType: [
       "Data Engineering Consultancy",
       "Data Analytics Consultancy",
-      "Data Science Consultancy",
+      "Analytics Engineering Consultancy",
       "dbt Consultancy",
       "Azure Data Engineering",
     ],
@@ -81,7 +80,7 @@ export function WebsiteSchema() {
     url: siteConfig.url,
     name: siteConfig.name,
     description:
-      "Senior data engineering consultancy uit Breda — schaalbare, betrouwbare en business-driven dataplatforms.",
+      "Senior data engineering consultancy uit Breda. Schaalbare, betrouwbare dataplatforms voor organisaties die meer uit hun data willen halen.",
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "nl-NL",
   };
@@ -107,7 +106,7 @@ export function PersonSchema() {
       "Microsoft Azure",
       "Apache Airflow",
       "Power BI",
-      "Data Science",
+      "Data Analytics",
       "Modern Data Stack",
     ],
     address: {

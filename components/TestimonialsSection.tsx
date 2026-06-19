@@ -19,7 +19,7 @@ export default function TestimonialsSection() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-rule border border-rule rounded-xl overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-px bg-rule border border-rule rounded-xl overflow-hidden">
           {testimonialsSection.quotes.map((q, i) => (
             <Reveal
               as="figure"

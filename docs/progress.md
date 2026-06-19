@@ -30,7 +30,7 @@ to "Senior Data Engineering Consultancy" — based on briefing document.
 - [x] /diensten — services index
 - [x] /diensten/data-engineering — flagship service page
 - [x] /diensten/data-analytics
-- [x] /diensten/data-science
+- [x] /diensten/analytics-engineering
 - [x] /diensten/modern-data-stack
 - [x] /diensten/dbt-consultancy
 - [x] /diensten/azure-data-engineering

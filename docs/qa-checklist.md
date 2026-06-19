@@ -57,7 +57,7 @@
 
 ### SEO
 - [ ] `<html lang="nl">` set correctly
-- [ ] Meta title: "DC Data Consultancy | Data Analytics, Data Science & Dashboarding"
+- [ ] Meta title: "DC Data Consultancy | Data Analytics, Analytics Engineering & Dashboarding"
 - [ ] Meta description present
 - [ ] OG tags present
 - [ ] /robots.txt accessible

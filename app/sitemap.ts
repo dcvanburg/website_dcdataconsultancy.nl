@@ -9,7 +9,7 @@ const staticPages = [
   { path: "/diensten", priority: 0.95, changeFrequency: "monthly" as const },
   { path: "/diensten/data-engineering", priority: 0.95, changeFrequency: "monthly" as const },
   { path: "/diensten/data-analytics", priority: 0.85, changeFrequency: "monthly" as const },
-  { path: "/diensten/data-science", priority: 0.85, changeFrequency: "monthly" as const },
+  { path: "/diensten/analytics-engineering", priority: 0.85, changeFrequency: "monthly" as const },
   { path: "/diensten/modern-data-stack", priority: 0.85, changeFrequency: "monthly" as const },
   { path: "/diensten/dbt-consultancy", priority: 0.9, changeFrequency: "monthly" as const },
   {

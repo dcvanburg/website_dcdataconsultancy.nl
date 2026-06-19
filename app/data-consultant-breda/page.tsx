@@ -126,7 +126,7 @@ export default function BredaPage() {
             />
             <FAQ
               q="Wat doet een data consultant precies?"
-              a="Een data consultant helpt organisaties hun data slimmer in te zetten. In mijn geval ligt de focus op data engineering, pipelines, datawarehouses en dataplatforms, met daarbovenop analytics en data science."
+              a="Een data consultant helpt organisaties hun data slimmer in te zetten. In mijn geval ligt de focus op data engineering, pipelines, datawarehouses en dataplatforms, met daarbovenop analytics engineering en BI."
             />
             <FAQ
               q="Welk type opdrachten neem je aan?"
