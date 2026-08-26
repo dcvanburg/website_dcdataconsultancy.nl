@@ -7,7 +7,7 @@ export const siteConfig = {
   shortName: "DC Data",
   tagline: "Senior Data Consultancy",
   proposition:
-    "Freelance senior data specialist voor organisaties die meer uit hun data willen halen.",
+    "Freelance senior data specialist. Ik bouw de dataplatforms waar BI, analytics en AI op kunnen vertrouwen, omdat zonder die fundering elke AI-pilot op ruis strandt.",
   url: "https://www.dcdataconsultancy.nl",
   email: "dennis@dcdataconsultancy.nl",
   linkedin: "https://www.linkedin.com/in/dennisvanburg/",
@@ -76,7 +76,7 @@ export const problemSection = {
   eyebrow: "Herkenbaar?",
   heading: "Data zou tijd moeten besparen en belangrijke beslissingen moeten ondersteunen.",
   intro:
-    "In de praktijk werkt het vaak andersom.",
+    "In de praktijk werkt het vaak andersom. Data kost tijd, cijfers kloppen niet, en zonder die fundering strandt ook elke AI-ambitie op ruis.",
   problems: [
     {
       title: "Cijfers die niet kloppen",
@@ -104,9 +104,9 @@ export const problemSection = {
         "Dashboards worden genegeerd. Beslissingen gaan terug naar onderbuik en eigen spreadsheets.",
     },
     {
-      title: "Legacy zonder roadmap",
+      title: "AI zonder datafundering",
       description:
-        "Een SSIS tuin uit 2014, een ongedocumenteerd datawarehouse en geen plan om eruit te komen.",
+        "Een LLM-pilot ziet er indrukwekkend uit in de demo, maar antwoordt op verouderde of inconsistente data. Slechte data wordt niet zichtbaar fout, maar overtuigend fout.",
     },
   ],
 } as const;
@@ -123,7 +123,7 @@ export const offerSection = {
       title: "Data Engineering",
       tagline: "Pipelines en architectuur die je vertrouwt",
       description:
-        "Data die op tijd, compleet en betrouwbaar binnenkomt. Geen handmatige fixes meer op maandagochtend.",
+        "Data die op tijd, compleet en betrouwbaar binnenkomt. Geen handmatige fixes meer op maandagochtend. Dezelfde fundering waar BI én AI op moeten kunnen rekenen.",
       href: "/diensten/data-engineering",
       primary: true,
     },
@@ -132,7 +132,7 @@ export const offerSection = {
       title: "Analytics Engineering",
       tagline: "De brug die engineering en analytics verbindt",
       description:
-        "Data die niet alleen technisch klopt, maar ook betekenis heeft voor het business. Eén bron van waarheid, getest en gedocumenteerd, zodat iedereen dezelfde taal spreekt.",
+        "Data die niet alleen technisch klopt, maar ook betekenis heeft voor het business. Eén bron van waarheid, getest en gedocumenteerd, zodat mensen én LLM's dezelfde taal spreken.",
       href: "/diensten/analytics-engineering",
       primary: false,
     },
@@ -179,6 +179,10 @@ export const techStack = {
       name: "Data quality & governance",
       items: ["Great Expectations", "dbt tests", "Unity Catalog"],
     },
+    {
+      name: "AI & agents",
+      items: ["MCP", "Semantic layer / metrics", "RAG & vector search", "Azure OpenAI", "Context engineering"],
+    },
   ],
 } as const;
 
@@ -189,7 +193,7 @@ export const aboutSection = {
   role: "Eigenaar · Senior Data Specialist",
   bio: [
     "Sinds 2016 werk ik aan datavraagstukken die ertoe doen. In 2021 startte ik DC Data Consultancy, om opdrachtgevers te helpen die niet alleen zoeken naar een paar extra handen, maar naar iemand die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
-    "Mijn werk zit op het snijvlak van engineering en business. Ik bouw geen pipelines om de pipelines, maar omdat finance op maandag op de cijfers moet kunnen rekenen, omdat marketing wil weten wat werkt en omdat de directie wil sturen op data in plaats van op aannames.",
+    "Mijn werk zit op het snijvlak van engineering en business. Ik bouw geen pipelines om de pipelines, maar omdat finance op maandag op de cijfers moet kunnen rekenen, omdat marketing wil weten wat werkt, omdat de directie wil sturen op data in plaats van op aannames, en omdat AI alleen werkt als diezelfde cijfers en documenten kloppen.",
     "Ik werk graag over afdelingen heen, met het teamresultaat voor ogen. Daar haal ik energie uit: samen complexe vraagstukken aanpakken en dingen voor elkaar krijgen. Vanuit Breda werk ik door heel Nederland.",
   ],
   highlights: [
@@ -339,13 +343,14 @@ export const aiInterfaceSection = {
 export const services = {
   sectionId: "diensten",
   heading: "Diensten",
-  subheading: "Data engineering staat centraal, analytics engineering bouwt daar betrouwbare metrics op.",
+  subheading:
+    "Data engineering staat centraal. Analytics engineering bouwt daar betrouwbare metrics op. Op die fundering werken BI en AI.",
   items: [
     {
       title: "Data Engineering",
       tagline: "Hoofdspecialisatie",
       description:
-        "Schaalbare data pipelines (ELT/ETL), cloud datawarehouses, dbt gebaseerde modelleerlagen en orchestration die productie aankan.",
+        "Schaalbare data pipelines (ELT/ETL), cloud datawarehouses, dbt gebaseerde modelleerlagen en orchestration. De basis zonder welke BI én AI niet te vertrouwen zijn.",
       icon: "Database",
       href: "/diensten/data-engineering",
       primary: true,
@@ -354,7 +359,7 @@ export const services = {
       title: "Analytics Engineering",
       tagline: "Betrouwbare metrics, getest en gedocumenteerd",
       description:
-        "Gelaagde modellering, dbt marts en semantic layers. Eén bron van waarheid waar BI en stakeholders op vertrouwen.",
+        "Gelaagde modellering, dbt marts en semantic layers. Eén bron van waarheid waar BI, stakeholders én AI-agents op vertrouwen.",
       icon: "GitBranch",
       href: "/diensten/analytics-engineering",
     },
@@ -460,7 +465,7 @@ export const contactSection = {
 export const finalCta = {
   heading: "Klaar om je datafundering serieus te nemen?",
   subheading:
-    "Een kennismaking van 30 minuten: een eerlijke blik op waar je nu staat en wat realistisch haalbaar is.",
+    "Een kennismaking van 30 minuten: een eerlijke blik op waar je nu staat, wat realistisch haalbaar is, en of je platform klaar is voor analytics én AI.",
   cta: { label: "Plan een kennismaking", href: "/contact" },
 } as const;
 
@@ -473,12 +478,12 @@ export const dataEngineeringPage = {
   title: "Data Engineering Consultancy",
   metaTitle: "Data Engineering Consultancy | DC Data Consultancy",
   metaDescription:
-    "Senior data engineering consultancy. Schaalbare data pipelines, cloud datawarehousing, dbt en Azure architectuur, gebouwd om jaren mee te gaan.",
+    "Senior data engineering consultancy. Schaalbare pipelines, cloud datawarehousing en dbt als fundering voor BI, analytics en AI. Zonder betrouwbare data hallucineren LLM's.",
   hero: {
     eyebrow: "Hoofdspecialisatie",
     heading: "Data engineering die de basis legt voor alles wat erna komt.",
     subheading:
-      "Een dashboard is nooit beter dan de pipeline eronder. Ik bouw schaalbare, betrouwbare data-architectuur waar je BI, analytics en AI op kunt vertrouwen.",
+      "Een dashboard is nooit beter dan de pipeline eronder. Een LLM evenmin. Ik bouw schaalbare, betrouwbare data-architectuur waar je BI, analytics en AI op kunt vertrouwen.",
   },
   problems: [
     "Pipelines breken regelmatig en er is geen alerting.",
@@ -486,13 +491,14 @@ export const dataEngineeringPage = {
     "Het datawarehouse is een spaghetti van views en stored procedures.",
     "Iedere wijziging duurt weken en niemand durft te refactoren.",
     "Er is geen CI/CD, geen testing en geen documentatie van data lineage.",
+    "AI-pilots stranden omdat agents antwoorden op inconsistente of verouderde data.",
   ],
   solution: {
     heading: "Een fundering die schaalt, niet weer een set losse oplossingen.",
     paragraphs: [
       "Ik ontwerp en bouw moderne data-architectuur op basis van bewezen patronen: een gelaagde Medallion-architectuur (bronze, silver, gold), ELT op een cloud datawarehouse, geautomatiseerde tests en monitoring.",
-      "De tool maakt me niet zoveel uit. Het patroon eronder wel. Of je nu op Azure, AWS, Snowflake of Databricks zit: een goede laagopbouw, betrouwbare pipelines en heldere business definities zijn belangrijker dan welk logo op de stack staat. Ik adviseer wat in jouw situatie werkt en sluit aan op wat je al hebt.",
-      "Dat doe ik al meer dan tien jaar, onder andere bij Rabobank, waar de pipelines miljarden transacties verwerken. Het resultaat is een platform waar pipelines voorspelbaar lopen, business metrics één bron hebben, en je eigen team verder kan bouwen zonder afhankelijk te blijven van consultants.",
+      "De tool maakt me niet zoveel uit. Het patroon eronder wel. Of je nu op Azure, AWS, Snowflake of Databricks zit: een goede laagopbouw, betrouwbare pipelines en heldere business definities zijn belangrijker dan welk logo op de stack staat. Dat geldt dubbel voor AI. Een LLM vult ontbrekende logica zelf in en presenteert het resultaat overtuigend. Slechte data wordt daarmee niet zichtbaar fout, maar onzichtbaar fout.",
+      "Dat doe ik al meer dan tien jaar, onder andere bij Rabobank, waar de pipelines miljarden transacties verwerken. Het resultaat is een platform waar pipelines voorspelbaar lopen, business metrics één bron hebben, AI-agents dezelfde waarheid lezen als je dashboards, en je eigen team verder kan bouwen zonder afhankelijk te blijven van consultants.",
     ],
   },
   capabilities: [
@@ -563,7 +569,8 @@ export const dataEngineeringPage = {
     "Eén bron van waarheid voor business metrics, gedefinieerd in code, getest en gedocumenteerd.",
     "Pipelines die voorspelbaar draaien, met alerting en duidelijke ownership.",
     "Verkorte time-to-insight: van weken naar dagen voor nieuwe vragen uit de business.",
-    "Een platform dat schaalt naar nieuwe bronnen en nieuwe gebruikers zonder herontwerp.",
+    "Een platform dat schaalt naar nieuwe bronnen, nieuwe gebruikers en AI-use cases zonder herontwerp.",
+    "AI-agents die dezelfde metrics lezen als je dashboards, omdat de definities vastliggen.",
     "Een intern team dat zelfstandig kan doorbouwen, zonder vendor lock-in op consultants.",
   ],
   stack: [
@@ -745,12 +752,12 @@ export const analyticsEngineeringPage = {
   title: "Analytics Engineering Consultancy",
   metaTitle: "Analytics Engineering Consultancy | Betrouwbare metrics en marts",
   metaDescription:
-    "Senior analytics engineering consultant. dbt modellering, geteste marts, semantic layers en business metrics die BI en stakeholders vertrouwen.",
+    "Senior analytics engineering consultant. dbt modellering, geteste marts en semantic layers: business metrics die BI, stakeholders én AI-agents vertrouwen.",
   hero: {
     eyebrow: "Analytics engineering",
     heading: "Data die niet alleen technisch klopt, maar ook betekenis heeft voor de business.",
     subheading:
-      "De brug tussen raw data en betrouwbare business metrics: modulair, getest, gedocumenteerd en klaar voor BI, self-service en downstream analytics.",
+      "De brug tussen raw data en betrouwbare business metrics: modulair, getest, gedocumenteerd en klaar voor BI, self-service, analytics én AI-agents die dezelfde definities lezen.",
   },
   problems: [
     "Twee dashboards, twee omzetten, en niemand weet welk cijfer klopt.",
@@ -758,12 +765,13 @@ export const analyticsEngineeringPage = {
     "Business logic leeft in Power BI of Excel, niet in een gedeelde modellaag.",
     "Data engineers leveren tabellen die analytics niet begrijpt; analytics kopieert data opnieuw.",
     "KPI-definities zitten in hoofden en Slack-threads, niet in code.",
+    "AI-tools improviseren over ruwe tabellen omdat metrics nergens vastliggen.",
   ],
   solution: {
     heading: "Analytics engineering als discipline, niet als afterthought.",
     paragraphs: [
       "Ik modelleer data in gelaagde, geteste tabellen volgens de Medallion-architectuur (van bronze via silver naar gold), waar business logic één keer wordt vastgelegd en overal hetzelfde uitkomt.",
-      "Met dbt, CI/CD en documentatie krijg je een single source of truth waar finance, marketing en operations op kunnen sturen, zonder elke maand opnieuw te discussiëren over definities.",
+      "Met dbt, CI/CD en documentatie krijg je een single source of truth waar finance, marketing, operations én AI-agents op kunnen sturen, zonder elke maand opnieuw te discussiëren over definities. Zonder die laag moet een LLM business logic raden. Dat is precies het gevaarlijkste soort fout: overtuigend én stilzwijgend verkeerd.",
     ],
   },
   capabilities: [
@@ -873,12 +881,6 @@ export const aiInterfacePage = {
           "Alles moet auditeerbaar zijn. Welke agent, namens welke gebruiker, heeft welke data opgevraagd? In financial services is dat geen nice-to-have maar een randvoorwaarde om überhaupt live te mogen.",
         ],
       },
-      deliverables: [
-        "Ontwerp en bouw van MCP-servers op je warehouse, lakehouse, gold-laag of semantische laag",
-        "Tool-contracten: afgebakende inputs, getypeerde outputs en foutmeldingen die een model kan verwerken",
-        "Authenticatie en identity pass-through, zodat rechten van de gebruiker meereizen naar de agent",
-        "Observability: logging, tracing en kostenmonitoring per tool-aanroep",
-      ],
     },
     {
       id: "semantic-layer",
@@ -903,13 +905,6 @@ export const aiInterfacePage = {
           "Lineage maakt antwoorden verdedigbaar. Als de CFO vraagt waar een cijfer vandaan komt, moet je van het antwoord terug kunnen lopen naar de bron, of die lineage nu uit dbt docs, Unity Catalog, Purview of een eigen catalog komt.",
         ],
       },
-      deliverables: [
-        "Definities vastleggen in code: grain, aggregatie, filters, tijdlogica en dimensies",
-        "Advies over de vorm: dedicated semantic layer of een geteste, gedocumenteerde gold-laag, passend bij je stack en team",
-        "Werksessies met finance, sales en operations om conflicterende definities op één lijn te krijgen",
-        "Geautomatiseerde tests en machineleesbare documentatie en lineage, in de tooling die je al gebruikt",
-        "Ontsluiting richting BI én agents, zodat dashboard en chatvenster hetzelfde cijfer geven",
-      ],
     },
     {
       id: "context-engineering",
@@ -933,12 +928,6 @@ export const aiInterfacePage = {
           "Zonder evaluatie is er geen engineering, alleen hoop. Een gouden set vragen met verwachte antwoorden, die meeloopt in CI, maakt van AI-werk iets meetbaars in plaats van een demo-gevoel.",
         ],
       },
-      deliverables: [
-        "Retrieval-pipelines: ingestion, deduplicatie, chunking, embeddings en refresh-orchestratie",
-        "Permissie-bewuste indexering, zodat autorisatie meereist tot in het antwoord",
-        "Structurele context uit je bestaande catalog: definities, lineage en ownership als input voor de agent",
-        "Evaluatiesets en regressietests op antwoordkwaliteit, meelopend in CI/CD",
-      ],
     },
   ],
   architecture: {

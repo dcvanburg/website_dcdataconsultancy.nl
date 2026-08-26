@@ -113,6 +113,12 @@ export const blogPosts: BlogPost[] = [
         text:
           "In 2026 is ELT op een cloud warehouse de standaard voor de meeste organisaties. Klassieke ETL blijft relevant voor specifieke use cases, maar zou nooit de default mogen zijn. Wie het verkeerd om doet, betaalt de prijs in onderhoudslast en time-to-insight.",
       },
+      {
+        type: "callout",
+        title: "Waarom dit telt voor AI",
+        text:
+          "Een LLM die je warehouse bevraagt, heeft ruwe én gemodelleerde data nodig: ruwe voor retrieval, gemodelleerde voor betrouwbare metrics. ELT houdt die scheiding helder. Transformeer je te vroeg weg, dan verdwijnt context die agents later hard nodig hebben.",
+      },
     ],
     related: [
       "dbt-best-practices-projectstructuur",
@@ -291,11 +297,17 @@ export const blogPosts: BlogPost[] = [
         text:
           "Voor de meeste Nederlandse opdrachtgevers: Snowflake of Databricks als warehouse (afhankelijk van workload), dbt voor transformaties, Azure Data Factory of Airflow voor orchestration en Power BI als BI-tool. Maar de keuzes hangen sterk af van bestaande cloud-strategie en team-skills.",
       },
+      {
+        type: "callout",
+        title: "Waarom dit telt voor AI",
+        text:
+          "AI verandert niet wat een goede stack is. Het verhoogt alleen de prijs van een slechte. Zonder betrouwbare ingestion, geteste marts en documentatie krijgt elke LLM-pilot dezelfde inconsistente waarheid die je dashboards al hadden, alleen verpakt in vloeiende zinnen.",
+      },
     ],
     related: [
       "etl-vs-elt-wat-werkt-echt-in-2026",
       "snowflake-vs-databricks-2026",
-      "dbt-best-practices-projectstructuur",
+      "ai-zonder-datafundering",
     ],
   },
   // ───────────────────────────────────────────────────────────────────────────
@@ -443,11 +455,17 @@ export const blogPosts: BlogPost[] = [
         text:
           "Een runbook per kritieke pipeline beschrijft: wat te doen bij welke error, welke commando's je draait, en wanneer je escaleert. Zonder runbook is iedere middernacht-incident een improvisatie.",
       },
+      {
+        type: "callout",
+        title: "Waarom dit telt voor AI",
+        text:
+          "Een agent stelt geen vervolgvraag als je pipeline vannacht is gebroken. Hij antwoordt gewoon met verouderde data. Betrouwbare runs, freshness checks en falende tests die doorzetten blokkeren, zijn daarom geen BI-luxe meer. Ze zijn de minimale eis voordat je AI op productie data laat.",
+      },
     ],
     related: [
       "data-quality-die-business-vertrouwt",
       "dbt-best-practices-projectstructuur",
-      "data-incident-response",
+      "ai-zonder-datafundering",
     ],
   },
   // ───────────────────────────────────────────────────────────────────────────
@@ -519,11 +537,17 @@ export const blogPosts: BlogPost[] = [
           "Communiceer wekelijks een data quality-score naar stakeholders.",
         ],
       },
+      {
+        type: "callout",
+        title: "Waarom dit telt voor AI",
+        text:
+          "Een dashboard vergeeft slechte data nog enigszins: een mens ziet een raar getal en gaat navragen. Een LLM doet dat niet. Die neemt aan wat hij krijgt en vult gaten zelf in. Data quality is daarmee geen BI-hygiëne meer, het is de veiligheidsmaatregel die AI-antwoorden van hallucinaties scheidt.",
+      },
     ],
     related: [
       "data-pipeline-betrouwbaarheid",
       "dbt-best-practices-projectstructuur",
-      "data-governance-praktisch",
+      "ai-zonder-datafundering",
     ],
   },
   // ───────────────────────────────────────────────────────────────────────────
@@ -679,11 +703,17 @@ export const blogPosts: BlogPost[] = [
         text:
           "Wat ik regelmatig zie en vrijwel altijd advies om niet te doen: een eigen orchestration framework bouwen (gebruik Airflow), een custom data catalog (gebruik Purview of Unity Catalog), of een eigen testing framework (gebruik dbt of Great Expectations). De buy-vs-build afweging valt anno 2026 bijna altijd in het voordeel van buy uit.",
       },
+      {
+        type: "callout",
+        title: "Waarom dit telt voor AI",
+        text:
+          "Een agent leest alleen wat je platform hem aanreikt: catalog-metadata, lineage, geteste marts en documentatie. Bouw je die lagen niet, dan improviseren LLM's over ruwe tabellen. Een architectuur die jaren meegaat, is ook een architectuur waarop je AI-use cases kunt stapelen zonder opnieuw te beginnen.",
+      },
     ],
     related: [
       "modern-data-stack-uitgelegd",
       "azure-data-stack-keuzes",
-      "data-pipeline-betrouwbaarheid",
+      "ai-zonder-datafundering",
     ],
   },
   // ───────────────────────────────────────────────────────────────────────────
@@ -745,13 +775,19 @@ export const blogPosts: BlogPost[] = [
       {
         type: "paragraph",
         text:
-          "Dashboards die niet meer hoeven worden uitgelegd. Eén bron van waarheid voor business metrics. Data analisten die zich kunnen richten op insight in plaats van op data wrangling. Een platform dat schaalt naar nieuwe vragen zonder iedere keer het wiel opnieuw uit te vinden.",
+          "Dashboards die niet meer hoeven worden uitgelegd. Eén bron van waarheid voor business metrics. Data analisten die zich kunnen richten op insight in plaats van op data wrangling. Een platform dat schaalt naar nieuwe vragen zonder iedere keer het wiel opnieuw uit te vinden. En, steeds vaker: AI-agents die dezelfde metrics lezen als je directie-dashboard, omdat de definities vastliggen in code.",
+      },
+      {
+        type: "callout",
+        title: "Waarom dit telt voor AI",
+        text:
+          "Zonder analytics engineering moet een LLM zelf SQL schrijven over ruwe tabellen en business logic raden. Het antwoord ziet er overtuigend uit en is stilletjes fout. Geteste marts en vastgelegde metrics zijn wat een model ervan weerhoudt om te improviseren.",
       },
     ],
     related: [
       "dbt-best-practices-projectstructuur",
       "data-quality-die-business-vertrouwt",
-      "kpi-definitie-met-stakeholders",
+      "ai-zonder-datafundering",
     ],
   },
   // ───────────────────────────────────────────────────────────────────────────
@@ -816,11 +852,95 @@ export const blogPosts: BlogPost[] = [
         text:
           "KPI-definities zijn niet statisch. Bij elk nieuw business model of overname kunnen ze moeten worden bijgesteld. Beleg dat in een data council of een vergelijkbaar forum dat een paar keer per jaar de definities herijkt.",
       },
+      {
+        type: "callout",
+        title: "Waarom dit telt voor AI",
+        text:
+          "Als chatvenster en dashboard uit verschillende omzet-definities putten, introduceer je met elke AI-toepassing een extra versie van de waarheid. Eén afgesproken metric in code is de enige manier waarop BI en AI op één lijn blijven.",
+      },
     ],
     related: [
       "analytics-engineering-rol-en-impact",
       "data-quality-die-business-vertrouwt",
-      "data-governance-praktisch",
+      "ai-zonder-datafundering",
+    ],
+  },
+  // ───────────────────────────────────────────────────────────────────────────
+  {
+    slug: "ai-zonder-datafundering",
+    title: "AI zonder datafundering: waarom de meeste LLM-pilots vastlopen",
+    description:
+      "Niet het model is het probleem. Wat een LLM te zien krijgt wel. Waarom betrouwbare pipelines, metrics en context de echte AI-fundering zijn.",
+    metaTitle: "AI zonder datafundering | Waarom LLM-pilots vastlopen",
+    metaDescription:
+      "Waarom AI-projecten stranden op data, niet op het model. Pipelines, semantic layer en context engineering als voorwaarde voor betrouwbare LLM-toepassingen.",
+    category: "AI & Data Science",
+    tags: ["AI", "LLM", "data engineering", "MCP", "semantic layer", "RAG"],
+    publishedAt: "2026-03-26",
+    readingMinutes: 9,
+    intro:
+      "Bijna elke AI-pilot die vastloopt, loopt vast op hetzelfde punt. Niet op het model. Dat is inmiddels een commodity die je per token inkoopt. Het loopt vast op wat het model te zien krijgt: tabellen zonder betekenis, documenten die niemand ververst, en definities die alleen in iemands hoofd bestaan.",
+    sections: [
+      { type: "heading", text: "Het model is niet de bottleneck" },
+      {
+        type: "paragraph",
+        text:
+          "Een dashboard vergeeft slechte data nog enigszins. Een mens ziet een raar getal en gaat navragen. Een LLM doet dat niet. Die neemt aan wat hij krijgt, vult ontbrekende logica zelf in en presenteert het resultaat in vloeiende, overtuigende zinnen. Slechte data wordt daarmee niet zichtbaar fout, maar onzichtbaar fout. Dat is precies waarom AI de eisen aan je dataplatform verhoogt in plaats van verlaagt.",
+      },
+      { type: "heading", text: "Drie lagen die het verschil maken" },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Betrouwbare pipelines: data die op tijd, compleet en vers binnenkomt. Zonder freshness en tests antwoordt een agent stilletjes met cijfers van vorige week.",
+          "Een semantische laag of geteste gold-laag: business metrics één keer vastgelegd, getest en gedocumenteerd. Zodat chatvenster en dashboard hetzelfde cijfer geven.",
+          "Context engineering: documenten en metadata als dataproduct, met ingestion, chunking, permissies en evaluatie. Retrieval is een pipeline, geen prompttruc.",
+        ],
+      },
+      {
+        type: "callout",
+        title: "Kernpunt",
+        text:
+          "AI verandert niet wát goede data engineering is. Het verhoogt alleen de prijs van het weglaten ervan.",
+      },
+      { type: "heading", text: "Wat er misgaat zonder die fundering" },
+      {
+        type: "list",
+        items: [
+          "Het model raadt joins en filters over ruwe tabellen. Het antwoord ziet er overtuigend uit en is stilletjes fout.",
+          "Elke AI-tool krijgt een eigen koppeling op de database. Niemand heeft overzicht over wie wat mag opvragen.",
+          "Document-assistenten hallucineren omdat de index verouderde of dubbele stukken bevat.",
+          "De pilot maakt indruk in de demo, maar niemand durft de antwoorden in productie te vertrouwen.",
+        ],
+      },
+      { type: "heading", text: "MCP, semantic layer, context: tool-neutraal" },
+      {
+        type: "paragraph",
+        text:
+          "Het Model Context Protocol (MCP) is één open afspraak waarmee een LLM tools en bronnen aanroept, in plaats van per model een eigen integratie. Een semantic layer of een strak beheerde gold-laag houdt business logic vast. Context engineering behandelt retrieval als data-engineeringwerk. Welke tools je daarvoor kiest, is secundair. Het patroon is hetzelfde: gecontroleerd oppervlak, vaste definities, meetbare kwaliteit.",
+      },
+      { type: "heading", text: "Waar je begint" },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Kies één concrete AI-vraag uit de business, niet een platformprogramma.",
+          "Werk terug naar de data die die vraag raakt: welke tabellen, welke metrics, welke rechten, welke versheid.",
+          "Repareer of bouw precies dat stuk fundering. Niet het hele warehouse herontwerpen.",
+          "Meet of antwoorden kloppen met een gouden set vragen, voordat je de assistent breed uitzet.",
+        ],
+      },
+      { type: "heading", text: "Conclusie" },
+      {
+        type: "paragraph",
+        text:
+          "Wie AI serieus neemt, neemt data engineering serieus. Niet omdat het model dat eist in de brochure, maar omdat zonder betrouwbare bronnen, vaste metrics en geëngineerde context elke assistent uiteindelijk op ruis strandt. De organisaties die AI in productie houden, zijn dezelfde die hun pipelines, marts en documentatie al op orde hadden, of die AI als aanleiding gebruikten om dat gericht te verbeteren.",
+      },
+    ],
+    related: [
+      "analytics-engineering-rol-en-impact",
+      "data-quality-die-business-vertrouwt",
+      "data-platform-architectuur-blueprint",
     ],
   },
 ];

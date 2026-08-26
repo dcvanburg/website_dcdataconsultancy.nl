@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | DC Data Consultancy",
   },
   description:
-    "Senior data engineering consultancy uit Breda, voor organisaties die meer uit hun data willen halen. Schaalbare data pipelines, dbt implementaties en cloud dataplatforms door Dennis van Burg, sinds 2016 in data.",
+    "Senior data engineering consultancy uit Breda. Schaalbare pipelines en cloud dataplatforms als fundering voor BI, analytics en AI. Zonder betrouwbare data en vaste metrics hallucineren LLM's. Door Dennis van Burg, sinds 2016 in data.",
   keywords: [
     "data engineering consultancy",
     "data engineer Breda",
@@ -46,8 +46,12 @@ export const metadata: Metadata = {
     "Snowflake consultant",
     "Databricks consultant",
     "data analytics consultancy",
-    "Power BI consultant",
     "analytics engineering consultant",
+    "AI data engineering",
+    "LLM dataplatform",
+    "MCP consultant Nederland",
+    "semantic layer AI",
+    "AI readiness data",
   ],
   authors: [{ name: "Dennis van Burg", url: siteConfig.linkedin }],
   creator: "Dennis van Burg",
@@ -60,7 +64,7 @@ export const metadata: Metadata = {
     title:
       "DC Data Consultancy | Senior Data Engineering Consultancy Breda",
     description:
-      "Senior data engineering consultancy uit Breda, voor organisaties die meer uit hun data willen halen.",
+      "Senior data engineering consultancy uit Breda. Dataplatforms waar BI, analytics en AI op kunnen vertrouwen, omdat pipelines en metrics kloppen.",
     images: [
       {
         url: "/images/og-default.png",
@@ -74,7 +78,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DC Data Consultancy | Senior Data Engineering Consultancy",
     description:
-      "Senior data engineering consultancy uit Breda. Schaalbare dataplatforms voor enterprise opdrachtgevers.",
+      "Senior data engineering consultancy uit Breda. Schaalbare dataplatforms als fundering voor BI, analytics en betrouwbare AI.",
   },
   robots: {
     index: true,

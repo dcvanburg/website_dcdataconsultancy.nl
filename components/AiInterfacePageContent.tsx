@@ -171,20 +171,6 @@ export default function AiInterfacePageContent() {
                       {p}
                     </Reveal>
                   ))}
-
-                  <Reveal className="pt-6">
-                    <p className="eyebrow eyebrow-brand mb-4">Wat ik hier concreet oplever</p>
-                    <ul className="space-y-3">
-                      {pillar.deliverables.map((d) => (
-                        <li key={d} className="flex items-start gap-3 text-ink-soft leading-relaxed">
-                          <span className="shrink-0 mt-1 flex items-center justify-center w-5 h-5 rounded-md bg-brand/10">
-                            <Check className="w-3.5 h-3.5 text-brand" aria-hidden="true" />
-                          </span>
-                          {d}
-                        </li>
-                      ))}
-                    </ul>
-                  </Reveal>
                 </div>
 
                 {/* Why data/analytics engineering matters for this layer */}
