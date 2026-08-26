@@ -5,6 +5,7 @@ import OfferSection from "@/components/OfferSection";
 import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import QuoteSection from "@/components/QuoteSection";
+import AiInterfaceSection from "@/components/AiInterfaceSection";
 import AiUseCasesSection from "@/components/AiUseCasesSection";
 import TechStackSection from "@/components/TechStackSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -28,6 +29,7 @@ export default function Home() {
         <QuoteSection />
         <ServicesSection />
         <TechStackSection />
+        <AiInterfaceSection />
         <AiUseCasesSection />
         <ProjectsSection />
         <TestimonialsSection />

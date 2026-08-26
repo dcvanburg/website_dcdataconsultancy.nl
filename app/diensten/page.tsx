@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Diensten | Senior Data Engineering Consultancy",
   description:
-    "Data engineering, analytics engineering, dbt en Azure data engineering door een senior consultant uit Breda. Bekijk alle diensten van DC Data Consultancy.",
+    "Data engineering, analytics engineering, dbt, Azure data engineering en de AI-interface (MCP, semantic layer, context engineering) door een senior consultant uit Breda.",
   alternates: { canonical: `${siteConfig.url}/diensten` },
 };
 
@@ -52,6 +52,18 @@ const services = [
       "Metric & KPI modellering",
       "Staging → intermediate → marts",
       "Testing, docs en CI/CD",
+    ],
+  },
+  {
+    title: "AI-interface",
+    slug: "ai-interface",
+    tagline: "MCP & semantische laag",
+    description:
+      "De laag waar AI-agents je data door lezen: MCP-servers, metrics als contract en context die klopt.",
+    bullets: [
+      "MCP-servers op je dataplatform",
+      "Semantic layer of geteste gold-laag",
+      "Context engineering en retrieval",
     ],
   },
   {
@@ -107,7 +119,7 @@ export default function DienstenPage() {
         <PageHero
           eyebrow="DIENSTEN"
           heading="Senior data engineering en analytics engineering vanuit één consultancy."
-          subheading="Mijn focus ligt op data engineering. Analytics engineering werkt alleen als die fundering klopt. Hieronder de zes specialismen waarin ik werk."
+          subheading="Mijn focus ligt op data engineering. Analytics engineering én de interface voor AI-agents werken alleen als die fundering klopt. Hieronder de zeven specialismen waarin ik werk."
           primaryCta={{ label: "Plan een kennismaking", href: "/contact" }}
           secondaryCta={{ label: "Bekijk cases", href: "/cases" }}
         />

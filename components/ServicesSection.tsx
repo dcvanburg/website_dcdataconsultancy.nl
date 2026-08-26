@@ -4,6 +4,7 @@ import {
   BarChart2,
   GitBranch,
   Layers,
+  Plug,
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
@@ -15,6 +16,7 @@ const ICONS: Record<string, LucideIcon> = {
   BarChart2,
   GitBranch,
   Layers,
+  Plug,
 };
 
 export default function ServicesSection() {

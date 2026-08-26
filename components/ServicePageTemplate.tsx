@@ -181,6 +181,7 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
     { slug: "data-engineering", title: "Data Engineering", desc: "Schaalbare pipelines en cloud datawarehousing." },
     { slug: "data-analytics", title: "Data Analytics", desc: "Heldere business metrics en self service BI." },
     { slug: "analytics-engineering", title: "Analytics Engineering", desc: "Geteste marts, metrics en semantic layers voor BI." },
+    { slug: "ai-interface", title: "AI-interface", desc: "MCP, een semantische laag en context engineering voor AI-agents." },
     { slug: "modern-data-stack", title: "Modern Data Stack", desc: "Coherente architectuur, geen verzameling losse tools." },
     { slug: "dbt-consultancy", title: "dbt Consultancy", desc: "Analytics engineering met dbt best practices." },
     { slug: "azure-data-engineering", title: "Azure Data Engineering", desc: "ADF, Synapse, Databricks en Fabric." },

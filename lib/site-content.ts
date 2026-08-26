@@ -23,6 +23,7 @@ export const siteConfig = {
 export const navigation = [
   { label: "Diensten", href: "/diensten" },
   { label: "Data Engineering", href: "/diensten/data-engineering" },
+  { label: "AI-interface", href: "/diensten/ai-interface" },
   { label: "Cases", href: "/cases" },
   { label: "Industrieën", href: "/industrieen" },
   { label: "Over Dennis", href: "/over-dennis" },
@@ -35,6 +36,7 @@ export const footerNav = {
     { label: "Data Engineering", href: "/diensten/data-engineering" },
     { label: "Data Analytics", href: "/diensten/data-analytics" },
     { label: "Analytics Engineering", href: "/diensten/analytics-engineering" },
+    { label: "AI-interface (MCP & semantic layer)", href: "/diensten/ai-interface" },
     { label: "Modern Data Stack", href: "/diensten/modern-data-stack" },
     { label: "dbt Consultancy", href: "/diensten/dbt-consultancy" },
     { label: "Azure Data Engineering", href: "/diensten/azure-data-engineering" },
@@ -60,12 +62,12 @@ export const hero = {
   badge: "SENIOR ANALYTICS ENGINEERING · NL",
   heading: "Een dataplatform dat doet wat het belooft.",
   subheading:
-    "Freelance senior data specialist en al meer dan tien jaar bouw ik datapipelines en platforms waar BI, analytics en AI op kunnen draaien. Hands-on, samen met een team, met het resultaat voor ogen.",
+    "Freelance senior data specialist. Al meer dan tien jaar bouw ik datapipelines en platforms waar BI, analytics en AI op kunnen draaien. Hands-on, samen met een team, met het resultaat voor ogen.",
   primaryCta: { label: "Plan een kennismaking", href: "/contact" },
   secondaryCta: { label: "Lees over analytics engineering", href: "/diensten/analytics-engineering" },
   trustBar: {
     label: "Gewerkt voor o.a.",
-    clients: ["Rabobank", "de Volksbank", "Achmea", "PostNL", "Mileway", "Gulf", "Brandweer"],
+    clients: ["Rabobank", "de Volksbank", "Achmea", "Obvion", "PostNL", "Mileway", "Gulf", "Brandweer", "ABG"],
   },
 } as const;
 
@@ -74,7 +76,7 @@ export const problemSection = {
   eyebrow: "Herkenbaar?",
   heading: "Data zou tijd moeten besparen en belangrijke beslissingen moeten ondersteunen.",
   intro:
-    "Niet omdat teams niet hard werken, maar omdat de fundering onder de dataomgeving nooit goed is gelegd.",
+    "In de praktijk werkt het vaak andersom.",
   problems: [
     {
       title: "Cijfers die niet kloppen",
@@ -114,7 +116,7 @@ export const offerSection = {
   eyebrow: "Wat ik doe",
   heading: "Een dataplatform dat meegroeit met je organisatie.",
   intro:
-    "Geen losse projecten, maar een fundering die jaren meegaat. Mijn focus ligt op analytics engineering: analytics en AI werken alleen als die basis klopt.",
+    "Geen losse projecten, maar een fundering die jaren meegaat. Mijn focus ligt op data/analytics engineering: analytics en AI werken alleen als die basis klopt.",
   pillars: [
     {
       number: "01",
@@ -127,20 +129,20 @@ export const offerSection = {
     },
     {
       number: "02",
-      title: "Data Analytics",
-      tagline: "Business metrics waar de directie op stuurt",
-      description:
-        "Cijfers waar de hele organisatie op vertrouwt, zonder discussie vooraf over wiens dashboard gelijk heeft.",
-      href: "/diensten/data-analytics",
-      primary: false,
-    },
-    {
-      number: "03",
       title: "Analytics Engineering",
       tagline: "De brug die engineering en analytics verbindt",
       description:
         "Data die niet alleen technisch klopt, maar ook betekenis heeft voor het business. Eén bron van waarheid, getest en gedocumenteerd, zodat iedereen dezelfde taal spreekt.",
       href: "/diensten/analytics-engineering",
+      primary: false,
+    },
+    {
+      number: "03",
+      title: "Data Analytics",
+      tagline: "Business metrics waar de directie op stuurt",
+      description:
+        "Cijfers waar de hele organisatie op vertrouwt, zonder discussie vooraf over wiens dashboard gelijk heeft.",
+      href: "/diensten/data-analytics",
       primary: false,
     },
   ],
@@ -151,7 +153,7 @@ export const techStack = {
   eyebrow: "Modern Data Stack",
   heading: "Technologie in dienst van de business, niet andersom.",
   intro:
-    "Ik ben niet aan één tool getrouwd en adviseer wat in jouw situatie werkt. Geen hype, geen vendor lock-in zonder goede reden.",
+    "Ik ben niet met één tool getrouwd en adviseer wat in jouw situatie werkt. Geen hype, geen vendor lock-in zonder goede reden.",
   categories: [
     {
       name: "Cloud platforms",
@@ -188,7 +190,7 @@ export const aboutSection = {
   bio: [
     "Sinds 2016 werk ik aan datavraagstukken die ertoe doen. In 2021 startte ik DC Data Consultancy, om opdrachtgevers te helpen die niet alleen zoeken naar een paar extra handen, maar naar iemand die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
     "Mijn werk zit op het snijvlak van engineering en business. Ik bouw geen pipelines om de pipelines, maar omdat finance op maandag op de cijfers moet kunnen rekenen, omdat marketing wil weten wat werkt en omdat de directie wil sturen op data in plaats van op aannames.",
-    "Ik werk graag over afdelingen heen, met het teamresultaat voor ogen. Daar haal ik energie uit: samen complexe vraagstukken aanpakken en dingen voor elkaar krijgen. Vanuit Breda werk ik door heel Nederland, vooral in financial services, logistiek, vastgoed, energie en publieke sector.",
+    "Ik werk graag over afdelingen heen, met het teamresultaat voor ogen. Daar haal ik energie uit: samen complexe vraagstukken aanpakken en dingen voor elkaar krijgen. Vanuit Breda werk ik door heel Nederland.",
   ],
   highlights: [
     { value: "10+", label: "jaar ervaring in data" },
@@ -225,7 +227,7 @@ export const processSection = {
       number: "02",
       title: "Architectuur & plan",
       description:
-        "Concrete oplossing op één A4: doelarchitectuur, fasering, technologiekeuzes en verwacht businessresultaat per fase.",
+        "Concrete oplossing: doelarchitectuur, fasering, technologiekeuzes en verwacht businessresultaat per fase.",
     },
     {
       number: "03",
@@ -252,7 +254,7 @@ export const aiUseCases = {
   eyebrow: "AI & LLM",
   heading: "LLM-toepassingen die werken, omdat het dataplatform klopt.",
   intro:
-    "Een LLM is geen shortcut voor rommelige data. Zonder betrouwbare pipelines, schone context en geteste metrics krijg je hallucinaties in plaats van antwoorden. Data engineering levert de bronnen; analytics engineering levert de betekenis. Een paar toepassingen waar dat verschil zichtbaar wordt:",
+    "Met MCP, een semantische laag en geëngineerde context als fundament worden dit de toepassingen die daadwerkelijk in productie overleven. Data engineering levert de bronnen; analytics engineering levert de betekenis. Zonder die twee krijg je hallucinaties in plaats van antwoorden.",
   cases: [
     {
       title: "RAG & kennisassistenten",
@@ -263,7 +265,7 @@ export const aiUseCases = {
     {
       title: "Natuurlijke taal over je cijfers",
       description:
-        "Medewerkers stellen vragen in gewone taal en krijgen antwoord uit betrouwbare business metrics. Dat vraagt om geteste marts, duidelijke definities en een semantic layer, precies waar analytics engineering voor bedoeld is.",
+        "Medewerkers stellen vragen in gewone taal en krijgen antwoord uit betrouwbare business metrics. Dat vraagt om een geteste gold-laag met duidelijke definities, precies waar analytics engineering voor bedoeld is.",
       icon: "MessageSquare",
     },
     {
@@ -287,6 +289,53 @@ export const aiUseCases = {
   ],
 } as const;
 
+// ─────────────────────────────────────────────────────────────────────────────
+// HOMEPAGE — AI INTERFACE (MCP · SEMANTIC LAYER · CONTEXT ENGINEERING)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const aiInterfaceSection = {
+  sectionId: "ai-interface",
+  eyebrow: "AI-interface",
+  heading: "De interface bouwen waar AI-agents je data door lezen.",
+  intro:
+    "Een agent kan niet in je warehouse kijken. Hij ziet alleen wat je hem aanreikt: welke tools hij mag aanroepen, welke metrics gedefinieerd zijn en welke context in het venster past. Die interface bouw je niet in een prompt, die bouw je in je dataplatform. Drie lagen doen het werk, en geen ervan is aan één tool gebonden.",
+  layers: [
+    {
+      number: "01",
+      title: "MCP",
+      subtitle: "Model Context Protocol",
+      summary:
+        "Eén open protocol waarmee een LLM tools, queries en bronnen aanroept, in plaats van per model een eigen integratie te schrijven.",
+      whyDataEngineering:
+        "Een MCP-server is niets anders dan een API op je dataplatform, met een agent als gebruiker die zelf kiest wanneer hij hem aanroept. Dat legt elke zwakke plek in je data engineering meteen bloot: een tool zonder access control lekt data naar een chatvenster, een tool zonder freshness-check geeft stilzwijgend cijfers van vorige week, en een tool die ruwe brontabellen exposeert dwingt het model om joins te verzinnen die het niet kan verifiëren. De agent stelt geen vervolgvraag als je pipeline vannacht is gebroken; hij antwoordt gewoon met verouderde data.",
+      href: "/diensten/ai-interface#mcp",
+    },
+    {
+      number: "02",
+      title: "Semantische laag",
+      subtitle: "Metrics als contract",
+      summary:
+        "Business logic één keer vastleggen en afdwingbaar maken. Dat kan met een echte semantic layer (dbt, Cube, LookML, AtScale, een Power BI-model), maar net zo goed met een strak beheerde gold-laag met tests en documentatie. Het patroon telt, niet het product.",
+      whyDataEngineering:
+        "Zonder zo'n laag moet een LLM zelf SQL schrijven over ruwe tabellen. Dan raadt hij de business logic: welke orders tellen mee, hoe zit het met annuleringen, welke valuta, welk fiscaal jaar. Het antwoord ziet er overtuigend uit en is stilletjes fout, precies het gevaarlijkste soort fout. Geef je in plaats daarvan een gecureerde set gemodelleerde tabellen of metrics, dan komt hetzelfde cijfer terug als in het directie-dashboard. Analytics engineering is hier de veiligheidsmaatregel: geteste modellen en vastgelegde definities zijn wat een LLM ervan weerhoudt om te improviseren.",
+      href: "/diensten/ai-interface#semantic-layer",
+    },
+    {
+      number: "03",
+      title: "Context engineering",
+      subtitle: "Het venster vullen dat telt",
+      summary:
+        "Bepalen wat een model wél ziet: welke documenten, welke metadata, welke lineage, in welke volgorde en binnen welk tokenbudget.",
+      whyDataEngineering:
+        "Context is geen promptkunstje maar een retrieval-probleem, en retrieval is een pipeline: ingestion, deduplicatie, chunking, embeddings, refresh-schema's, permissies per gebruiker en evaluatie of het opgehaalde stuk daadwerkelijk het antwoord bevat. Verouderde of dubbele documenten in de index zijn de directe oorzaak van hallucinaties die niemand kan verklaren. Wie zijn context niet als dataproduct behandelt (met eigenaar, tests en versiebeheer) bouwt een assistent die vandaag indruk maakt en volgend kwartaal niet meer vertrouwd wordt.",
+      href: "/diensten/ai-interface#context-engineering",
+    },
+  ],
+  closing:
+    "Deze drie lagen delen één fundering: betrouwbare pipelines en geteste, gedocumenteerde metrics. Welke tools je daarvoor gebruikt is een implementatiekeuze. AI verandert niet wát goede data engineering is, het verhoogt alleen de prijs van het weglaten ervan.",
+  cta: { label: "Lees hoe ik dit bouw", href: "/diensten/ai-interface" },
+} as const;
+
 export const services = {
   sectionId: "diensten",
   heading: "Diensten",
@@ -302,6 +351,14 @@ export const services = {
       primary: true,
     },
     {
+      title: "Analytics Engineering",
+      tagline: "Betrouwbare metrics, getest en gedocumenteerd",
+      description:
+        "Gelaagde modellering, dbt marts en semantic layers. Eén bron van waarheid waar BI en stakeholders op vertrouwen.",
+      icon: "GitBranch",
+      href: "/diensten/analytics-engineering",
+    },
+    {
       title: "Data Analytics",
       tagline: "Inzicht met onderbouwing",
       description:
@@ -310,12 +367,12 @@ export const services = {
       href: "/diensten/data-analytics",
     },
     {
-      title: "Analytics Engineering",
-      tagline: "Betrouwbare metrics, getest en gedocumenteerd",
+      title: "AI-interface",
+      tagline: "MCP, semantische laag, context",
       description:
-        "Gelaagde modellering, dbt marts en semantic layers. Eén bron van waarheid waar BI en stakeholders op vertrouwen.",
-      icon: "GitBranch",
-      href: "/diensten/analytics-engineering",
+        "De laag waarmee AI-agents je data veilig bevragen: MCP-servers, metrics als contract en context die klopt in plaats van hallucineert.",
+      icon: "Plug",
+      href: "/diensten/ai-interface",
     },
     {
       title: "Modern Data Stack",
@@ -352,7 +409,7 @@ export const testimonialsSection = {
   eyebrow: "Wat opdrachtgevers zeggen",
   heading: "Senior, hands-on en met oog voor de business.",
   intro:
-    "Aanbevelingen van opdrachtgevers en collega's op LinkedIn, woordelijk overgenomen.",
+    "Aanbevelingen van opdrachtgevers.",
   quotes: [
     {
       text: "Dennis is energiek, onderzoekend en een volwaardig sparringpartner die snel kan schakelen en oplossingen levert. De combinatie van analytische vaardigheden en conceptueel denkvermogen stelt hem in staat om complexe data uitdagingen met gemak aan te pakken. Als teamplayer blinkt hij uit door zijn social skills en heldere communicatie. Dennis is stressbestendig en pragmatisch wat hem slagvaardig maakt, zelfs onder de druk. Ik ben er zeker van dat Dennis een waardevolle aanwinst is voor ieder team dat op zoek is naar data expertise.",
@@ -414,7 +471,7 @@ export const finalCta = {
 export const dataEngineeringPage = {
   slug: "data-engineering",
   title: "Data Engineering Consultancy",
-  metaTitle: "Data Engineering Consultancy | DC Data Consultancy Breda",
+  metaTitle: "Data Engineering Consultancy | DC Data Consultancy",
   metaDescription:
     "Senior data engineering consultancy. Schaalbare data pipelines, cloud datawarehousing, dbt en Azure architectuur, gebouwd om jaren mee te gaan.",
   hero: {
@@ -457,7 +514,7 @@ export const dataEngineeringPage = {
     {
       title: "Orchestration",
       description:
-        "DAG-gedreven orchestration met Azure Data Factory, dbt, Airflow of Prefect, inclusief observability en SLA-bewaking.",
+        "DAG-gedreven orchestration met Azure Data Factory, dbt of Airflow, inclusief observability.",
     },
     {
       title: "Data quality & testing",
@@ -753,7 +810,7 @@ export const analyticsEngineeringPage = {
     "Minder tijd aan definities-discussies, meer tijd aan sturen op data.",
     "Een team dat zelfstandig marts en metrics kan uitbreiden.",
   ],
-  stack: ["dbt Core", "dbt Cloud", "Snowflake", "Databricks", "BigQuery", "Redshift", "Power BI", "Looker", "GitHub Actions"],
+  stack: ["dbt Core", "dbt Cloud", "Snowflake", "Databricks", "BigQuery", "Redshift", "Power BI", "Looker", "Azure Devops", "GitHub Actions"],
   faqs: [
     {
       q: "Wat is analytics engineering precies?",
@@ -761,11 +818,301 @@ export const analyticsEngineeringPage = {
     },
     {
       q: "Hoe verschilt dit van dbt consultancy?",
-      a: "dbt consultancy richt zich op het dbt-project zelf: structuur, macros, CI/CD. Analytics engineering is breder: metric-definities met stakeholders, modelleringstrategie, BI-aansluiting en het opzetten van analytics engineering als manier van werken in je team. Vaak overlap, want dbt is mijn primaire tool.",
+      a: "dbt consultancy richt zich op het dbt-project zelf: structuur, macros, CI/CD. Analytics engineering is breder: metric-definities met stakeholders, modelleringstrategie, BI-aansluiting en het opzetten van analytics engineering als manier van werken in je team. Vaak overlap, want dbt is hiervoor de primaire tool.",
     },
     {
       q: "Hebben we eerst data engineering nodig?",
       a: "Ideaal wel: analytics engineering bouwt op betrouwbare, tijdige data. Zonder solide pipelines en een warehouse wordt modelleren een constant vechten tegen datakwaliteit. In de praktijk pak ik beide vaak in één traject aan.",
+    },
+  ],
+} as const;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SERVICE PAGE — AI INTERFACE (MCP · SEMANTISCHE LAAG · CONTEXT ENGINEERING)
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const aiInterfacePage = {
+  slug: "ai-interface",
+  title: "De interface voor AI-agents",
+  metaTitle: "MCP, semantic layer & context engineering | DC Data Consultancy",
+  metaDescription:
+    "De datalaag waar AI-agents op draaien: MCP-servers, een semantische laag (semantic layer of geteste gold-laag) en context engineering. Tool-neutraal, want LLM-toepassingen staan of vallen met data engineering en analytics engineering.",
+  hero: {
+    eyebrow: "AI-interface",
+    heading: "De interface bouwen waar AI-agents je organisatie door lezen.",
+    subheading:
+      "Een agent ziet je bedrijf niet. Hij ziet de tools die je aanbiedt, de metrics die je hebt gedefinieerd en de context die je aanreikt. Die drie dingen zijn data engineering en analytics engineering werk, geen prompt-werk.",
+  },
+  intro: {
+    heading: "Waarom een LLM-project een data-project is.",
+    paragraphs: [
+      "Bijna elke AI-pilot die vastloopt, loopt vast op hetzelfde punt. Niet op het model, dat is inmiddels een commodity die je per token inkoopt. Het loopt vast op wat het model te zien krijgt: tabellen zonder betekenis, documenten die niemand ververst, definities die alleen in iemands hoofd bestaan en toegangsrechten die niet meereizen naar het chatvenster.",
+      "Een dashboard vergeeft slechte data nog enigszins: een mens ziet een raar getal en gaat navragen. Een LLM doet dat niet. Die neemt aan wat hij krijgt, vult ontbrekende logica zelf in en presenteert het resultaat in vloeiende, overtuigende zinnen. Slechte data wordt daarmee niet zichtbaar fout, maar onzichtbaar fout. Dat is precies de reden waarom AI de eisen aan je dataplatform verhoogt in plaats van verlaagt.",
+      "De oplossing is geen nieuwe categorie tooling, maar het serieus toepassen van wat data engineering en analytics engineering altijd al deden: betrouwbare pipelines, gelaagde modellering, geteste business metrics, lineage en governance. Alleen is de afnemer nu een agent die honderd keer per dag vragen stelt, in plaats van een analist die één keer per week een rapport opent.",
+      "Daarom is dit verhaal bewust tool-neutraal. Een semantische laag kun je bouwen met dbt, Cube, LookML, AtScale of een goed beheerd Power BI-model, maar in veel organisaties is een strak gemodelleerde gold-laag met tests en documentatie ruim voldoende. Retrieval kan op pgvector, Azure AI Search, Databricks Vector Search of Elastic. MCP is een open protocol dat op dat alles past. Ik kijk eerst naar wat je al hebt, en adviseer pas daarna wat er echt bij moet.",
+    ],
+  },
+  pillars: [
+    {
+      id: "mcp",
+      eyebrow: "Laag 01",
+      title: "MCP: het stopcontact tussen model en dataplatform",
+      lead:
+        "Het Model Context Protocol is een open standaard waarmee een LLM tools, queries en bronnen aanroept via één afspraak, in plaats van via een eigen koppeling per model en per applicatie.",
+      body: [
+        "Voor MCP schreef je per assistent een eigen integratie: een custom functie-definitie hier, een losse API-wrapper daar, allemaal met eigen authenticatie en eigen foutafhandeling. Met MCP publiceer je één server die tools blootstelt (een metric opvragen, een document zoeken, een pipeline-status uitlezen) en die door elke MCP-compatibele client gebruikt kan worden. Je koppelt je dataplatform één keer, niet per AI-tool.",
+        "Wat vaak wordt onderschat: zo'n server is geen wrapper maar een productiekoppeling op je warehouse, met een niet-deterministische gebruiker aan de andere kant. De agent kiest zelf welke tool hij aanroept, met welke parameters, hoe vaak en in welke volgorde. Dat betekent dat elke tool zijn eigen contract nodig heeft: strak afgebakende input, voorspelbare output, expliciete foutmeldingen die het model kan interpreteren, en een beschrijving die zó duidelijk is dat het model niet gokt.",
+      ],
+      whyEngineering: {
+        heading: "Waarom dit staat of valt met data engineering",
+        points: [
+          "Toegangsrechten moeten meereizen. Een MCP-tool die met één service account draait, geeft iedere gebruiker van de chatbot het toegangsniveau van dat account. Row-level security, rolgebaseerde toegang en identity pass-through horen in de laag eronder, niet in de prompt.",
+          "Freshness moet onderdeel zijn van het antwoord. Een agent ziet niet dat je nachtelijke load is gebroken. Tools moeten metadata teruggeven over hoe actueel de data is, zodat het model dat kan melden in plaats van verzwijgen.",
+          "Ruwe tabellen zijn geen tool-oppervlak. Een tool die de agent vrij laat queryen over honderden brontabellen dwingt hem joins en filters te verzinnen. Exposeer gemodelleerde marts en metrics, niet het rauwe landingsgebied.",
+          "Kosten en concurrency worden een architectuurvraag. Agents queryen in loops. Zonder caching, query-limieten en materialisatiestrategie schrijft één enthousiast team in een week een verrassende warehouse-rekening.",
+          "Alles moet auditeerbaar zijn. Welke agent, namens welke gebruiker, heeft welke data opgevraagd? In financial services is dat geen nice-to-have maar een randvoorwaarde om überhaupt live te mogen.",
+        ],
+      },
+      deliverables: [
+        "Ontwerp en bouw van MCP-servers op je warehouse, lakehouse, gold-laag of semantische laag",
+        "Tool-contracten: afgebakende inputs, getypeerde outputs en foutmeldingen die een model kan verwerken",
+        "Authenticatie en identity pass-through, zodat rechten van de gebruiker meereizen naar de agent",
+        "Observability: logging, tracing en kostenmonitoring per tool-aanroep",
+      ],
+    },
+    {
+      id: "semantic-layer",
+      eyebrow: "Laag 02",
+      title: "De semantische laag: metrics als contract, niet als suggestie",
+      lead:
+        "Business logic wordt één keer vastgelegd (grain, filters, dimensies, tijdlogica) en is daarna opvraagbaar door BI-tools én door AI-agents. Dezelfde definitie, dezelfde uitkomst, ongeacht wie het vraagt. Of je dat implementeert als een echte semantic layer of als een strak beheerde gold-laag, is een keuze die van je situatie afhangt.",
+      body: [
+        "De klassieke aanpak voor 'praten met je data' is text-to-SQL: het model krijgt een schema en schrijft zelf een query. Op een demo met vijf tabellen werkt dat prachtig. In een echte omgeving met tweehonderd tabellen, langlopende dimensies, annuleringen, correctieboekingen en drie valuta's raadt het model de business logic. Het antwoord is syntactisch correct, ziet er professioneel uit en is inhoudelijk fout, zonder dat iemand het merkt.",
+        "De oplossing is om de vraag te veranderen van 'schrijf SQL over deze tabellen' naar 'vraag deze metric op met deze dimensie en dit tijdvenster'. Het model kiest uit een gecureerde set die door mensen is gedefinieerd en getest. De ruimte om te improviseren is weg, en dat is precies wat je wilt. Een agent die zegt 'die metric bestaat niet' is oneindig veel bruikbaarder dan een agent die er een verzint.",
+        "Dat kan op meerdere manieren. Een dedicated semantic layer (dbt, Cube, LookML, AtScale, of het semantische model in Power BI) geeft je metrics als expliciet object, met dimensies en tijdlogica die op het moment van bevragen worden samengesteld. Maar in veel organisaties is een goed gemodelleerde gold-laag genoeg: business-klare tabellen op de juiste grain, met geautomatiseerde tests op uniciteit, niet-null en referentiële integriteit, en documentatie en lineage die machineleesbaar zijn. Je agent bevraagt dan een handvol gecureerde tabellen in plaats van tweehonderd ruwe.",
+        "De afweging is niet religieus. Een extra semantic layer voegt vooral waarde toe bij veel metric-varianten, veel BI-tools naast elkaar of zware governance-eisen. Heb je een overzichtelijk aantal duidelijke KPI's, dan is een geteste en gedocumenteerde gold-laag sneller gebouwd, goedkoper in onderhoud en voor een LLM net zo goed te begrijpen. Wat in beide gevallen niet optioneel is: de definities zijn vastgelegd, ze zijn getest en ze zijn gedocumenteerd.",
+        "Dit is ook wat AI en BI eindelijk op één lijn brengt. Als het chatvenster en het directie-dashboard uit dezelfde definitie putten, verdwijnt de discussie over welk cijfer klopt. Zonder die laag introduceer je met elke nieuwe AI-toepassing een extra versie van de waarheid, bovenop de versies die je al had.",
+      ],
+      whyEngineering: {
+        heading: "Waarom dit staat of valt met analytics engineering",
+        points: [
+          "De laag is zo goed als de modellering eronder. Metrics of gold-tabellen bovenop ongeteste, ongedocumenteerde modellen verplaatsen het probleem, ze lossen het niet op.",
+          "Definities moeten expliciet zijn gemaakt met de business. Wat telt als actieve klant, wanneer is omzet gerealiseerd, hoe gaan we om met storno's. Die gesprekken zijn het echte werk; het vastleggen in code of YAML is het makkelijke deel.",
+          "Tests zijn wat een cijfer betrouwbaar houdt. Uniciteit, niet-null, referentiële integriteit en freshness die bij iedere wijziging meelopen in CI, of dat nu dbt-tests zijn, Great Expectations, Soda of eigen assertions in de pipeline.",
+          "Documentatie is niet langer hygiëne, het is modelinput. Beschrijvingen, synoniemen en voorbeeldvragen bij tabellen, kolommen en metrics zijn precies waarmee een LLM de juiste bron kiest. Een catalog die leeg is, laat het model gokken.",
+          "Lineage maakt antwoorden verdedigbaar. Als de CFO vraagt waar een cijfer vandaan komt, moet je van het antwoord terug kunnen lopen naar de bron, of die lineage nu uit dbt docs, Unity Catalog, Purview of een eigen catalog komt.",
+        ],
+      },
+      deliverables: [
+        "Definities vastleggen in code: grain, aggregatie, filters, tijdlogica en dimensies",
+        "Advies over de vorm: dedicated semantic layer of een geteste, gedocumenteerde gold-laag, passend bij je stack en team",
+        "Werksessies met finance, sales en operations om conflicterende definities op één lijn te krijgen",
+        "Geautomatiseerde tests en machineleesbare documentatie en lineage, in de tooling die je al gebruikt",
+        "Ontsluiting richting BI én agents, zodat dashboard en chatvenster hetzelfde cijfer geven",
+      ],
+    },
+    {
+      id: "context-engineering",
+      eyebrow: "Laag 03",
+      title: "Context engineering: bepalen wat het model wél ziet",
+      lead:
+        "Een contextvenster is eindig en duur. Context engineering is het vak van bepalen welke documenten, metadata, metrics en voorbeelden erin gaan, in welke vorm, in welke volgorde en met welke versheid.",
+      body: [
+        "Prompt engineering gaat over hoe je de vraag formuleert. Context engineering gaat over wat er naast die vraag in het venster staat, en dat is waar veruit de meeste kwaliteitswinst zit. Een middelmatig prompt met uitstekende context verslaat een briljant prompt met rommelige context, elke keer.",
+        "In de praktijk is dat een retrieval-pipeline, en dus gewoon data engineering: bronnen ontsluiten, dedupliceren, versies bijhouden, verstandig chunken op semantische grenzen in plaats van op karakteraantal, embeddings genereren en verversen, permissies per document meenemen in de index en meten of het opgehaalde materiaal het antwoord daadwerkelijk bevat.",
+        "Die laatste stap is degene die het vaakst wordt overgeslagen. Zonder evaluatieset weet je niet of een wijziging in je chunking-strategie het systeem beter of slechter maakt; je hebt alleen een onderbuikgevoel en een demo die toevallig goed ging. Ik zet daarom evaluatie op als onderdeel van de pipeline, niet als eenmalige test achteraf.",
+        "En context is meer dan documenten. Voor een agent die over je bedrijf redeneert hoort daar structurele context bij: welke metrics bestaan er, wat betekenen ze, welke tabellen zijn actueel, wat is de lineage, wie is eigenaar. Precies de metadata die elk fatsoenlijk beheerd dataplatform al produceert, of dat nu via dbt docs, Unity Catalog, Microsoft Purview, een information schema of een eigen catalog gaat. In de meeste organisaties ligt die metadata er wel, maar wordt hij nooit aan het model gegeven.",
+      ],
+      whyEngineering: {
+        heading: "Waarom dit staat of valt met data engineering",
+        points: [
+          "Een vector store is een dataproduct. Ingestion, refresh-schema, deduplicatie, ownership en monitoring: dezelfde discipline als bij elke andere pipeline, inclusief alerting als de verversing stilvalt.",
+          "Verouderde context is de meest voorkomende oorzaak van hallucinaties. Een index die nog het beleid van vorig jaar bevat, geeft met volle overtuiging een verkeerd antwoord. Freshness is hier een feature, geen detail.",
+          "Permissies horen in de index, niet in de prompt. 'Vertel dit niet aan gebruikers zonder rechten' is geen beveiliging. Filteren op autorisatie moet gebeuren vóór het ophalen.",
+          "Chunking is modelleerwerk. Waar je knipt bepaalt of een clausule, tabel of procedure heel blijft. Dat is dezelfde afweging als het kiezen van de grain van een tabel, met dezelfde gevolgen als je het fout doet.",
+          "Zonder evaluatie is er geen engineering, alleen hoop. Een gouden set vragen met verwachte antwoorden, die meeloopt in CI, maakt van AI-werk iets meetbaars in plaats van een demo-gevoel.",
+        ],
+      },
+      deliverables: [
+        "Retrieval-pipelines: ingestion, deduplicatie, chunking, embeddings en refresh-orchestratie",
+        "Permissie-bewuste indexering, zodat autorisatie meereist tot in het antwoord",
+        "Structurele context uit je bestaande catalog: definities, lineage en ownership als input voor de agent",
+        "Evaluatiesets en regressietests op antwoordkwaliteit, meelopend in CI/CD",
+      ],
+    },
+  ],
+  architecture: {
+    eyebrow: "Samenhang",
+    heading: "Hoe de drie lagen op elkaar staan.",
+    intro:
+      "Ze zijn geen alternatieven voor elkaar. Ze stapelen, en elke laag erboven is precies zo betrouwbaar als de laag eronder.",
+    layers: [
+      {
+        label: "Bronnen",
+        description: "Systemen, events, documenten. Ruw, ongeschoond en zonder gedeelde betekenis.",
+      },
+      {
+        label: "Pipelines & lakehouse",
+        description:
+          "Data engineering: betrouwbare ingestion, gelaagde opbouw (bronze, silver, gold), tests en orchestration. Zonder deze laag is al het volgende gokwerk.",
+      },
+      {
+        label: "Gold-laag & metrics",
+        description:
+          "Analytics engineering: business logic één keer vastgelegd, getest en gedocumenteerd. Dit is wat een LLM ervan weerhoudt zelf definities te verzinnen.",
+      },
+      {
+        label: "Semantische laag & retrieval",
+        description:
+          "Definities als opvraagbaar contract (via een semantic layer of rechtstreeks op gecureerde gold-tabellen), plus een permissie-bewuste index met documentatie en structurele context.",
+      },
+      {
+        label: "MCP-servers",
+        description:
+          "Het tool-oppervlak: afgebakend, geauthenticeerd, gelogd en begrijpelijk beschreven voor een model.",
+      },
+      {
+        label: "Agents & copilots",
+        description:
+          "De toepassing waar de business om vroeg. Het zichtbare stukje, gedragen door alles eronder.",
+      },
+    ],
+  },
+  problems: [
+    "De AI-pilot gaf indrukwekkende demo's, maar niemand durft de antwoorden in productie te vertrouwen.",
+    "De chatbot schrijft zelf SQL en komt met andere cijfers dan het directie-dashboard.",
+    "Elke AI-tool krijgt een eigen koppeling op de database; niemand heeft overzicht over wie wat mag opvragen.",
+    "De assistent citeert beleid en documentatie die al maanden achterhaald zijn.",
+    "Er is geen manier om te meten of een wijziging de antwoordkwaliteit verbetert of verslechtert.",
+    "Security en compliance blokkeren de uitrol, omdat rechten niet meereizen naar het chatvenster.",
+  ],
+  useCases: [
+    {
+      title: "Praten met je cijfers, zonder verrassingen",
+      description:
+        "Medewerkers stellen vragen in gewone taal over omzet, marge of volumes. De agent vraagt gedefinieerde metrics of gecureerde gold-tabellen op in plaats van SQL te verzinnen, dus het antwoord is per definitie hetzelfde als in het dashboard. Analytics engineering levert hier de definities; data engineering zorgt dat ze actueel zijn.",
+      icon: "MessageSquare",
+    },
+    {
+      title: "Kennisassistenten op interne documentatie",
+      description:
+        "Beleid, procedures, handleidingen en contracten doorzoekbaar maken voor een LLM. Staat of valt met ingestion, deduplicatie, chunking, permissie-bewuste indexering en verversing. Dat is data engineering, geen prompt engineering.",
+      icon: "BookOpen",
+    },
+    {
+      title: "Agents die acties uitvoeren",
+      description:
+        "Niet alleen antwoorden, maar ook iets doen: een case aanmaken, een run herstarten, een klantstatus bijwerken. Dat vraagt om MCP-tools met strakke contracten, idempotentie en audit logging, bovenop data die aantoonbaar actueel is.",
+      icon: "Bot",
+    },
+    {
+      title: "Document intelligence op schaal",
+      description:
+        "Contracten, klachten of compliance-documenten geautomatiseerd analyseren. Het model kan lezen, maar iemand moet de documenten betrouwbaar binnenhalen, structureren, classificeren en de output weer terug in het warehouse landen zodat je erop kunt rapporteren.",
+      icon: "FileSearch",
+    },
+    {
+      title: "Interne copilots per afdeling",
+      description:
+        "Sales, support en finance die hun eigen data, policies en cases kunnen raadplegen, elk binnen hun eigen rechten. Zonder governance, lineage en actuele gestructureerde data wordt het een speeltje dat niemand vertrouwt.",
+      icon: "Sparkles",
+    },
+    {
+      title: "Je dataplatform zelf agent-ready maken",
+      description:
+        "Catalog-metadata, lineage en modeldocumentatie ontsluiten via MCP (uit dbt docs, Unity Catalog, Purview of je eigen catalog), zodat engineers en analisten hun eigen platform kunnen bevragen: waar komt deze metric vandaan, wat breekt er als ik dit model wijzig, wanneer is deze tabel voor het laatst ververst.",
+      icon: "Plug",
+    },
+  ],
+  process: [
+    {
+      title: "AI-readiness review",
+      description:
+        "Welke use case, welke data, welke definities en welke rechten? In één of twee sessies wordt duidelijk wat er nu al kan en wat eerst gebouwd moet worden.",
+    },
+    {
+      title: "Fundering op orde",
+      description:
+        "Gerichte verbeteringen aan pipelines en marts voor precies de data die de use case raakt. Niet het hele platform herbouwen, wel het deel dat de agent gaat gebruiken.",
+    },
+    {
+      title: "Interface bouwen",
+      description:
+        "Semantic layer, retrieval-pipeline en MCP-server, inclusief authenticatie, logging en een evaluatieset om kwaliteit te meten.",
+    },
+    {
+      title: "Meten, bijsturen, overdragen",
+      description:
+        "Evaluatie in CI, monitoring op kosten en versheid, en kennisoverdracht zodat je eigen team nieuwe tools en metrics zelfstandig toevoegt.",
+    },
+  ],
+  outcomes: [
+    "AI-antwoorden die overeenkomen met wat het dashboard laat zien, omdat ze uit dezelfde definitie komen.",
+    "Eén gecontroleerd tool-oppervlak op je dataplatform, in plaats van een koppeling per AI-tool.",
+    "Toegangsrechten die meereizen van gebruiker tot antwoord, met een audit trail die compliance overleeft.",
+    "Meetbare antwoordkwaliteit via evaluatiesets, zodat verbeteringen aantoonbaar zijn.",
+    "Een dataplatform dat de volgende AI-use case aankan zonder opnieuw te beginnen.",
+  ],
+  stack: [
+    "Model Context Protocol (MCP)",
+    "dbt Core & dbt Cloud",
+    "dbt Semantic Layer",
+    "Cube",
+    "Power BI semantisch model",
+    "Snowflake",
+    "Databricks",
+    "BigQuery",
+    "Azure Synapse & Fabric",
+    "Great Expectations",
+    "Azure OpenAI",
+    "Azure AI Search",
+    "pgvector",
+    "Python",
+    "Airflow",
+    "Unity Catalog",
+    "Microsoft Purview",
+    "GitHub Actions",
+  ],
+  faqs: [
+    {
+      q: "Wat is MCP precies, en waarom zou ik er nu iets mee doen?",
+      a: "Het Model Context Protocol is een open standaard waarmee een LLM tools en bronnen aanroept via één afspraak, in plaats van via een eigen integratie per model en per applicatie. Praktisch belang: je koppelt je dataplatform één keer en kunt daarna van model of client wisselen zonder alles opnieuw te bouwen. Dat verlaagt de kosten van experimenteren aanzienlijk, en het dwingt je bovendien om expliciet te maken welke data een agent mag zien, wat sowieso een gezonde oefening is.",
+    },
+    {
+      q: "Waarom niet gewoon text-to-SQL op ons warehouse loslaten?",
+      a: "Omdat het model dan de business logic moet raden. In een demo met vijf schone tabellen werkt het; in een echte omgeving met annuleringen, correctieboekingen, meerdere valuta's en een fiscaal jaar dat niet gelijkloopt met het kalenderjaar krijg je antwoorden die er professioneel uitzien en fout zijn. Dat is gevaarlijker dan een foutmelding. Laat je het model in plaats daarvan kiezen uit gedefinieerde metrics of een gecureerde set gold-tabellen, dan is de ruimte om te improviseren weg en kan het zeggen dat iets niet bestaat in plaats van het te verzinnen.",
+    },
+    {
+      q: "Hebben we per se een semantic layer nodig, of is onze gold-laag genoeg?",
+      a: "Vaak is een goed gemodelleerde gold-laag genoeg, en dat scheelt een tool. Wat je nodig hebt, is business-klare tabellen op de juiste grain, geautomatiseerde tests op uniciteit, niet-null, referentiële integriteit en freshness, plus documentatie en lineage die machineleesbaar zijn. Een agent bevraagt dan een handvol gecureerde tabellen in plaats van tweehonderd ruwe. Een dedicated semantic layer (dbt, Cube, LookML, AtScale of een Power BI-model) betaalt zich vooral terug bij veel metric-varianten, meerdere BI-tools naast elkaar of zware governance-eisen. Ik adviseer op basis van jullie situatie, niet op basis van wat er in de markt populair is.",
+    },
+    {
+      q: "Moeten onze pipelines eerst helemaal op orde zijn voordat we hiermee kunnen beginnen?",
+      a: "Niet het hele platform, wel het deel dat de use case raakt. Ik werk liever vanuit één concrete vraag terug naar de data die daarvoor nodig is: welke tabellen, welke definities, welke rechten, welke versheid. Dat levert binnen weken iets werkends op én verbetert precies het stuk fundering dat er toe doet. Een AI-project als aanleiding gebruiken om je datakwaliteit gericht aan te pakken werkt in de praktijk beter dan een apart datakwaliteitsprogramma zonder zichtbaar resultaat.",
+    },
+    {
+      q: "Wat is het verschil tussen prompt engineering en context engineering?",
+      a: "Prompt engineering gaat over hoe je de instructie formuleert. Context engineering gaat over wat er verder in het contextvenster staat: welke documenten zijn opgehaald, welke metrics en metadata zijn meegegeven, hoe vers is dat materiaal en in welke volgorde staat het. In de praktijk zit daar veruit de meeste kwaliteitswinst, en het is grotendeels een pipeline-vraagstuk: retrieval, deduplicatie, chunking, verversing en evaluatie. Dus data engineering, geen tekstschrijven.",
+    },
+    {
+      q: "Hoe voorkom je dat een AI-agent data laat zien die iemand niet mag zien?",
+      a: "Door autorisatie in de datalaag te regelen, niet in de prompt. Instructies als 'toon dit niet aan gebruikers zonder rechten' zijn geen beveiliging, want ze zijn te omzeilen. Wat wel werkt: identity pass-through zodat de agent queryt namens de ingelogde gebruiker, row-level security in het warehouse, permissie-filters die vóór retrieval worden toegepast en volledige audit logging op elke tool-aanroep. In financial services is dat de voorwaarde om überhaupt live te gaan.",
+    },
+    {
+      q: "Hoe meet je of zo'n AI-toepassing goed werkt?",
+      a: "Met een evaluatieset: een verzameling realistische vragen met verwachte antwoorden of verwachte bronnen, die meeloopt in CI. Daarnaast meet ik retrieval-kwaliteit (bevat het opgehaalde materiaal het antwoord überhaupt), versheid van de index en kosten per aanroep. Zonder die metingen weet je bij elke wijziging alleen of de demo toevallig goed ging, en dat is geen basis om iets in productie te zetten.",
+    },
+    {
+      q: "Bouw je ook de AI-applicatie zelf, of alleen de datalaag?",
+      a: "Mijn zwaartepunt ligt op de datalaag: pipelines, modellering, metrics, retrieval en MCP-servers. Dat is waar de meeste projecten stuklopen en waar mijn tien jaar ervaring zit. De applicatie eromheen bouw ik mee waar dat handig is, maar ik ben eerlijk over waar mijn toegevoegde waarde het grootst is. Vaak heeft een team al een frontend-ontwikkelaar en ontbreekt juist iemand die de data eronder betrouwbaar krijgt.",
+    },
+    {
+      q: "Wij zitten volledig in het Microsoft-ecosysteem. Past dit daarbij?",
+      a: "Ja. MCP is protocol-niveau en modelonafhankelijk; het werkt net zo goed met Azure OpenAI als met andere providers. Aan de datakant sluit ik aan op wat er staat: Fabric, Synapse, Databricks of Azure SQL, met Purview voor governance en Azure AI Search voor retrieval. De semantische laag kan dan prima het Power BI-model of een geteste gold-laag zijn; daar hoeft geen extra tool bij. Het patroon (gelaagde modellering, definities als contract, permissie-bewuste retrieval) is hetzelfde, ongeacht welk logo op de stack staat.",
+    },
+    {
+      q: "Is dit alleen interessant voor grote organisaties?",
+      a: "Nee, maar de volgorde verschilt. Een kleinere organisatie heeft vaak minder definitie-chaos en kan sneller bij een werkende toepassing zijn, meestal rechtstreeks op een geteste gold-laag. Grote organisaties hebben meer te winnen bij een expliciete semantische laag, omdat daar de meeste conflicterende definities en de zwaarste governance-eisen liggen. In beide gevallen geldt: begin bij één concrete vraag die iemand nu handmatig beantwoordt, en bouw de interface daaromheen.",
     },
   ],
 } as const;
@@ -777,9 +1124,9 @@ export const analyticsEngineeringPage = {
 export const modernDataStackPage = {
   slug: "modern-data-stack",
   title: "Modern Data Stack Consultancy",
-  metaTitle: "Modern Data Stack Consultancy | Snowflake, dbt, Airflow",
+  metaTitle: "Modern Data Stack Consultancy | Databricks, dbt, Airflow",
   metaDescription:
-    "Implementatie en architectuur van de Modern Data Stack: Snowflake, Databricks, dbt, Airflow, Fivetran en BI, door een senior consultant uit Breda.",
+    "Implementatie en architectuur van de Modern Data Stack door een senior consultant uit Breda.",
   hero: {
     eyebrow: "Modern Data Stack",
     heading: "De Modern Data Stack, zonder de hype.",
@@ -788,7 +1135,7 @@ export const modernDataStackPage = {
   },
   problems: [
     "Tooling keuzes zijn ad-hoc gemaakt: drie ingestion tools, twee orchestrators.",
-    "Snowflake rekening loopt op omdat queries niet worden geoptimaliseerd.",
+    "Databricks rekening loopt op omdat queries niet worden geoptimaliseerd.",
     "Geen idee waar data lineage of governance moet landen.",
     "Iedereen heeft een eigen mening, niemand een coherente architectuur.",
   ],
@@ -801,9 +1148,9 @@ export const modernDataStackPage = {
   },
   capabilities: [
     { title: "Architectuur-design", description: "End-to-end stack: ingestion, warehouse, transformation, BI, governance." },
-    { title: "Tool-selectie", description: "Onafhankelijk advies tussen Snowflake / Databricks / Synapse en tussen Fivetran / Airbyte / custom." },
+    { title: "Tool-selectie", description: "Onafhankelijk advies tussen Snowflake / Databricks / Synapse en tussen Fivetran / Airbyte / AWS Glue, databricks autoloader." },
     { title: "dbt implementatie", description: "Project-structuur, naming conventions, tests, snapshots, exposures." },
-    { title: "Orchestration", description: "Airflow, Prefect of Azure Data Factory, pragmatisch ingericht." },
+    { title: "Orchestration", description: "Airflow, dbt cloud, databricks workflows of Azure Data Factory, pragmatisch ingericht." },
     { title: "Cost management", description: "Resource monitors, query tuning en query tagging, om te voorkomen dat de Snowflake-rekening explodeert." },
     { title: "Data governance", description: "Unity Catalog, Snowflake Horizon of Microsoft Purview, gekozen op basis van de use case." },
   ],
@@ -818,7 +1165,7 @@ export const modernDataStackPage = {
     "Voorspelbare kosten en performance.",
     "Een platform dat schaalt naar nieuwe use cases zonder herontwerp.",
   ],
-  stack: ["Snowflake", "Databricks", "dbt", "Airflow", "Fivetran", "Airbyte", "Power BI", "Looker"],
+  stack: ["Snowflake", "Databricks", "dbt", "Airflow", "Fivetran", "Airbyte", "Power BI"],
   faqs: [
     {
       q: "Wat is de Modern Data Stack precies?",
@@ -903,7 +1250,7 @@ export const dbtConsultancyPage = {
     },
     {
       q: "Kun je CI/CD opzetten voor ons dbt project?",
-      a: "Ja. Ik richt pipelines in op GitHub Actions of Azure DevOps die bij iedere pull request de modellen bouwen en testen, met aparte omgevingen voor dev, staging en productie. Deploys worden voorspelbaar en herhaalbaar, geen handmatig draaien meer op de productie-database.",
+      a: "Ja. Ik richt pipelines in op GitHub Actions of Azure DevOps die bij iedere pull request de modellen bouwen en testen, met aparte omgevingen voor dev en productie bijvoorbeeld. Deploys worden voorspelbaar en herhaalbaar, geen handmatig draaien meer op de productie-database.",
     },
     {
       q: "Kun je een bestaand dbt project overnemen of opschonen?",
@@ -952,7 +1299,6 @@ export const azureDataEngineeringPage = {
     { title: "Databricks", description: "Workspaces, clusters, Delta Lake, Unity Catalog en workflows." },
     { title: "Microsoft Fabric", description: "Architectuur en migratie naar Fabric Lakehouse, OneLake en Direct Lake mode in Power BI." },
     { title: "ADLS Gen2 lakehouse", description: "Medallion architecture (bronze / silver / gold), partitionering en optimalisatie." },
-    { title: "Infrastructure as Code", description: "Terraform of Bicep voor consistente, herhaalbare Azure resources." },
     { title: "Power BI integratie", description: "Power BI Premium / Embedded / Fabric, met DirectQuery, Import en Direct Lake." },
     { title: "Security & governance", description: "Managed identities, RBAC, Microsoft Purview en private endpoints." },
   ],
@@ -977,7 +1323,6 @@ export const azureDataEngineeringPage = {
     "Azure SQL",
     "Power BI",
     "Microsoft Purview",
-    "Terraform / Bicep",
   ],
   faqs: [
     {
@@ -986,7 +1331,7 @@ export const azureDataEngineeringPage = {
     },
     {
       q: "Wat is de meerwaarde van ADF naast Databricks?",
-      a: "ADF is sterk in connectivity (honderden out of the box connectors) en in orkestratie van pipelines. Databricks is sterker in transformatie en Spark. In veel implementaties gebruik ik ADF voor ingestion en orchestration, Databricks voor zware transformaties.",
+      a: "ADF is sterk in connectivity (honderden out of the box connectors) en in orkestratie van pipelines. Databricks is sterker in transformatie en Spark. In sommige implementaties gebruik ik ADF voor ingestion en orchestration, Databricks voor zware transformaties.",
     },
   ],
 } as const;
@@ -1003,13 +1348,13 @@ export const aboutPage = {
     eyebrow: "Over Dennis van Burg",
     heading: "Senior data specialist. Hands-on, met oog voor de business en zonder ego.",
     intro:
-      "Ik werk sinds 2016 aan data-architectuur en analytics. In 2021 startte ik DC Data Consultancy om opdrachtgevers te helpen die niet zoeken naar een paar extra handen, maar naar een senior die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
+      "Ik werk sinds 2016 aan data-architectuur en analytics. In 2021 startte ik DC Data Consultancy om opdrachtgevers te helpen die niet alleen zoeken naar een paar extra handen, maar naar een senior die ontwerpt, bouwt, de juiste vragen stelt en richting geeft.",
   },
   story: [
     {
       heading: "Van analytics naar engineering",
       paragraphs: [
-        "Mijn carrière begon aan de analytics-kant: rapportages bouwen, KPI's definiëren, dashboards opleveren. Bij elke opdracht liep ik tegen hetzelfde aan: de echte bottleneck zat niet in BI, maar in de fundering eronder.",
+        "Mijn carrière begon als Data Scientist: Voorspellende modellen bouwen en dashboards opleveren. Bij elke opdracht liep ik tegen hetzelfde aan: de echte bottleneck zat niet in het doen van analyses, maar in de fundering eronder.",
         "Pipelines die elke nacht halverwege braken. Datawarehouses zonder structuur. Business logic die in vijf dashboards op vijf manieren stond. Dat verschoof mijn focus richting data engineering, want zonder betrouwbare fundering is alles daarboven net zo wankel als die fundering.",
       ],
     },
@@ -1017,7 +1362,7 @@ export const aboutPage = {
       heading: "Eigen consultancy sinds 2021",
       paragraphs: [
         "In 2021 startte ik DC Data Consultancy. De drijfveer: rechtstreeks bij opdrachtgevers aan tafel zitten, zonder de overhead van een groot bureau, met volledige eigenaarschap over de kwaliteit van wat ik oplever.",
-        "Sindsdien werk ik vanuit Breda door heel Nederland: financial services, logistiek, vastgoed, energie en publieke sector. Meestal als senior consultant of lead, vaak op het snijvlak van engineering en business.",
+        "Sindsdien werk ik door heel Nederland: financial services, logistiek, vastgoed, energie en publieke sector. Meestal als senior consultant of lead, vaak op het snijvlak van engineering en business.",
       ],
     },
     {
@@ -1030,7 +1375,7 @@ export const aboutPage = {
     {
       heading: "Waarom DC Data?",
       paragraphs: [
-        "Je krijgt direct een senior aan tafel. Geen team van junioren met een partner op afstand, maar één aanspreekpunt, korte lijnen en een eerste resultaat binnen weken in plaats van maanden.",
+        "Je krijgt direct een senior aan tafel, één aanspreekpunt, korte lijnen, no nonsens en een eerste resultaat binnen weken in plaats van maanden.",
       ],
     },
   ],
@@ -1042,7 +1387,7 @@ export const aboutPage = {
         "Cloud datawarehousing (Snowflake, Synapse, Databricks)",
         "Data modelling (dimensional, Data Vault, OBT)",
         "Analytics engineering met dbt",
-        "Orchestration (Airflow, ADF, Prefect)",
+        "Orchestration (Airflow, ADF, dbt cloud, databricks workflows)",
         "Data quality, testing en observability",
         "CI/CD voor data en infrastructure as code",
       ],
@@ -1051,7 +1396,6 @@ export const aboutPage = {
       area: "Data Analytics",
       items: [
         "Power BI (modellering, RLS, premium)",
-        "Tableau & Looker",
         "Semantic layers in dbt",
         "KPI- en metrics-definitie met stakeholders",
         "Self-service enablement",
@@ -1063,7 +1407,7 @@ export const aboutPage = {
         "dbt modellering (Medallion: bronze, silver, gold)",
         "Metric & KPI definitie met stakeholders",
         "Testing, documentatie en CI/CD",
-        "Semantic layers voor Power BI en Looker",
+        "Semantic layers voor Power BI",
         "Data quality en lineage",
       ],
     },
@@ -1074,10 +1418,10 @@ export const aboutPage = {
   ],
   industries: [
     "Financial services (Rabobank, de Volksbank, Achmea, Obvion)",
-    "Logistiek (PostNL, Mileway)",
+    "Logistiek (PostNL)",
     "Energie (Gulf)",
     "Publieke sector (Brandweer, ABG)",
-    "Vastgoed",
+    "Vastgoed (Mileway)",
   ],
   values: [
     {
