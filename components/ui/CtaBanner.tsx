@@ -34,12 +34,15 @@ export default function CtaBanner() {
             {finalCta.cta.label}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="font-mono text-sm text-night-muted-ink hover:text-brand-bright transition-colors"
-          >
-            {siteConfig.email}
-          </a>
+          <p className="font-mono text-sm text-night-muted-ink">
+            <a href={siteConfig.phoneHref} className="hover:text-brand-bright transition-colors">
+              {siteConfig.phone}
+            </a>
+            {" · "}
+            <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-bright transition-colors">
+              {siteConfig.email}
+            </a>
+          </p>
         </Reveal>
       </div>
     </section>

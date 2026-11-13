@@ -8,11 +8,7 @@ import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 
 const topNav = [
   { label: "Diensten", href: "/diensten", dropdown: footerNav.diensten },
-  { label: "Cases", href: "/cases" },
-  { label: "Industrieën", href: "/industrieen" },
   { label: "Over Dennis", href: "/over-dennis" },
-  { label: "Insights", href: "/blog" },
-  { label: "Contact", href: "/contact" },
 ] as const;
 
 export default function Header() {
@@ -135,7 +131,7 @@ export default function Header() {
               );
             })}
             <Link
-              href="/contact"
+              href="/#contact"
               className={`group ml-3 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg font-display font-semibold text-sm transition-all ${
                 solid
                   ? "bg-brand text-brand-ink hover:shadow-lg hover:shadow-brand/25"
@@ -189,7 +185,7 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/contact"
+              href="/#contact"
               className="mt-4 w-full text-center px-5 py-3 bg-brand text-brand-ink font-display font-semibold rounded-lg"
               onClick={closeMobile}
             >

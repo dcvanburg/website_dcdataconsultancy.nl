@@ -19,16 +19,9 @@ export default function QuoteSection() {
         <Reveal
           as="blockquote"
           delay={80}
-          className="font-display font-bold text-3xl md:text-4xl lg:text-[2.9rem] text-night-ink leading-[1.18] tracking-tight text-balance mb-10"
+          className="font-display font-bold text-3xl md:text-4xl lg:text-[2.9rem] text-night-ink leading-[1.18] tracking-tight text-balance"
         >
           {quote.text}
-        </Reveal>
-        <Reveal
-          as="p"
-          delay={160}
-          className="font-mono text-xs md:text-sm tracking-[0.24em] uppercase text-night-soft-ink"
-        >
-          {quote.attribution}
         </Reveal>
       </div>
     </section>

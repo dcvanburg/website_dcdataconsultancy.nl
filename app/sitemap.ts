@@ -11,18 +11,8 @@ const staticPages = [
   { path: "/diensten/data-analytics", priority: 0.85, changeFrequency: "monthly" as const },
   { path: "/diensten/analytics-engineering", priority: 0.85, changeFrequency: "monthly" as const },
   { path: "/diensten/ai-interface", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/diensten/modern-data-stack", priority: 0.85, changeFrequency: "monthly" as const },
-  { path: "/diensten/dbt-consultancy", priority: 0.9, changeFrequency: "monthly" as const },
-  {
-    path: "/diensten/azure-data-engineering",
-    priority: 0.9,
-    changeFrequency: "monthly" as const,
-  },
-  { path: "/cases", priority: 0.8, changeFrequency: "monthly" as const },
-  { path: "/industrieen", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/over-dennis", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/blog", priority: 0.85, changeFrequency: "weekly" as const },
-  { path: "/contact", priority: 0.7, changeFrequency: "yearly" as const },
   { path: "/data-consultant-breda", priority: 0.7, changeFrequency: "monthly" as const },
 ];
 

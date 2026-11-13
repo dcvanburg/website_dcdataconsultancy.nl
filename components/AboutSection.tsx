@@ -48,19 +48,6 @@ export default function AboutSection() {
               ))}
             </Reveal>
 
-            <Reveal delay={160} className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-rule border border-rule rounded-xl overflow-hidden mb-10">
-              {aboutSection.highlights.map((h) => (
-                <div key={h.label} className="bg-surface p-5">
-                  <p className="font-display font-extrabold text-3xl md:text-4xl text-ink leading-none tracking-tight mb-2">
-                    {h.value}
-                  </p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-muted leading-relaxed">
-                    {h.label}
-                  </p>
-                </div>
-              ))}
-            </Reveal>
-
             <Link
               href={aboutSection.cta.href}
               className="group inline-flex items-center gap-2 font-display font-semibold text-base text-ink hover:text-brand transition-colors"
