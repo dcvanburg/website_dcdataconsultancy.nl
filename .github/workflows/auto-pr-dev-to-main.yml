@@ -21,13 +21,31 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+
           existing=$(gh pr list --base main --head dev --state open --json number --jq '.[0].number // empty')
           if [ -n "$existing" ]; then
             echo "PR #$existing already open. Nothing to do."
             exit 0
           fi
-          gh pr create \
+
+          ahead=$(gh api "repos/${{ github.repository }}/compare/main...dev" --jq '.ahead_by')
+          if [ "$ahead" = "0" ]; then
+            echo "main and dev are already in sync. Nothing to do."
+            exit 0
+          fi
+
+          if ! output=$(gh pr create \
             --base main \
             --head dev \
             --title "dev to main" \
-            --body "Auto opened by .github/workflows/auto-pr-dev-to-main.yml. Merge when ready to deploy to production. Vercel will auto deploy main on merge."
+            --body "Auto opened by .github/workflows/auto-pr-dev-to-main.yml. Merge when ready to deploy to production. Vercel will auto deploy main on merge." 2>&1); then
+            # Race: PR opened/merged between our checks and create.
+            if echo "$output" | grep -qiE 'No commits between|already exists'; then
+              echo "$output"
+              echo "Treating as success (already synced or PR already exists)."
+              exit 0
+            fi
+            echo "$output"
+            exit 1
+          fi
+          echo "$output"

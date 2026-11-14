@@ -71,18 +71,11 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               </Reveal>
               <Reveal delay={180} className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/contact"
+                  href="/#contact"
                   className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-brand text-brand-ink font-display font-semibold rounded-lg shadow-lg shadow-brand/30 hover:shadow-xl hover:shadow-brand/40 hover:-translate-y-0.5 transition-all"
                 >
                   Plan een kennismaking
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  href="/cases"
-                  className="group inline-flex items-center justify-center gap-2 px-6 py-4 font-display font-semibold text-base text-night-ink border border-white/15 rounded-lg hover:bg-white/5 transition-colors"
-                >
-                  Bekijk cases
-                  <ArrowRight className="w-4 h-4 text-brand-bright group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Reveal>
             </div>
@@ -182,9 +175,6 @@ function RelatedServices({ currentSlug }: { currentSlug: string }) {
     { slug: "data-analytics", title: "Data Analytics", desc: "Heldere business metrics en self service BI." },
     { slug: "analytics-engineering", title: "Analytics Engineering", desc: "Geteste marts, metrics en semantic layers voor BI." },
     { slug: "ai-interface", title: "AI-interface", desc: "MCP, een semantische laag en context engineering voor AI-agents." },
-    { slug: "modern-data-stack", title: "Modern Data Stack", desc: "Coherente architectuur, geen verzameling losse tools." },
-    { slug: "dbt-consultancy", title: "dbt Consultancy", desc: "Analytics engineering met dbt best practices." },
-    { slug: "azure-data-engineering", title: "Azure Data Engineering", desc: "ADF, Synapse, Databricks en Fabric." },
   ];
   const others = all.filter((a) => a.slug !== currentSlug).slice(0, 3);
   return (

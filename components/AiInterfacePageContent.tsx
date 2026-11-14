@@ -2,12 +2,9 @@ import Link from "next/link";
 import {
   ArrowRight,
   AlertCircle,
-  Check,
   BookOpen,
   MessageSquare,
-  FileSearch,
   Bot,
-  Sparkles,
   Plug,
   Star,
   type LucideIcon,
@@ -25,9 +22,7 @@ import { aiInterfacePage, siteConfig } from "@/lib/site-content";
 const USE_CASE_ICONS: Record<string, LucideIcon> = {
   BookOpen,
   MessageSquare,
-  FileSearch,
   Bot,
-  Sparkles,
   Plug,
 };
 
@@ -94,7 +89,7 @@ export default function AiInterfacePageContent() {
 
               <Reveal delay={180} className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/contact"
+                  href="/#contact"
                   className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-brand text-brand-ink font-display font-semibold rounded-lg shadow-lg shadow-brand/30 hover:shadow-xl hover:shadow-brand/40 hover:-translate-y-0.5 transition-all"
                 >
                   Plan een kennismaking
@@ -112,23 +107,11 @@ export default function AiInterfacePageContent() {
           </div>
         </section>
 
-        {/* Why an LLM project is a data project */}
-        <SectionShell eyebrow="Uitgangspunt" heading={data.intro.heading} variant="white">
-          <div className="max-w-3xl space-y-5 text-ink-soft text-lg leading-relaxed">
-            {data.intro.paragraphs.map((p, i) => (
-              <Reveal as="p" key={i} delay={i * 60}>
-                {p}
-              </Reveal>
-            ))}
-          </div>
-        </SectionShell>
-
         {/* Problems */}
         <SectionShell
           eyebrow="Probleem"
           heading="Waar AI-initiatieven in de praktijk stuklopen"
-          intro="Vrijwel nooit op het model. Bijna altijd op de laag eronder."
-          variant="canvas"
+                    variant="canvas"
         >
           <ul className="grid md:grid-cols-2 gap-x-12 gap-y-5 max-w-4xl">
             {data.problems.map((p) => (
@@ -199,56 +182,17 @@ export default function AiInterfacePageContent() {
           </section>
         ))}
 
-        {/* Architecture stack — dark */}
-        <SectionShell
-          eyebrow={data.architecture.eyebrow}
-          heading={data.architecture.heading}
-          intro={data.architecture.intro}
-          variant="night"
-        >
-          <ol className="max-w-4xl">
-            {[...data.architecture.layers].reverse().map((layer, i, arr) => {
-              const isTop = i === 0;
-              const isBottom = i === arr.length - 1;
-              return (
-                <Reveal
-                  as="li"
-                  key={layer.label}
-                  delay={i * 60}
-                  className={`relative flex items-start gap-6 border border-night-rule bg-night-soft/60 p-6 md:p-7 ${
-                    isTop ? "rounded-t-xl" : ""
-                  } ${isBottom ? "rounded-b-xl" : "border-b-0"}`}
-                >
-                  <span
-                    className="shrink-0 font-mono text-xs text-brand-bright pt-1"
-                    aria-hidden="true"
-                  >
-                    {String(arr.length - i).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3 className="font-display font-bold text-lg text-night-ink tracking-tight mb-1.5">
-                      {layer.label}
-                    </h3>
-                    <p className="text-night-soft-ink leading-relaxed">{layer.description}</p>
-                  </div>
-                </Reveal>
-              );
-            })}
-          </ol>
-        </SectionShell>
-
         {/* Use cases */}
         <SectionShell
           eyebrow="Toepassingen"
           heading="Wat je hiermee bouwt"
-          intro="Bij elke toepassing geldt hetzelfde: het zichtbare deel is een LLM, het werkende deel is data engineering en analytics engineering."
-          variant="canvas"
+                    variant="canvas"
         >
-          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+          <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10">
             {data.useCases.map((c, i) => {
               const Icon = USE_CASE_ICONS[c.icon] ?? Star;
               return (
-                <Reveal as="li" key={c.title} delay={(i % 3) * 70} className="border-t border-rule pt-6">
+                <Reveal as="li" key={c.title} delay={(i % 4) * 70} className="border-t border-rule pt-6">
                   <div className="w-11 h-11 rounded-xl border border-rule bg-surface flex items-center justify-center mb-5">
                     <Icon className="w-5 h-5 text-brand" aria-hidden="true" />
                   </div>
@@ -275,20 +219,6 @@ export default function AiInterfacePageContent() {
           </ol>
         </SectionShell>
 
-        {/* Outcomes */}
-        <SectionShell eyebrow="Resultaat" heading="Wat je eraan overhoudt" variant="canvas">
-          <ul className="max-w-3xl space-y-4">
-            {data.outcomes.map((o) => (
-              <Reveal as="li" key={o} className="flex items-start gap-3 text-ink-soft leading-relaxed text-lg">
-                <span className="shrink-0 mt-1 flex items-center justify-center w-5 h-5 rounded-md bg-brand/10">
-                  <Check className="w-3.5 h-3.5 text-brand" aria-hidden="true" />
-                </span>
-                {o}
-              </Reveal>
-            ))}
-          </ul>
-        </SectionShell>
-
         <SectionShell eyebrow="Stack" heading="Technologie waar ik in werk" variant="white">
           <ul className="flex flex-wrap gap-2 max-w-4xl">
             {data.stack.map((t) => (
@@ -308,8 +238,7 @@ export default function AiInterfacePageContent() {
         <SectionShell
           eyebrow="Verder lezen"
           heading="De fundering hieronder"
-          intro="Deze interface werkt alleen zo goed als de lagen waar hij op staat."
-          variant="white"
+                    variant="white"
         >
           <ul className="grid md:grid-cols-3 gap-px bg-rule border border-rule rounded-xl overflow-hidden">
             {[
@@ -324,9 +253,9 @@ export default function AiInterfacePageContent() {
                 desc: "Geteste marts en metrics: wat een LLM ervan weerhoudt definities te verzinnen.",
               },
               {
-                slug: "dbt-consultancy",
-                title: "dbt Consultancy",
-                desc: "Het dbt-project waar de semantic layer en de metadata uit voortkomen.",
+                slug: "data-analytics",
+                title: "Data Analytics",
+                desc: "Business metrics en dashboards op dezelfde definities die agents gebruiken.",
               },
             ].map((s, i) => (
               <Reveal as="li" key={s.slug} delay={i * 80} className="h-full">

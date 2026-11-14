@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { projects } from "@/lib/site-content";
 import Reveal from "@/components/ui/Reveal";
 
@@ -22,15 +20,6 @@ export default function ProjectsSection() {
               {projects.intro}
             </Reveal>
           </div>
-          <Reveal delay={160}>
-            <Link
-              href={projects.cta.href}
-              className="group inline-flex items-center gap-2 font-display font-semibold text-base text-ink hover:text-brand transition-colors whitespace-nowrap"
-            >
-              {projects.cta.label}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Reveal>
         </div>
 
         <Reveal>

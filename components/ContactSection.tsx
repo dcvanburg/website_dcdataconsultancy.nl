@@ -1,8 +1,5 @@
-"use client";
-
-import { useState } from "react";
 import { contactSection, siteConfig } from "@/lib/site-content";
-import { ArrowRight, Mail, Clock } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -12,113 +9,29 @@ function LinkedinIcon({ className }: { className?: string }) {
   );
 }
 
-export default function ContactSection({ bare = false }: { bare?: boolean }) {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
-  const inputClass =
-    "w-full px-3.5 py-3 bg-surface border border-rule rounded-lg text-ink placeholder:text-ink-faint focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-colors";
-  const labelClass =
-    "block font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted mb-2";
-
+export default function ContactSection() {
   return (
-    <section id={contactSection.sectionId} className={`py-24 md:py-32 surface-canvas ${bare ? "" : "border-t border-rule"}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-          <div className="lg:col-span-5">
-            <p className="eyebrow eyebrow-brand mb-6">{bare ? "Direct contact" : contactSection.eyebrow}</p>
-            {!bare && (
-              <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance text-ink mb-6">
-                {contactSection.heading}
-              </h2>
-            )}
-            <p className="text-ink-soft text-lg leading-relaxed mb-12">
-              {bare
-                ? "Eén aanspreekpunt, korte lijnen. Vul het formulier in of pak direct een van de kanalen hieronder."
-                : contactSection.intro}
-            </p>
+    <section id={contactSection.sectionId} className="py-24 md:py-32 surface-canvas border-t border-rule scroll-mt-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="eyebrow eyebrow-brand mb-6">{contactSection.eyebrow}</p>
+        <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance text-ink mb-6">
+          {contactSection.heading}
+        </h2>
+        <p className="text-ink-soft text-lg leading-relaxed mb-12">{contactSection.intro}</p>
 
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 rounded-xl border border-rule bg-surface px-5 py-4">
-                <Clock className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
-                <p className="text-ink-soft text-sm">{contactSection.responseTime}</p>
-              </div>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-5 py-4 hover:border-brand/40 transition-colors"
-              >
-                <Mail className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
-                <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors break-all">
-                  {siteConfig.email}
-                </span>
-              </a>
-              <a
-                href={siteConfig.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-5 py-4 hover:border-brand/40 transition-colors"
-              >
-                <LinkedinIcon className="w-5 h-5 text-brand shrink-0" />
-                <span className="text-sm text-ink-soft group-hover:text-brand transition-colors">
-                  Connect via LinkedIn
-                </span>
-              </a>
-            </div>
-          </div>
-
-          <div className="lg:col-span-7">
-            <form
-              onSubmit={handleSubmit}
-              className="bg-surface border border-rule p-7 md:p-10 rounded-2xl shadow-xl shadow-ink/5"
-            >
-              {submitted ? (
-                <div className="text-center py-16">
-                  <div className="mx-auto mb-5 w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-brand" aria-hidden="true" />
-                  </div>
-                  <p className="font-display font-bold text-2xl text-ink mb-3 tracking-tight">
-                    Bedankt, je bericht is verstuurd.
-                  </p>
-                  <p className="text-ink-soft">Ik neem binnen één werkdag contact op.</p>
-                </div>
-              ) : (
-                <div className="grid md:grid-cols-2 gap-5">
-                  <div>
-                    <label className={labelClass}>{contactSection.fields.name.label}</label>
-                    <input type="text" placeholder={contactSection.fields.name.placeholder} required className={inputClass} />
-                  </div>
-                  <div>
-                    <label className={labelClass}>{contactSection.fields.email.label}</label>
-                    <input type="email" placeholder={contactSection.fields.email.placeholder} required className={inputClass} />
-                  </div>
-                  <div className="md:col-span-2">
-                    <label className={labelClass}>{contactSection.fields.company.label}</label>
-                    <input type="text" placeholder={contactSection.fields.company.placeholder} className={inputClass} />
-                  </div>
-                  <div className="md:col-span-2">
-                    <label className={labelClass}>{contactSection.fields.message.label}</label>
-                    <textarea placeholder={contactSection.fields.message.placeholder} required rows={5} className={`${inputClass} resize-none`} />
-                  </div>
-                  <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-1">
-                    <p className="font-mono text-[11px] text-ink-muted">
-                      {contactSection.responseTime}
-                    </p>
-                    <button
-                      type="submit"
-                      className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-brand text-brand-ink font-display font-semibold rounded-lg shadow-lg shadow-brand/20 hover:shadow-xl hover:shadow-brand/30 hover:-translate-y-0.5 transition-all"
-                    >
-                      {contactSection.submitLabel}
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                  </div>
-                </div>
-              )}
-            </form>
-          </div>
+        <div className="grid sm:grid-cols-3 gap-4 text-left">
+          <a href={siteConfig.phoneHref} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 hover:border-brand/40 transition-colors">
+            <Phone className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
+            <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors">{siteConfig.phone}</span>
+          </a>
+          <a href={`mailto:${siteConfig.email}`} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 hover:border-brand/40 transition-colors">
+            <Mail className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
+            <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors break-all">{siteConfig.email}</span>
+          </a>
+          <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 hover:border-brand/40 transition-colors">
+            <LinkedinIcon className="w-5 h-5 text-brand shrink-0" />
+            <span className="text-sm text-ink-soft group-hover:text-brand transition-colors">LinkedIn</span>
+          </a>
         </div>
       </div>
     </section>

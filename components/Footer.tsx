@@ -36,6 +36,14 @@ export default function Footer() {
                   {siteConfig.email}
                 </a>
               </p>
+              <p className="mt-1">
+                <a
+                  href={siteConfig.phoneHref}
+                  className="font-mono text-xs text-night-soft-ink hover:text-brand-bright transition-colors"
+                >
+                  {siteConfig.phone}
+                </a>
+              </p>
             </div>
             <a
               href={footer.linkedinUrl}

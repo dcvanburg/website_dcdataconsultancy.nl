@@ -72,7 +72,7 @@ export default function OverDennisPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
-                    href="/contact"
+                    href="/#contact"
                     className="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-brand text-brand-ink font-display font-semibold rounded-lg shadow-lg shadow-brand/30 hover:shadow-xl hover:shadow-brand/40 hover:-translate-y-0.5 transition-all"
                   >
                     Plan een kennismaking
@@ -109,7 +109,7 @@ export default function OverDennisPage() {
         </SectionShell>
 
         <SectionShell variant="canvas">
-          <div className="max-w-3xl space-y-14">
+          <div className="max-w-3xl space-y-10">
             {aboutPage.story.map((section) => (
               <div key={section.heading}>
                 <h2 className="font-display font-bold text-3xl md:text-4xl text-ink mb-5 tracking-tight">
@@ -128,10 +128,9 @@ export default function OverDennisPage() {
         <SectionShell
           eyebrow="EXPERTISE"
           heading="Waar ik in werk"
-          intro="Een overzicht van de gebieden waarin ik in de afgelopen jaren expertise heb opgebouwd."
           variant="white"
         >
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
             {aboutPage.expertise.map((e) => (
               <li key={e.area} className="border-t border-rule pt-6">
                 <h3 className="font-display font-bold text-xl text-ink mb-4">
@@ -160,8 +159,7 @@ export default function OverDennisPage() {
 
         <SectionShell
           eyebrow="SECTOREN"
-          heading="Sectoren waar ik in heb gewerkt"
-          intro="Iedere sector heeft zijn eigen data uitdagingen. Dit is waar mijn ervaring zit."
+          heading="Sectoren"
           variant="canvas"
         >
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 max-w-4xl">
@@ -180,15 +178,6 @@ export default function OverDennisPage() {
               </li>
             ))}
           </ul>
-          <div className="mt-12">
-            <Link
-              href="/industrieen"
-              className="inline-flex items-center gap-2 font-display font-semibold text-base text-ink hover:text-brand transition-colors"
-            >
-              Bekijk per sector
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
         </SectionShell>
 
         <SectionShell
@@ -196,7 +185,7 @@ export default function OverDennisPage() {
           heading="Waar ik voor sta"
           variant="white"
         >
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
             {aboutPage.values.map((v) => (
               <li key={v.title} className="border-t border-rule pt-6">
                 <h3 className="font-display font-bold text-xl text-ink mb-3">

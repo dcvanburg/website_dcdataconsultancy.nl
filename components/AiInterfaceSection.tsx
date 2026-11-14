@@ -60,14 +60,7 @@ export default function AiInterfaceSection() {
                   <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-bright mb-5">
                     {layer.subtitle}
                   </p>
-                  <p className="text-night-soft-ink leading-relaxed mb-6">{layer.summary}</p>
-
-                  <div className="mt-auto pt-6 border-t border-night-rule">
-                    <p className="eyebrow text-night-muted-ink mb-3">Waarom data engineering</p>
-                    <p className="text-night-soft-ink text-sm leading-relaxed">
-                      {layer.whyDataEngineering}
-                    </p>
-                  </div>
+                  <p className="text-night-soft-ink leading-relaxed">{layer.summary}</p>
                 </Link>
               </Reveal>
             );

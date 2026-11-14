@@ -38,7 +38,7 @@ export default function BredaPage() {
           eyebrow={bredaPage.hero.eyebrow.toUpperCase()}
           heading={bredaPage.hero.heading}
           subheading={bredaPage.hero.intro}
-          primaryCta={{ label: "Plan een kennismaking", href: "/contact" }}
+          primaryCta={{ label: "Plan een kennismaking", href: "/#contact" }}
           secondaryCta={{ label: "Bekijk diensten", href: "/diensten" }}
         />
 
@@ -76,7 +76,6 @@ export default function BredaPage() {
         <SectionShell
           eyebrow="BEREIK"
           heading={bredaPage.regions.heading}
-          intro="Vanuit Breda werk ik voor opdrachtgevers in heel Nederland. Onsite, hybride of remote, wat past bij jouw team en opdracht."
           variant="white"
         >
           <ul className="flex flex-wrap gap-2 max-w-4xl">
@@ -96,7 +95,7 @@ export default function BredaPage() {
           heading={bredaPage.localTrust.heading}
           variant="canvas"
         >
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 max-w-4xl">
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-6 max-w-4xl">
             {bredaPage.localTrust.items.map((item) => (
               <li
                 key={item}
@@ -116,25 +115,21 @@ export default function BredaPage() {
 
         <SectionShell
           eyebrow="FAQ"
-          heading="Veelgestelde vragen, data consultancy Breda"
+          heading="Veelgestelde vragen"
           variant="white"
         >
           <div className="max-w-3xl space-y-6">
             <FAQ
               q="Werk je alleen voor opdrachtgevers in Breda?"
-              a="Nee, vanuit Breda werk ik voor opdrachtgevers door heel Nederland. Veel werk gebeurt remote of hybride, met sessies op locatie waar dat zinvol is."
+              a="Nee, ik werk door heel Nederland, veelal remote of hybride."
             />
             <FAQ
-              q="Wat doet een data consultant precies?"
-              a="Een data consultant helpt organisaties hun data slimmer in te zetten. In mijn geval ligt de focus op data engineering, pipelines, datawarehouses en dataplatforms, met daarbovenop analytics engineering en BI."
+              q="Wat doet een data consultant?"
+              a="Ik bouw en verbeter de data-fundering: pipelines, datawarehouses en dataplatforms, met analytics engineering en BI erbovenop."
             />
             <FAQ
               q="Welk type opdrachten neem je aan?"
-              a="Projectgebaseerde opdrachten van 2 tot 6 maanden, interim of lead rollen van 3 tot 9 maanden en kortere strategische trajecten zoals architectuur reviews of dbt audits van 1 tot 4 weken."
-            />
-            <FAQ
-              q="Kan ik ook een eerste vrijblijvend gesprek inplannen?"
-              a="Ja, ik plan graag een vrijblijvende kennismaking van 30 minuten in. Geen verkooppraatje, wel een eerlijke read op waar je nu staat en wat haalbaar is."
+              a="Projecten van 2 tot 6 maanden, interim of lead rollen van 3 tot 9 maanden en korte reviews of audits van 1 tot 4 weken."
             />
           </div>
         </SectionShell>
