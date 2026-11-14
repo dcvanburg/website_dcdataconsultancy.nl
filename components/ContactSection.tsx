@@ -19,16 +19,16 @@ export default function ContactSection() {
         </h2>
         <p className="text-ink-soft text-lg leading-relaxed mb-12">{contactSection.intro}</p>
 
-        <div className="grid sm:grid-cols-3 gap-4 text-left">
-          <a href={siteConfig.phoneHref} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 hover:border-brand/40 transition-colors">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4 text-left">
+          <a href={siteConfig.phoneHref} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 whitespace-nowrap hover:border-brand/40 transition-colors">
             <Phone className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
             <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors">{siteConfig.phone}</span>
           </a>
-          <a href={`mailto:${siteConfig.email}`} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 hover:border-brand/40 transition-colors">
+          <a href={`mailto:${siteConfig.email}`} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 whitespace-nowrap hover:border-brand/40 transition-colors">
             <Mail className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
-            <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors break-all">{siteConfig.email}</span>
+            <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors">{siteConfig.email}</span>
           </a>
-          <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 hover:border-brand/40 transition-colors">
+          <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 whitespace-nowrap hover:border-brand/40 transition-colors">
             <LinkedinIcon className="w-5 h-5 text-brand shrink-0" />
             <span className="text-sm text-ink-soft group-hover:text-brand transition-colors">LinkedIn</span>
           </a>
