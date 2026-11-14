@@ -27,9 +27,9 @@ export default function ProjectsSection() {
             {projects.clients.map((c) => (
               <li
                 key={c.name}
-                className="bg-surface aspect-[3/2] flex items-center justify-center px-6 py-5"
+                className="bg-surface aspect-[3/2] flex items-center justify-center px-4 py-4"
               >
-                <div className="relative w-full h-12 md:h-14">
+                <div className="relative w-full max-w-[220px] aspect-[2/1]">
                   <Image
                     src={c.logo}
                     alt={c.name}
