@@ -206,7 +206,7 @@ export const projects = {
   clients: [
     { name: "DrWorker", logo: "/images/logo-drworker.png" },
     { name: "Gulf", logo: "/images/logo-gulf.png" },
-    { name: "de Volksbank", logo: "/images/logo-volksbank.jpg" },
+    { name: "de Volksbank", logo: "/images/logo-volksbank.png" },
     { name: "Mileway", logo: "/images/logo-mileway.png" },
     { name: "PostNL", logo: "/images/logo-postnl.png" },
     { name: "Rabobank", logo: "/images/logo-rabobank.png" },
