@@ -118,6 +118,7 @@ export const aboutSection = {
     "Vastgoed",
     "Energie",
     "Publieke sector",
+    "Retail & e-commerce",
   ],
   profileImage: "/images/profile-dennis.png",
   profileImageAlt: "Dennis van Burg, senior data specialist bij DC Data Consultancy",
@@ -754,6 +755,7 @@ export const aboutPage = {
     "Energie (Gulf)",
     "Publieke sector (Brandweer, ABG)",
     "Vastgoed (Mileway)",
+    "Retail & e-commerce (DrWorker)",
   ],
   values: [
     {
