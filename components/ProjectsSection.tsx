@@ -27,15 +27,15 @@ export default function ProjectsSection() {
             {projects.clients.map((c) => (
               <li
                 key={c.name}
-                className="bg-surface aspect-[3/2] flex items-center justify-center p-6"
+                className="bg-surface aspect-[3/2] flex items-center justify-center px-6 py-5"
               >
-                <div className="relative w-full h-9 md:h-10">
+                <div className="relative w-full h-12 md:h-14">
                   <Image
                     src={c.logo}
                     alt={c.name}
                     fill
-                    className="object-contain grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
-                    sizes="(max-width: 640px) 40vw, 180px"
+                    className="object-contain grayscale opacity-75 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                    sizes="(max-width: 640px) 45vw, 240px"
                   />
                 </div>
               </li>
