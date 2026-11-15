@@ -23,7 +23,7 @@ export function OrganizationSchema() {
     name: siteConfig.name,
     alternateName: "DC Data",
     description:
-      "Senior data engineering consultancy gevestigd in Breda. Schaalbare data pipelines, cloud dataplatforms en analytics engineering voor enterprise opdrachtgevers.",
+      "Senior data engineering consultancy voor heel Nederland. Schaalbare data pipelines, cloud dataplatforms en analytics engineering voor enterprise opdrachtgevers.",
     url: siteConfig.url,
     email: siteConfig.email,
     telephone: "+31636277071",
@@ -88,7 +88,7 @@ export function WebsiteSchema() {
     url: siteConfig.url,
     name: siteConfig.name,
     description:
-      "Senior data engineering consultancy uit Breda. Schaalbare, betrouwbare dataplatforms voor organisaties die meer uit hun data willen halen.",
+      "Senior data engineering consultancy voor heel Nederland. Schaalbare, betrouwbare dataplatforms voor organisaties die meer uit hun data willen halen.",
     publisher: { "@id": `${siteConfig.url}/#organization` },
     inLanguage: "nl-NL",
   };

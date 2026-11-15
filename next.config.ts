@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       { source: "/diensten/modern-data-stack", destination: "/diensten", permanent: true },
       { source: "/diensten/dbt-consultancy", destination: "/diensten/analytics-engineering", permanent: true },
       { source: "/diensten/azure-data-engineering", destination: "/diensten/data-engineering", permanent: true },
+      { source: "/data-consultant-breda", destination: "/", permanent: true },
     ];
   },
 };
