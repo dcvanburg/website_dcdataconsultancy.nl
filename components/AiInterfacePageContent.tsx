@@ -219,16 +219,6 @@ export default function AiInterfacePageContent() {
           </ol>
         </SectionShell>
 
-        <SectionShell eyebrow="Stack" heading="Technologie waar ik in werk" variant="white">
-          <ul className="flex flex-wrap gap-2 max-w-4xl">
-            {data.stack.map((t) => (
-              <li key={t} className="chip">
-                {t}
-              </li>
-            ))}
-          </ul>
-        </SectionShell>
-
         <SectionShell eyebrow="FAQ" heading="Veelgestelde vragen" variant="canvas">
           <div className="max-w-3xl">
             <FaqList items={data.faqs} />

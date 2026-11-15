@@ -262,7 +262,7 @@ export const dataEngineeringPage = {
   title: "Data Engineering Consultancy",
   metaTitle: "Data Engineering Consultancy | DC Data Consultancy",
   metaDescription:
-    "Senior data engineering consultancy. Schaalbare pipelines, cloud datawarehousing en dbt als fundering voor BI, analytics en AI. Zonder betrouwbare data hallucineren LLM's.",
+    "Senior data engineering consultancy. Schaalbare pipelines, cloud datawarehousing en geteste datamodellen als fundering voor BI, analytics en AI. Zonder betrouwbare data hallucineren LLM's.",
   hero: {
     eyebrow: "Hoofdspecialisatie",
     heading: "Data engineering die de basis legt voor alles wat erna komt.",
@@ -278,7 +278,7 @@ export const dataEngineeringPage = {
   solution: {
     heading: "Een fundering die schaalt, niet weer een set losse oplossingen.",
     paragraphs: [
-      "Ik bouw op bewezen patronen: een Medallion-architectuur (bronze, silver, gold), ELT op een cloud datawarehouse, tests en monitoring. Of je op Azure, AWS, Snowflake of Databricks zit maakt weinig uit, het patroon eronder wel. Dat doe ik al meer dan tien jaar, onder andere bij Rabobank, waar pipelines miljarden transacties verwerken.",
+      "Ik bouw op bewezen patronen: een Medallion-architectuur (bronze, silver, gold), ELT op een cloud datawarehouse, tests en monitoring. Welk platform je gebruikt maakt weinig uit, het patroon eronder wel. Dat doe ik al meer dan tien jaar, onder andere bij Rabobank, waar pipelines miljarden transacties verwerken.",
     ],
   },
   capabilities: [
@@ -292,7 +292,7 @@ export const dataEngineeringPage = {
     },
     {
       title: "Orchestration",
-      description: "Orchestration met Azure Data Factory, dbt of Airflow, inclusief observability.",
+      description: "Geplande en afhankelijke runs met heldere status, retries en observability.",
     },
     {
       title: "Data quality & CI/CD",
@@ -323,19 +323,6 @@ export const dataEngineeringPage = {
     "AI-agents die dezelfde metrics lezen als je dashboards.",
     "Een intern team dat zelfstandig doorbouwt, zonder afhankelijkheid van consultants.",
   ],
-  stack: [
-    "Azure (ADF, Synapse, Fabric, ADLS Gen2)",
-    "AWS (Glue, Redshift, Athena, S3, SageMaker)",
-    "Google Cloud (BigQuery)",
-    "Snowflake",
-    "Databricks",
-    "Spark & PySpark",
-    "dbt Core & dbt Cloud",
-    "Airflow",
-    "Python, SQL & R",
-    "Terraform",
-    "GitHub Actions / Azure DevOps",
-  ],
   faqs: [
     {
       q: "Wat onderscheidt jouw aanpak van een grote consultancy?",
@@ -347,11 +334,11 @@ export const dataEngineeringPage = {
     },
     {
       q: "Hoe kies je welke technologie past?",
-      a: "Ik kijk eerst naar je bestaande stack, de skills in het team, volumes en budget. Vaak volg ik de cloudstrategie die er al is en kies ik cloud-agnostische tools als Snowflake of dbt waar dat flexibiliteit geeft.",
+      a: "Ik kijk eerst naar je bestaande stack, de skills in het team, volumes en budget. Vaak volg ik de cloudstrategie die er al is en kies ik waar mogelijk voor oplossingen die je niet aan één leverancier binden.",
     },
     {
       q: "Doe je ook interim-rollen?",
-      a: "Ja, als senior of lead data engineer, meestal 4 tot 5 dagen per week voor 3 tot 9 maanden. Dan zit ik midden in het team: bouwen, richting geven en collega's meenemen.",
+      a: "Ja, als senior of lead data engineer, meestal voor 3 tot 9 maanden. Dan zit ik midden in het team: bouwen, richting geven en collega's meenemen.",
     },
   ],
 } as const;
@@ -363,9 +350,9 @@ export const dataEngineeringPage = {
 export const dataAnalyticsPage = {
   slug: "data-analytics",
   title: "Data Analytics Consultancy",
-  metaTitle: "Data Analytics Consultancy | Power BI & Semantic Layers",
+  metaTitle: "Data Analytics Consultancy | Dashboards & Semantic Layers",
   metaDescription:
-    "Data analytics consultancy gericht op heldere business metrics, self service dashboards en analytics engineering met dbt en Power BI.",
+    "Data analytics consultancy gericht op heldere business metrics, self service dashboards en analytics engineering op één gemodelleerde laag.",
   hero: {
     eyebrow: "Analytics dat staat",
     heading: "Van losse rapporten naar één betrouwbare bron van waarheid.",
@@ -374,14 +361,14 @@ export const dataAnalyticsPage = {
   },
   problems: [
     "Drie afdelingen, drie verschillende omzetdefinities.",
-    "Power BI-bestanden die niemand meer durft aan te raken.",
+    "Rapportbestanden die niemand meer durft aan te raken.",
     "Rapporten die elke maand handmatig worden bijgewerkt.",
     "Self-service is een ramp omdat de onderliggende data niet klopt.",
   ],
   solution: {
     heading: "Dashboards en rapportage waar de directie op kan sturen.",
     paragraphs: [
-      "Eerst brengen we met finance, sales en operations de KPI-definities op één lijn. Daarna bouw ik dashboards in Power BI op één gemodelleerde laag, zodat dezelfde KPI overal dezelfde waarde heeft. Handmatige Excel-rapportages verdwijnen en self-service gaat eindelijk werken.",
+      "Eerst brengen we met finance, sales en operations de KPI-definities op één lijn. Daarna bouw ik dashboards op één gemodelleerde laag, zodat dezelfde KPI overal dezelfde waarde heeft. Handmatige spreadsheetrapportages verdwijnen en self-service gaat eindelijk werken.",
     ],
   },
   capabilities: [
@@ -390,8 +377,8 @@ export const dataAnalyticsPage = {
       description: "Werksessies met finance, sales en operations om tot ondubbelzinnige business definities te komen.",
     },
     {
-      title: "Power BI architectuur",
-      description: "Van losse PBIX-bestanden naar een schaalbare workspace-structuur met datasets, Apps en row level security.",
+      title: "BI-architectuur",
+      description: "Van losse rapportbestanden naar een schaalbare structuur met gedeelde datasets en row level security.",
     },
     {
       title: "Management reporting",
@@ -399,7 +386,7 @@ export const dataAnalyticsPage = {
     },
     {
       title: "Reporting automation",
-      description: "Handmatige Excel-rapportages vervangen door subscriptions, alerts en automatische verspreiding.",
+      description: "Handmatige spreadsheetrapportages vervangen door subscriptions, alerts en automatische verspreiding.",
     },
     {
       title: "Self-service enablement",
@@ -423,22 +410,21 @@ export const dataAnalyticsPage = {
   outcomes: [
     "Eén consistente set business metrics in alle dashboards.",
     "Dashboards die de directie daadwerkelijk gebruikt om te sturen.",
-    "Geen handmatige Excel-rapportages meer in de maandafsluiting.",
+    "Geen handmatige spreadsheetrapportages meer in de maandafsluiting.",
     "Self-service dat schaalt zonder data chaos.",
   ],
-  stack: ["Power BI", "dbt", "Snowflake", "Databricks", "Azure Synapse"],
   faqs: [
     {
       q: "Hoe pak je conflicterende KPI-definities aan?",
       a: "Met mensen, niet met een tool. In werksessies brengen we grain, uitsluitingen en timing op één lijn, en pas daarna leggen we het vast.",
     },
     {
-      q: "We hebben al tientallen Power BI-rapporten. Moet alles opnieuw?",
+      q: "We hebben al tientallen rapporten. Moet alles opnieuw?",
       a: "Nee. Ik inventariseer welke rapporten echt gebruikt worden en start met één kritieke KPI-set, bijvoorbeeld omzet. Bestaande dashboards migreren we gefaseerd, niet in één big bang.",
     },
     {
       q: "Kunnen business users zelf rapporten maken?",
-      a: "Ja, mits de laag eronder goed is ingericht met geteste data, documentatie en row level security. Anders krijg je weer losse Excel-varianten.",
+      a: "Ja, mits de laag eronder goed is ingericht met geteste data, documentatie en row level security. Anders krijg je weer losse spreadsheetvarianten.",
     },
     {
       q: "Hoe snel zien we iets werkends?",
@@ -456,7 +442,7 @@ export const analyticsEngineeringPage = {
   title: "Analytics Engineering Consultancy",
   metaTitle: "Analytics Engineering Consultancy | Betrouwbare metrics en marts",
   metaDescription:
-    "Senior analytics engineering consultant. dbt modellering, geteste marts en semantic layers: business metrics die BI, stakeholders én AI-agents vertrouwen.",
+    "Senior analytics engineering consultant. Datamodellering, geteste marts en semantic layers: business metrics die BI, stakeholders én AI-agents vertrouwen.",
   hero: {
     eyebrow: "Analytics engineering",
     heading: "Data die niet alleen technisch klopt, maar ook betekenis heeft voor de business.",
@@ -466,13 +452,13 @@ export const analyticsEngineeringPage = {
   problems: [
     "Twee dashboards, twee omzetten, en niemand weet welk cijfer klopt.",
     "SQL-spaghetti in losse scripts zonder versiebeheer, tests of documentatie.",
-    "Business logic leeft in Power BI of Excel, niet in een gedeelde modellaag.",
+    "Business logic leeft in losse rapporten en spreadsheets, niet in een gedeelde modellaag.",
     "AI-tools improviseren over ruwe tabellen omdat metrics nergens vastliggen.",
   ],
   solution: {
     heading: "Analytics engineering als discipline, niet als afterthought.",
     paragraphs: [
-      "Ik modelleer data in dbt in gelaagde, geteste tabellen (bronze, silver, gold), waar business logic één keer wordt vastgelegd. Met CI/CD en documentatie krijgen finance, marketing, operations én AI-agents dezelfde cijfers. Zonder die laag moet een LLM business logic raden, en dat gaat overtuigend én stilzwijgend fout.",
+      "Ik modelleer data in gelaagde, geteste tabellen (bronze, silver, gold), waar business logic één keer wordt vastgelegd. Met CI/CD en documentatie krijgen finance, marketing, operations én AI-agents dezelfde cijfers. Zonder die laag moet een LLM business logic raden, en dat gaat overtuigend én stilzwijgend fout.",
     ],
   },
   capabilities: [
@@ -481,7 +467,7 @@ export const analyticsEngineeringPage = {
       description: "Business metrics in code, met duidelijke definities, grain en aggregatielogica.",
     },
     {
-      title: "dbt project design",
+      title: "Project design",
       description: "Structuur, naming conventions, sources en packages in een codebase die andere engineers snel oppakken.",
     },
     {
@@ -490,11 +476,11 @@ export const analyticsEngineeringPage = {
     },
     {
       title: "Semantic layer & BI-aansluiting",
-      description: "Marts die aansluiten op Power BI, Looker of Tableau, zonder dubbele logica in het dashboard.",
+      description: "Marts die aansluiten op elke BI-tool, zonder dubbele logica in het dashboard.",
     },
     {
       title: "Documentation & lineage",
-      description: "dbt docs als data catalog: waar komt een metric vandaan en welke rapporten hangen eraan?",
+      description: "Documentatie als data catalog: waar komt een metric vandaan en welke rapporten hangen eraan?",
     },
   ],
   process: [
@@ -508,15 +494,14 @@ export const analyticsEngineeringPage = {
     "Minder discussie over definities, meer sturen op data.",
     "Een team dat zelfstandig marts en metrics uitbreidt.",
   ],
-  stack: ["dbt Core", "dbt Cloud", "Snowflake", "Databricks", "BigQuery", "Redshift", "Power BI", "Looker", "Azure Devops", "GitHub Actions"],
   faqs: [
     {
       q: "Wat is analytics engineering precies?",
       a: "Ruwe data omzetten naar betrouwbare, business-gerichte tabellen met versiebeheer, tests, documentatie en CI/CD. Het is de brug tussen data engineering (pipelines) en data analytics (BI en rapportages).",
     },
     {
-      q: "Hoe verschilt dit van dbt consultancy?",
-      a: "dbt consultancy gaat over het dbt-project zelf. Analytics engineering is breder: metric-definities met stakeholders, modelleringsstrategie, BI-aansluiting en een manier van werken in je team.",
+      q: "Gaat dit vooral over een tool?",
+      a: "Nee. Analytics engineering gaat over metric-definities met stakeholders, modelleringsstrategie, BI-aansluiting en een manier van werken in je team. De tooling volgt daaruit.",
     },
     {
       q: "Hebben we eerst data engineering nodig?",
@@ -566,7 +551,7 @@ export const aiInterfacePage = {
       eyebrow: "Laag 02",
       title: "De semantische laag: metrics als contract",
       lead:
-        "Business logic één keer vastleggen, zodat dashboard en agent hetzelfde cijfer geven. Met een semantic layer (dbt, Cube, Power BI-model) of een geteste gold-laag.",
+        "Business logic één keer vastleggen, zodat dashboard en agent hetzelfde cijfer geven. Met een semantic layer of een geteste gold-laag.",
       body: [
         "Laat je een model zelf SQL schrijven over ruwe tabellen, dan raadt het de business logic en klinkt een fout antwoord overtuigend. Laat het kiezen uit gedefinieerde metrics, dan zegt het 'bestaat niet' in plaats van iets te verzinnen.",
       ],
@@ -649,26 +634,6 @@ export const aiInterfacePage = {
       description: "Monitoring op kwaliteit, kosten en versheid. Je team breidt daarna zelf uit.",
     },
   ],
-  stack: [
-    "Model Context Protocol (MCP)",
-    "dbt Core & dbt Cloud",
-    "dbt Semantic Layer",
-    "Cube",
-    "Power BI semantisch model",
-    "Snowflake",
-    "Databricks",
-    "BigQuery",
-    "Azure Synapse & Fabric",
-    "Great Expectations",
-    "Azure OpenAI",
-    "Azure AI Search",
-    "pgvector",
-    "Python",
-    "Airflow",
-    "Unity Catalog",
-    "Microsoft Purview",
-    "GitHub Actions",
-  ],
   faqs: [
     {
       q: "Waarom niet gewoon text-to-SQL op ons warehouse?",
@@ -727,8 +692,8 @@ export const aboutPage = {
     {
       area: "Data Engineering",
       items: [
-        "Pipelines en orchestration (ADF, Airflow, Databricks)",
-        "Datawarehousing (Snowflake, Synapse, Databricks)",
+        "Pipelines en orchestration",
+        "Datawarehousing en lakehouses",
         "Data modelling (dimensional, Data Vault)",
         "CI/CD, testing en data quality",
       ],
@@ -736,14 +701,10 @@ export const aboutPage = {
     {
       area: "Analytics Engineering & BI",
       items: [
-        "dbt (Medallion: bronze, silver, gold)",
-        "Power BI en semantic layers",
+        "Medallion-architectuur: bronze, silver, gold",
+        "BI en semantic layers",
         "KPI-definitie met stakeholders",
       ],
-    },
-    {
-      area: "Cloud & Platforms",
-      items: ["Microsoft Azure", "AWS", "GCP", "Databricks", "Snowflake"],
     },
   ],
   industries: [

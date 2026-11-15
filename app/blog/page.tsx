@@ -15,14 +15,14 @@ import {
 } from "@/lib/blog-posts";
 
 export const metadata: Metadata = {
-  title: "Insights. Data engineering, dbt en modern data stack.",
+  title: "Insights. Data engineering, analytics en AI.",
   description:
-    "Praktische artikelen over data engineering, dbt, analytics engineering, Azure en de Modern Data Stack door senior data engineering consultant Dennis van Burg.",
+    "Praktische artikelen over data engineering, analytics engineering en AI door senior data engineering consultant Dennis van Burg.",
   alternates: { canonical: `${siteConfig.url}/blog` },
   openGraph: {
     title: "Insights | DC Data Consultancy",
     description:
-      "Praktische artikelen over data engineering, dbt en moderne dataplatforms door senior consultant Dennis van Burg.",
+      "Praktische artikelen over data engineering en moderne dataplatforms door senior consultant Dennis van Burg.",
     url: `${siteConfig.url}/blog`,
     type: "website",
   },
