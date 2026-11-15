@@ -25,7 +25,6 @@ type ServicePageData = {
   capabilities: readonly { title: string; description: string }[];
   process: readonly { title: string; description: string }[];
   outcomes: readonly string[];
-  stack: readonly string[];
   faqs: readonly { q: string; a: string }[];
 };
 
@@ -144,21 +143,13 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
           </ul>
         </SectionShell>
 
-        <SectionShell eyebrow="Stack" heading="Technologie waar ik in werk" variant="white">
-          <ul className="flex flex-wrap gap-2 max-w-4xl">
-            {data.stack.map((t) => (
-              <li key={t} className="chip">{t}</li>
-            ))}
-          </ul>
-        </SectionShell>
-
-        <SectionShell eyebrow="FAQ" heading="Veelgestelde vragen" variant="canvas">
+        <SectionShell eyebrow="FAQ" heading="Veelgestelde vragen" variant="white">
           <div className="max-w-3xl">
             <FaqList items={data.faqs} />
           </div>
         </SectionShell>
 
-        <SectionShell eyebrow="Verder lezen" heading="Andere diensten" variant="white">
+        <SectionShell eyebrow="Verder lezen" heading="Andere diensten" variant="canvas">
           <RelatedServices currentSlug={data.slug} />
         </SectionShell>
 

@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Diensten | Senior Data Engineering Consultancy",
   description:
-    "Data engineering, analytics engineering, dbt, Azure data engineering en de AI-interface (MCP, semantic layer, context engineering) door een senior consultant, voor heel Nederland.",
+    "Data engineering, analytics engineering, data analytics en de AI-interface (MCP, semantic layer, context engineering) door een senior consultant, voor heel Nederland.",
   alternates: { canonical: `${siteConfig.url}/diensten` },
 };
 
@@ -120,17 +120,17 @@ export default function DienstenPage() {
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
             <WorkType
               title="Projectgebaseerd"
-              description="Een afgebakend doel met een duidelijke oplevering, zoals een dbt-implementatie."
+              description="Een afgebakend doel met een duidelijke oplevering, zoals een nieuw datamodel of dataplatform."
               duration="2 tot 6 maanden"
             />
             <WorkType
               title="Interim of lead rol"
-              description="Senior of lead data engineer in je team, 3 tot 4 dagen per week."
+              description="Senior of lead data engineer in je team."
               duration="3 tot 9 maanden"
             />
             <WorkType
               title="Strategisch advies"
-              description="Kort en intensief: architectuurreview, technologiekeuze of dbt-audit."
+              description="Kort en intensief: architectuurreview, technologiekeuze of code-audit."
               duration="1 tot 4 weken"
             />
           </ul>

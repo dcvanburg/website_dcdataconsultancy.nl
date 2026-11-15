@@ -131,34 +131,33 @@ export default function AiInterfacePageContent() {
             className={`scroll-mt-24 py-24 md:py-32 ${index % 2 === 0 ? "surface-white" : "surface-canvas"}`}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-3xl mb-12 md:mb-16">
-                <Reveal as="p" className="eyebrow eyebrow-brand mb-6">
-                  {pillar.eyebrow}
-                </Reveal>
-                <Reveal
-                  as="h2"
-                  delay={60}
-                  className="font-display font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance text-ink mb-6"
-                >
-                  {pillar.title}
-                </Reveal>
-                <Reveal as="p" delay={120} className="text-ink-soft text-lg leading-relaxed">
-                  {pillar.lead}
-                </Reveal>
-              </div>
-
-              <div className="grid lg:grid-cols-12 gap-x-12 gap-y-12">
-                <div className="lg:col-span-7 space-y-5 text-ink-soft leading-relaxed">
-                  {pillar.body.map((p, i) => (
-                    <Reveal as="p" key={i} delay={i * 60}>
-                      {p}
-                    </Reveal>
-                  ))}
+              <div className="grid lg:grid-cols-12 gap-x-12 gap-y-12 items-start">
+                <div className="lg:col-span-7">
+                  <Reveal as="p" className="eyebrow eyebrow-brand mb-6">
+                    {pillar.eyebrow}
+                  </Reveal>
+                  <Reveal
+                    as="h2"
+                    delay={60}
+                    className="font-display font-bold text-3xl md:text-4xl lg:text-5xl leading-[1.05] tracking-tight text-balance text-ink mb-6"
+                  >
+                    {pillar.title}
+                  </Reveal>
+                  <Reveal as="p" delay={120} className="text-ink-soft text-lg leading-relaxed mb-6">
+                    {pillar.lead}
+                  </Reveal>
+                  <div className="space-y-5 text-ink-soft leading-relaxed">
+                    {pillar.body.map((p, i) => (
+                      <Reveal as="p" key={i} delay={i * 60}>
+                        {p}
+                      </Reveal>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Why data/analytics engineering matters for this layer */}
                 <Reveal delay={80} className="lg:col-span-5">
-                  <div className="rounded-2xl border border-rule bg-surface p-8 md:p-9 h-full">
+                  <div className="rounded-2xl border border-rule bg-surface p-8 md:p-9">
                     <h3 className="font-display font-bold text-xl text-ink tracking-tight mb-6">
                       {pillar.whyEngineering.heading}
                     </h3>
@@ -217,16 +216,6 @@ export default function AiInterfacePageContent() {
               </Reveal>
             ))}
           </ol>
-        </SectionShell>
-
-        <SectionShell eyebrow="Stack" heading="Technologie waar ik in werk" variant="white">
-          <ul className="flex flex-wrap gap-2 max-w-4xl">
-            {data.stack.map((t) => (
-              <li key={t} className="chip">
-                {t}
-              </li>
-            ))}
-          </ul>
         </SectionShell>
 
         <SectionShell eyebrow="FAQ" heading="Veelgestelde vragen" variant="canvas">
