@@ -221,21 +221,9 @@
     transform: none;
   }
 
-  .lineage-dash {
-    stroke-dasharray: 5 7;
-    animation: lineage-flow 1.4s linear infinite;
-  }
-  .node-pulse { animation: node-pulse 2.4s ease-in-out infinite; }
   .drift-slow { animation: drift 18s ease-in-out infinite alternate; }
 }
 
-@keyframes lineage-flow {
-  to { stroke-dashoffset: -24; }
-}
-@keyframes node-pulse {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.35); }
-}
 @keyframes drift {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(0, -24px, 0); }

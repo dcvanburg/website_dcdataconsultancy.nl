@@ -61,25 +61,6 @@ export default function Header() {
                 {siteConfig.name}
               </span>
             </Link>
-            <span
-              className={`hidden lg:inline-flex items-center gap-2 px-2.5 py-1 rounded-md border transition-colors ${
-                solid
-                  ? "border-rule bg-surface"
-                  : "border-white/10 bg-white/5"
-              }`}
-            >
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-success opacity-60 animate-ping" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-success" />
-              </span>
-              <span
-                className={`font-mono text-[10px] uppercase tracking-[0.16em] ${
-                  solid ? "text-ink-muted" : "text-night-soft-ink"
-                }`}
-              >
-                Beschikbaar
-              </span>
-            </span>
           </div>
 
           <nav className="hidden lg:flex items-center gap-1">
