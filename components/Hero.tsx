@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { hero } from "@/lib/site-content";
 import Reveal from "@/components/ui/Reveal";
-import LineageDiagram from "@/components/ui/LineageDiagram";
+import StackDiagram from "@/components/ui/StackDiagram";
 
 export default function Hero() {
   return (
@@ -60,7 +60,7 @@ export default function Hero() {
           </div>
 
           <Reveal delay={260} className="lg:col-span-5">
-            <LineageDiagram />
+            <StackDiagram />
           </Reveal>
         </div>
 

@@ -20,15 +20,9 @@ export default function AboutSection() {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
               </div>
-              <div className="absolute left-4 bottom-4 right-4 flex items-center justify-between rounded-xl border border-rule bg-surface/90 backdrop-blur px-4 py-3">
-                <div>
-                  <p className="font-display font-bold text-ink text-sm tracking-tight">Dennis van Burg</p>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-muted">{aboutSection.role}</p>
-                </div>
-                <span className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-success" />
-                  <span className="font-mono text-[10px] uppercase tracking-[0.14em] text-ink-muted">Beschikbaar</span>
-                </span>
+              <div className="absolute left-4 bottom-4 right-4 rounded-xl border border-rule bg-surface/90 backdrop-blur px-4 py-3">
+                <p className="font-display font-bold text-ink text-sm tracking-tight">Dennis van Burg</p>
+                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-muted">{aboutSection.role}</p>
               </div>
             </div>
           </Reveal>
