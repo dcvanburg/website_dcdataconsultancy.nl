@@ -44,18 +44,18 @@ export default function Header() {
           <div className="flex items-center gap-4 min-w-0">
             <Link
               href="/"
-              className="flex items-center gap-2.5 shrink-0"
+              className="flex items-center gap-3 shrink-0"
               onClick={closeMobile}
             >
               <Image
                 src="/images/logo.png"
                 alt={siteConfig.name}
-                width={32}
-                height={32}
-                className="w-7 h-7 md:w-8 md:h-8 object-contain"
+                width={44}
+                height={44}
+                className="w-9 h-9 md:w-11 md:h-11 object-contain"
                 priority
               />
-              <span className={`font-display font-bold text-base md:text-lg tracking-tight transition-colors ${
+              <span className={`font-display font-bold text-lg md:text-xl tracking-tight transition-colors ${
                 solid ? "text-ink hover:text-brand" : "text-night-ink hover:text-brand-bright"
               }`}>
                 {siteConfig.name}
