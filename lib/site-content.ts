@@ -52,7 +52,7 @@ export const hero = {
   badge: "SENIOR DATA ENGINEERING & AI · NL",
   heading: "Je data klaar voor AI.",
   subheading:
-    "Freelance senior data engineer. Ik bouw de lagen tussen je bronnen en je AI-agent.",
+    "Freelance senior data engineer. Ik zorg ervoor dat jij AI kunt gebruiken op je eigen data.",
   primaryCta: { label: "Plan een kennismaking", href: "/#contact" },
   secondaryCta: { label: "Bekijk de diensten", href: "/diensten" },
   trustBar: {
