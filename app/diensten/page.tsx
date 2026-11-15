@@ -125,7 +125,7 @@ export default function DienstenPage() {
             />
             <WorkType
               title="Interim of lead rol"
-              description="Senior of lead data engineer in je team, 3 tot 4 dagen per week."
+              description="Senior of lead data engineer in je team."
               duration="3 tot 9 maanden"
             />
             <WorkType
