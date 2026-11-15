@@ -50,9 +50,9 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt={siteConfig.name}
-                width={44}
-                height={44}
-                className="w-9 h-9 md:w-11 md:h-11 object-contain"
+                width={56}
+                height={56}
+                className="w-9 h-9 md:w-11 md:h-11 lg:w-14 lg:h-14 object-contain"
                 priority
               />
               <span className={`font-display font-bold text-lg md:text-xl tracking-tight transition-colors ${
