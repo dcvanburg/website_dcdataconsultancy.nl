@@ -50,9 +50,9 @@ export const footerNav = {
 
 export const hero = {
   badge: "SENIOR DATA ENGINEERING & AI · NL",
-  heading: "Een dataplatform en AI die gewoon werken.",
+  heading: "Je data klaar voor AI.",
   subheading:
-    "Freelance senior data engineer. Ik bouw de datapipelines en platforms waar BI, analytics en AI op draaien.",
+    "Freelance senior data engineer. Ik bouw de lagen tussen je bronnen en je AI-agent.",
   primaryCta: { label: "Plan een kennismaking", href: "/#contact" },
   secondaryCta: { label: "Bekijk de diensten", href: "/diensten" },
   trustBar: {
