@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Insights | DC Data Consultancy",
     description:
-      "Praktische artikelen over data engineering, dbt en moderne dataplatforms door senior consultant Dennis van Burg uit Breda.",
+      "Praktische artikelen over data engineering, dbt en moderne dataplatforms door senior consultant Dennis van Burg.",
     url: `${siteConfig.url}/blog`,
     type: "website",
   },

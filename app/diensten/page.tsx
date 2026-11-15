@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site-content";
 export const metadata: Metadata = {
   title: "Diensten | Senior Data Engineering Consultancy",
   description:
-    "Data engineering, analytics engineering, dbt, Azure data engineering en de AI-interface (MCP, semantic layer, context engineering) door een senior consultant uit Breda.",
+    "Data engineering, analytics engineering, dbt, Azure data engineering en de AI-interface (MCP, semantic layer, context engineering) door een senior consultant, voor heel Nederland.",
   alternates: { canonical: `${siteConfig.url}/diensten` },
 };
 

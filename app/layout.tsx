@@ -28,17 +28,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default:
-      "DC Data Consultancy | Senior Data Engineering Consultancy Breda",
+      "DC Data Consultancy | Senior Data Engineering Consultancy Nederland",
     template: "%s | DC Data Consultancy",
   },
   description:
-    "Senior data engineering consultancy uit Breda. Schaalbare pipelines en cloud dataplatforms als fundering voor BI, analytics en AI. Zonder betrouwbare data en vaste metrics hallucineren LLM's. Door Dennis van Burg, sinds 2016 in data.",
+    "Senior data engineering consultancy voor heel Nederland. Schaalbare pipelines en cloud dataplatforms als fundering voor BI, analytics en AI. Zonder betrouwbare data en vaste metrics hallucineren LLM's. Door Dennis van Burg, sinds 2016 in data.",
   keywords: [
     "data engineering consultancy",
-    "data engineer Breda",
+    "data engineer Nederland",
     "freelance data engineer",
     "interim data engineer Nederland",
-    "data consultancy Breda",
+    "data consultancy Nederland",
     "dbt consultant Nederland",
     "Azure data engineer",
     "modern data stack consultant",
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     title:
-      "DC Data Consultancy | Senior Data Engineering Consultancy Breda",
+      "DC Data Consultancy | Senior Data Engineering Consultancy Nederland",
     description:
-      "Senior data engineering consultancy uit Breda. Dataplatforms waar BI, analytics en AI op kunnen vertrouwen, omdat pipelines en metrics kloppen.",
+      "Senior data engineering consultancy voor heel Nederland. Dataplatforms waar BI, analytics en AI op kunnen vertrouwen, omdat pipelines en metrics kloppen.",
     images: [
       {
         url: "/images/og-default.png",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DC Data Consultancy | Senior Data Engineering Consultancy",
     description:
-      "Senior data engineering consultancy uit Breda. Schaalbare dataplatforms als fundering voor BI, analytics en betrouwbare AI.",
+      "Senior data engineering consultancy voor heel Nederland. Schaalbare dataplatforms als fundering voor BI, analytics en betrouwbare AI.",
   },
   robots: {
     index: true,

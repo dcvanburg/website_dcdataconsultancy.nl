@@ -1,5 +1,5 @@
 // Central content file — single source of truth for all copy.
-// Positioning: Senior Data Engineering Consultancy based in Breda, NL.
+// Positioning: Senior Data Engineering Consultancy serving all of NL.
 // DC Data Consultancy: actief sinds 2021, ervaring sinds 2016.
 
 export const siteConfig = {
@@ -42,9 +42,6 @@ export const footerNav = {
     { label: "Insights", href: "/blog" },
     { label: "Contact", href: "/#contact" },
   ],
-  locatie: [
-    { label: "Data Consultant Breda", href: "/data-consultant-breda" },
-  ],
 } as const;
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -53,7 +50,7 @@ export const footerNav = {
 
 export const hero = {
   badge: "SENIOR DATA ENGINEERING & AI · NL",
-  heading: "Een dataplatform dat doet wat het belooft.",
+  heading: "Een dataplatform en AI die gewoon werken.",
   subheading:
     "Freelance senior data engineer. Ik bouw de datapipelines en platforms waar BI, analytics en AI op draaien.",
   primaryCta: { label: "Plan een kennismaking", href: "/#contact" },
@@ -103,7 +100,7 @@ export const aboutSection = {
   heading: "Dennis van Burg, senior data specialist.",
   role: "Eigenaar · Senior Data Specialist",
   bio: [
-    "Sinds 2016 werk ik in data, sinds 2021 met DC Data Consultancy. Ik ontwerp, bouw en denk mee, samen met je team, vanuit Breda door heel Nederland.",
+    "Sinds 2016 werk ik in data, sinds 2021 met DC Data Consultancy. Ik ontwerp, bouw en denk mee, samen met je team, door heel Nederland.",
   ],
   // highlights + industries are not shown on the homepage anymore; /over-dennis still renders highlights.
   highlights: [
@@ -251,7 +248,7 @@ export const contactSection = {
 } as const;
 
 export const finalCta = {
-  heading: "Klaar om je datafundering serieus te nemen?",
+  heading: "Klaar om serieus met Data en AI aan de slag te gaan?",
   subheading: "Een kennismaking van 30 minuten: waar sta je nu en wat is realistisch haalbaar.",
   cta: { label: "Plan een kennismaking", href: "/#contact" },
 } as const;
@@ -699,7 +696,7 @@ export const aiInterfacePage = {
 export const aboutPage = {
   metaTitle: "Over Dennis van Burg | Senior Data Engineering Consultant",
   metaDescription:
-    "Dennis van Burg is senior data engineering consultant en oprichter van DC Data Consultancy in Breda. Sinds 2016 actief in data, sinds 2021 als zelfstandig consultant.",
+    "Dennis van Burg is senior data engineering consultant en oprichter van DC Data Consultancy. Sinds 2016 actief in data, sinds 2021 als zelfstandig consultant.",
   hero: {
     eyebrow: "Over Dennis van Burg",
     heading: "Senior data specialist. Hands-on, met oog voor de business.",
@@ -773,60 +770,9 @@ export const aboutPage = {
   ],
 } as const;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// LOCAL SEO PAGE — BREDA
-// ─────────────────────────────────────────────────────────────────────────────
-
-export const bredaPage = {
-  metaTitle: "Data Consultant Breda | DC Data Consultancy",
-  metaDescription:
-    "Senior data engineering consultant gevestigd in Breda. Voor opdrachtgevers in Noord Brabant en heel Nederland. Data pipelines, dataplatforms, Power BI en AI.",
-  hero: {
-    eyebrow: "Data consultancy in Breda",
-    heading: "Senior data engineering consultancy vanuit Breda, voor heel Nederland.",
-    intro:
-      "Gevestigd in Breda. Ik werk voor opdrachtgevers in Brabant, de Randstad en remote door heel Nederland.",
-  },
-  whyBreda: {
-    heading: "Waarom Breda?",
-    paragraphs: [
-      "Breda ligt tussen de Randstad en Brabant, goed bereikbaar via A16, A27, A58 en de HSL. Veel werk gaat remote of hybride; voor workshops en reviews kom ik graag langs.",
-    ],
-  },
-  servicesInBreda: {
-    heading: "Wat ik doe",
-    items: [
-      "Data engineering en dataplatform architectuur",
-      "dbt en analytics engineering",
-      "Power BI en semantic layers",
-      "Interim senior of lead data engineer",
-    ],
-  },
-  regions: {
-    heading: "Regio's",
-    items: [
-      "Breda en West Brabant",
-      "Tilburg",
-      "Eindhoven",
-      "Den Bosch",
-      "Rotterdam",
-      "Utrecht en Amsterdam",
-      "Remote / heel Nederland",
-    ],
-  },
-  localTrust: {
-    heading: "Waarom lokaal",
-    items: [
-      "Direct een senior aanspreekpunt, geen accountmanager ertussen",
-      "In Nederland gevestigd, geen offshoring",
-      "Werk volgens AVG en Nederlandse governance-standaarden",
-    ],
-  },
-} as const;
-
 export const footer = {
   tagline:
-    "Senior data engineering consultancy uit Breda, voor organisaties die meer uit hun data willen halen.",
+    "Senior data engineering consultancy voor organisaties in heel Nederland die meer uit hun data willen halen.",
   linkedinUrl: siteConfig.linkedin,
   copyright: siteConfig.copyright,
 } as const;
