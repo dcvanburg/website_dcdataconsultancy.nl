@@ -102,20 +102,12 @@ export const aboutSection = {
   bio: [
     "Sinds 2016 werk ik in data, sinds 2021 met DC Data Consultancy. Ik ontwerp, bouw en denk mee, samen met je team, door heel Nederland.",
   ],
-  // highlights + industries are not shown on the homepage anymore; /over-dennis still renders highlights.
+  // highlights are only rendered on /over-dennis.
   highlights: [
     { value: "10+", label: "jaar ervaring in data" },
     { value: "2021", label: "DC Data Consultancy gestart" },
     { value: "6+", label: "sectoren waarvoor gewerkt" },
     { value: "10+", label: "bedrijven waarvoor gewerkt" },
-  ],
-  industries: [
-    "Financial Services (banken, verzekeraars, pensioenen)",
-    "Logistiek & Supply Chain",
-    "Vastgoed",
-    "Energie",
-    "Publieke sector",
-    "Retail & e-commerce",
   ],
   profileImage: "/images/profile-dennis.png",
   profileImageAlt: "Dennis van Burg, senior data specialist bij DC Data Consultancy",
