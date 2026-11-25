@@ -943,6 +943,281 @@ export const blogPosts: BlogPost[] = [
       "data-platform-architectuur-blueprint",
     ],
   },
+  // ───────────────────────────────────────────────────────────────────────────
+  {
+    slug: "gen-analytics-praten-met-je-data",
+    title: "Gen Analytics: zelf vragen stellen aan je eigen data, in gewone taal",
+    description:
+      "Niet meer wachten op een analist of een nieuw dashboard. Gen Analytics laat je in gewone taal vragen stellen aan je eigen data. Wat het is, wat het niet is en wat je nodig hebt.",
+    metaTitle: "Gen Analytics: praten met je eigen data | Wat het is en wat je nodig hebt",
+    metaDescription:
+      "Wat is Gen Analytics? Zelf data-analyse doen in gewone taal op je eigen data. Verschil met BI, waar het waarde levert en welke fundering nodig is. Door AI/Data Engineering Consultant Dennis van Burg.",
+    category: "AI & Data Science",
+    tags: ["Gen Analytics", "AI", "LLM", "self-service", "BI"],
+    publishedAt: "2026-11-11",
+    readingMinutes: 7,
+    intro:
+      "In bijna elke organisatie waar ik werk, zie ik dezelfde rij: mensen met een vraag over hun cijfers, en een klein data team dat die vragen een voor een afwerkt. Een nieuw dashboard duurt weken, een ad-hoc analyse dagen. Gen Analytics verandert die rij. Je stelt je vraag in gewone taal en krijgt binnen seconden een antwoord, op je eigen data.",
+    sections: [
+      { type: "heading", text: "Wat is Gen Analytics?" },
+      {
+        type: "paragraph",
+        text:
+          "Gen Analytics is data-analyse met generatieve AI als interface. Een taalmodel vertaalt je vraag (‘hoeveel nieuwe klanten hadden we vorig kwartaal in regio Zuid, en hoe verhoudt dat zich tot vorig jaar?’) naar een query op je dataplatform, voert die uit en legt het resultaat in gewone taal uit. Met een tabel of grafiek erbij, en idealiter met de definities die gebruikt zijn.",
+      },
+      {
+        type: "paragraph",
+        text:
+          "Het model weet zelf niets van je organisatie. Het praat met jouw data, via de koppelingen en definities die jij beschikbaar stelt. Dat is meteen de kern van het hele verhaal: de kwaliteit van het antwoord hangt af van wat eronder ligt.",
+      },
+      { type: "heading", text: "Waarom nu?" },
+      {
+        type: "list",
+        items: [
+          "Taalmodellen zijn goed genoeg geworden in het schrijven van queries en het uitleggen van resultaten.",
+          "Er is een open standaard (MCP) waarmee een model gecontroleerd met je dataplatform praat, in plaats van losse koppelingen per tool.",
+          "De vraag naar data groeit sneller dan data teams kunnen meegroeien. Dashboards beantwoorden de vragen van vorig jaar, niet die van vandaag.",
+          "Business teams zijn gewend geraakt aan AI-assistenten en verwachten hetzelfde gemak bij hun eigen cijfers.",
+        ],
+      },
+      { type: "heading", text: "Gen Analytics is geen vervanging van BI" },
+      {
+        type: "paragraph",
+        text:
+          "Dashboards blijven nodig. Voor vaste KPI's waar je wekelijks op stuurt, wil je een stabiel, gecontroleerd overzicht dat iedereen op dezelfde manier leest. Gen Analytics vult het gat daarnaast: de vervolgvraag, de uitsplitsing die niet in het dashboard zit, de ‘waarom daalde dit?’ die nu in een ticket bij het data team belandt.",
+      },
+      {
+        type: "callout",
+        title: "Vuistregel",
+        text:
+          "Vaste vragen horen in een dashboard. Losse, wisselende vragen horen in Gen Analytics. Beide lezen uit dezelfde, geteste definities.",
+      },
+      { type: "heading", text: "Waar het direct waarde levert" },
+      {
+        type: "list",
+        items: [
+          "Management en controllers die snel een cijfer willen checken zonder Excel-export.",
+          "Commerciële teams die per klant, product of regio willen inzoomen.",
+          "Operationele teams die afwijkingen willen verklaren: welke orders, welke dag, welke locatie.",
+          "Data teams zelf, die minder tijd kwijt zijn aan ad-hoc verzoeken en meer aan het platform.",
+        ],
+      },
+      { type: "heading", text: "Wat je nodig hebt" },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Betrouwbare data: pipelines die op tijd en compleet laden, met tests op de kritieke tabellen.",
+          "Vaste definities: wat is ‘omzet’, wat is een ‘actieve klant’? Eén keer vastgelegd, niet per vraag opnieuw geraden door het model.",
+          "Een gecontroleerde koppeling: het model ziet alleen wat het mag zien, met dezelfde rechten als de gebruiker.",
+          "Toetsing: een set vragen met bekende antwoorden, zodat je kunt meten of de assistent klopt voordat je hem breed uitrolt.",
+        ],
+      },
+      { type: "heading", text: "Wat het niet is" },
+      {
+        type: "paragraph",
+        text:
+          "Gen Analytics is geen chatbot die je los op je database zet en die het verder zelf uitzoekt. Dat levert een indrukwekkende demo op en een productie die niemand vertrouwt. Het model raadt dan joins, filters en definities, en presenteert het resultaat net zo zelfverzekerd als wanneer het klopt. Het verschil tussen een gimmick en een werkend hulpmiddel zit volledig in de datafundering.",
+      },
+      { type: "heading", text: "Conclusie" },
+      {
+        type: "paragraph",
+        text:
+          "Gen Analytics maakt data-analyse toegankelijk voor iedereen in de organisatie, zonder dat elke vraag via het data team hoeft. Dat is een echte verschuiving. Maar het werkt alleen als de basis staat: schone data, vaste definities en een gecontroleerde koppeling. Organisaties die dat op orde hebben, kunnen vandaag beginnen. De rest heeft nu een heel concrete reden om het op orde te brengen.",
+      },
+    ],
+    related: [
+      "gen-analytics-semantische-laag",
+      "gen-analytics-starten-in-vier-weken",
+      "ai-zonder-datafundering",
+    ],
+  },
+  // ───────────────────────────────────────────────────────────────────────────
+  {
+    slug: "gen-analytics-semantische-laag",
+    title: "Waarom Gen Analytics zonder semantische laag foute antwoorden geeft",
+    description:
+      "Een taalmodel dat zelf queries schrijft op ruwe tabellen, geeft vroeg of laat een overtuigend fout antwoord. De semantische laag is wat Gen Analytics betrouwbaar maakt.",
+    metaTitle: "Gen Analytics en de semantische laag | Betrouwbare AI-antwoorden",
+    metaDescription:
+      "Waarom text-to-SQL op ruwe tabellen faalt en hoe een semantische laag met vaste metric-definities Gen Analytics betrouwbaar maakt. Door AI/Data Engineering Consultant Dennis van Burg.",
+    category: "AI & Data Science",
+    tags: ["Gen Analytics", "semantic layer", "metrics", "text-to-SQL", "AI"],
+    publishedAt: "2026-11-18",
+    readingMinutes: 8,
+    intro:
+      "De eerste demo van Gen Analytics is bijna altijd indrukwekkend. Je stelt een vraag, het model schrijft een query, er komt een mooi antwoord uit. Daarna vraagt iemand uit finance naar de omzet van vorige maand, en het getal wijkt af van het maandrapport. Vanaf dat moment vertrouwt niemand de assistent meer. Dat ligt zelden aan het model. Het ligt aan wat het model te zien krijgt.",
+    sections: [
+      { type: "heading", text: "Het probleem met text-to-SQL op ruwe tabellen" },
+      {
+        type: "paragraph",
+        text:
+          "Laat je een taalmodel vrij queries schrijven op je warehouse, dan moet het bij elke vraag zelf bepalen welke tabellen het joint, welke filters het toepast en hoe het een begrip als ‘omzet’ berekent. Inclusief of exclusief btw? Op orderdatum of factuurdatum? Met of zonder creditnota's en interne boekingen? Een analist die al jaren in de organisatie zit, weet dat. Het model raadt.",
+      },
+      {
+        type: "list",
+        items: [
+          "Dezelfde vraag, twee keer gesteld, levert twee verschillende queries en soms twee verschillende getallen op.",
+          "Een verkeerde join verdubbelt stilletjes rijen. Het antwoord ziet er plausibel uit, maar is te hoog.",
+          "Uitzonderingen die alleen in iemands hoofd bestaan (testklanten, interne orders) worden niet uitgefilterd.",
+          "Niemand kan achteraf uitleggen waarom het getal afwijkt van het dashboard.",
+        ],
+      },
+      { type: "heading", text: "Wat een semantische laag doet" },
+      {
+        type: "paragraph",
+        text:
+          "Een semantische laag legt je business-begrippen één keer vast: metrics, dimensies, de relaties ertussen en de regels die erbij horen. ‘Omzet’ is dan geen vrije interpretatie meer, maar een gedefinieerde, geteste berekening. Het model hoeft geen SQL meer te verzinnen. Het kiest de juiste metric, de juiste uitsplitsing en de juiste periode, en de semantische laag zorgt voor een correcte query.",
+      },
+      {
+        type: "callout",
+        title: "Kernpunt",
+        text:
+          "Laat het model kiezen, niet rekenen. Het taalmodel vertaalt de vraag naar metric, filter en periode. De berekening zelf ligt vast in de semantische laag.",
+      },
+      { type: "heading", text: "Metrics als contract" },
+      {
+        type: "paragraph",
+        text:
+          "Het mooiste effect: dashboard en assistent lezen uit dezelfde definities. Vraagt iemand in de chat naar de omzet van vorige maand, dan krijgt hij exact het getal uit het maandrapport. Dat is wat vertrouwen opbouwt. Een metric wordt zo een contract tussen data team en business: vastgelegd, getest, gedocumenteerd, met een eigenaar.",
+      },
+      { type: "heading", text: "Wat er in een goede definitie hoort" },
+      {
+        type: "list",
+        items: [
+          "Een naam en een omschrijving in begrijpelijke taal, want het model leest die ook.",
+          "De exacte berekening, inclusief wat er wel en niet meetelt.",
+          "Welke dimensies je ermee mag combineren, en welke niet.",
+          "De peildatum en versheid: tot wanneer is de data compleet?",
+          "Een eigenaar die beslist als de definitie moet veranderen.",
+        ],
+      },
+      { type: "heading", text: "Moet het een aparte tool zijn?" },
+      {
+        type: "paragraph",
+        text:
+          "Niet per se. Een semantische laag kan een dedicated product zijn, maar ook een strak beheerde gold-laag met gedocumenteerde marts en vaste metric-definities die je via een gecontroleerde koppeling (bijvoorbeeld een MCP-server) aanbiedt. Het patroon telt, niet de tool: een beperkt, gedocumenteerd oppervlak in plaats van het hele warehouse.",
+      },
+      { type: "heading", text: "Begin klein" },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Inventariseer de tien vragen die het vaakst bij het data team binnenkomen.",
+          "Bepaal welke metrics en dimensies nodig zijn om die te beantwoorden.",
+          "Leg die definities vast samen met de business, en test ze tegen de bestaande rapportages.",
+          "Stel alleen die laag beschikbaar aan het model. Breid uit als de antwoorden aantoonbaar kloppen.",
+        ],
+      },
+      { type: "heading", text: "Conclusie" },
+      {
+        type: "paragraph",
+        text:
+          "Gen Analytics staat of valt met consistente antwoorden. Een taalmodel dat zelf definities raadt, gaat vroeg of laat onderuit, meestal precies op het moment dat het ertoe doet. Een semantische laag haalt dat risico weg: het model doet waar het goed in is (de vraag begrijpen en het antwoord uitleggen), en jouw definities doen de rest.",
+      },
+    ],
+    related: [
+      "gen-analytics-praten-met-je-data",
+      "gen-analytics-starten-in-vier-weken",
+      "kpi-definitie-met-stakeholders",
+    ],
+  },
+  // ───────────────────────────────────────────────────────────────────────────
+  {
+    slug: "gen-analytics-starten-in-vier-weken",
+    title: "Gen Analytics in de praktijk: in vier weken van idee naar werkende assistent",
+    description:
+      "Geen groot AI-programma, maar één domein, één set vragen en binnen vier weken een assistent die je team echt gebruikt. Een nuchter stappenplan.",
+    metaTitle: "Gen Analytics starten: stappenplan in vier weken",
+    metaDescription:
+      "Praktisch stappenplan om Gen Analytics in vier weken werkend te krijgen: domein kiezen, definities vastleggen, veilig koppelen, toetsen en uitrollen. Door AI/Data Engineering Consultant Dennis van Burg.",
+    category: "AI & Data Science",
+    tags: ["Gen Analytics", "AI", "aanpak", "MCP", "governance"],
+    publishedAt: "2026-11-25",
+    readingMinutes: 8,
+    intro:
+      "Veel organisaties willen iets met AI op hun data, maar weten niet waar ze moeten beginnen. Het risico is dat het een groot programma wordt met een stuurgroep, een architectuurplaat en na een half jaar nog niets werkends. Het kan ook anders. Met één afgebakend domein heb je binnen vier weken een assistent waar je team echt vragen aan stelt.",
+    sections: [
+      { type: "heading", text: "Week 1: kies één domein en verzamel de vragen" },
+      {
+        type: "paragraph",
+        text:
+          "Begin niet met het hele bedrijf. Kies één domein waar veel vragen over gesteld worden en waar de data redelijk op orde is: sales, voorraad, klantservice, finance. Verzamel bij de gebruikers de twintig tot dertig vragen die ze het vaakst stellen, of zouden willen stellen. Die lijst wordt je scope én je testset.",
+      },
+      {
+        type: "list",
+        items: [
+          "Welke vragen komen nu als verzoek bij het data team binnen?",
+          "Welke vragen worden nu met een Excel-export beantwoord?",
+          "Welke vervolgvragen stellen mensen na het bekijken van het dashboard?",
+        ],
+      },
+      { type: "heading", text: "Week 2: leg de definities vast" },
+      {
+        type: "paragraph",
+        text:
+          "Werk van de vragen terug naar de data. Welke metrics en dimensies zijn nodig? Bestaan die al in een geteste gold-laag, of zitten ze verspreid over rapportages en spreadsheets? Leg de definities samen met de business vast en controleer ze tegen de cijfers die mensen nu gebruiken. Wijkt het af, dan los je dat nu op, niet nadat de assistent live staat.",
+      },
+      {
+        type: "callout",
+        title: "Praktijktip",
+        text:
+          "Dit is meestal de week waarin het echte werk zit. Niet de AI, maar de vraag ‘wat bedoelen we precies met dit getal?’. Dat werk betaalt zich ook terug in je dashboards.",
+      },
+      { type: "heading", text: "Week 3: koppel veilig en bouw de eerste versie" },
+      {
+        type: "paragraph",
+        text:
+          "Stel de vastgelegde metrics beschikbaar aan het taalmodel via een gecontroleerde koppeling, bijvoorbeeld een MCP-server. Het model ziet alleen die laag, niet het hele warehouse. Geef het context mee: omschrijvingen van metrics, toegestane combinaties, de peildatum. Aan het eind van deze week stelt een eerste groep gebruikers er al echte vragen aan.",
+      },
+      {
+        type: "list",
+        items: [
+          "Rechten: de assistent mag nooit meer zien dan de gebruiker zelf.",
+          "Privacy: geen persoonsgegevens naar het model als dat niet nodig is voor de vraag.",
+          "Transparantie: laat bij elk antwoord zien welke metric, filters en periode gebruikt zijn.",
+          "Kosten: zet limieten op querygrootte en aantal aanroepen.",
+        ],
+      },
+      { type: "heading", text: "Week 4: toets, verbeter en rol uit" },
+      {
+        type: "paragraph",
+        text:
+          "Draai de verzamelde vragen uit week 1 als testset en vergelijk de antwoorden met de bekende uitkomsten. Waar het misgaat, ligt het bijna altijd aan een ontbrekende definitie of onduidelijke omschrijving, niet aan het model. Verbeter, toets opnieuw en rol pas breder uit als de score stabiel goed is. Houd daarna bij welke vragen gesteld worden: dat is de beste input voor de volgende uitbreiding.",
+      },
+      { type: "heading", text: "Wat je na vier weken hebt" },
+      {
+        type: "list",
+        items: [
+          "Een werkende assistent voor één domein, die je team dagelijks gebruikt.",
+          "Vastgelegde, geteste definities die ook je dashboards consistenter maken.",
+          "Een testset om elke wijziging tegen te toetsen.",
+          "Inzicht in welke vragen er echt leven, en dus waar je hierna uitbreidt.",
+        ],
+      },
+      { type: "heading", text: "Valkuilen" },
+      {
+        type: "list",
+        items: [
+          "Te breed beginnen: het hele warehouse openzetten levert vage antwoorden en weinig vertrouwen op.",
+          "Overslaan van de testset: zonder meting weet je niet of het klopt, alleen dat het overtuigend klinkt.",
+          "Alleen IT erbij: zonder de business aan tafel zijn de definities niet de definities die mensen gebruiken.",
+          "Wachten op perfecte data: begin met het domein dat het meest op orde is, en verbeter onderweg.",
+        ],
+      },
+      { type: "heading", text: "Conclusie" },
+      {
+        type: "paragraph",
+        text:
+          "Gen Analytics hoeft geen langlopend AI-traject te zijn. Met één domein, een concrete set vragen en vastgelegde definities staat er binnen vier weken iets werkends. Daarna breid je stap voor stap uit, telkens getoetst. Zo bouw je vertrouwen op bij de gebruikers, en dat is uiteindelijk wat bepaalt of een AI-toepassing blijft.",
+      },
+    ],
+    related: [
+      "gen-analytics-praten-met-je-data",
+      "gen-analytics-semantische-laag",
+      "ai-zonder-datafundering",
+    ],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
