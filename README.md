@@ -2,7 +2,7 @@
 
 Codebase voor [dcdataconsultancy.nl](https://www.dcdataconsultancy.nl) — senior data engineering consultancy uit Breda.
 
-**Stack:** Next.js 16 (App Router · Turbopack), React 19, TypeScript, Tailwind CSS v4, shadcn/ui.
+**Stack:** Next.js 16 (App Router · Turbopack), React 19, TypeScript, Tailwind CSS v4.
 
 ## Prerequisites
 
@@ -99,13 +99,6 @@ lib/
 public/
   images/                         # Client logos, profile photo
   robots.txt                      # Met AI crawler allow-list
-docs/
-  content-inventory.md
-  audit.md
-  assumptions.md
-  progress.md
-  improvement-roadmap.md
-  qa-checklist.md
 ```
 
 ## Content Updates
