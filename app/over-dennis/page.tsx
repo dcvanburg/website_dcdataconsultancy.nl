@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Banknote,
+  Building2,
+  Landmark,
+  ShoppingCart,
+  Truck,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SectionShell from "@/components/ui/SectionShell";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CtaBanner from "@/components/ui/CtaBanner";
+import QuoteSection from "@/components/QuoteSection";
 import { BreadcrumbSchema } from "@/components/SchemaMarkup";
 import { aboutPage, aboutSection, siteConfig } from "@/lib/site-content";
 
@@ -20,6 +30,15 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/over-dennis`,
     type: "profile",
   },
+};
+
+const INDUSTRY_ICONS: Record<string, LucideIcon> = {
+  Banknote,
+  Building2,
+  Landmark,
+  ShoppingCart,
+  Truck,
+  Zap,
 };
 
 export default function OverDennisPage() {
@@ -125,33 +144,20 @@ export default function OverDennisPage() {
           </div>
         </SectionShell>
 
+        <QuoteSection />
+
         <SectionShell
           eyebrow="EXPERTISE"
           heading="Waar ik in werk"
           variant="white"
         >
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-12">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
             {aboutPage.expertise.map((e) => (
               <li key={e.area} className="border-t border-rule pt-6">
-                <h3 className="font-display font-bold text-xl text-ink mb-4">
+                <h3 className="font-display font-bold text-xl text-ink mb-3">
                   {e.area}
                 </h3>
-                <ul className="space-y-1.5">
-                  {e.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-start gap-3 text-ink-soft text-base leading-relaxed"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="font-mono text-xs text-brand leading-6 shrink-0"
-                      >
-                        ::
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-ink-soft leading-relaxed">{e.description}</p>
               </li>
             ))}
           </ul>
@@ -162,21 +168,21 @@ export default function OverDennisPage() {
           heading="Sectoren"
           variant="canvas"
         >
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 max-w-4xl">
-            {aboutPage.industries.map((ind) => (
-              <li
-                key={ind}
-                className="flex items-start gap-3 text-ink-soft text-base leading-relaxed border-b border-rule pb-3"
-              >
-                <span
-                  aria-hidden="true"
-                  className="font-mono text-xs text-brand leading-6 shrink-0"
-                >
-                  ::
-                </span>
-                {ind}
-              </li>
-            ))}
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+            {aboutPage.industries.map((ind) => {
+              const Icon = INDUSTRY_ICONS[ind.icon] ?? Building2;
+              return (
+                <li key={ind.name} className="flex items-start gap-4 border-t border-rule pt-6">
+                  <div className="w-11 h-11 rounded-xl border border-rule bg-surface flex items-center justify-center shrink-0">
+                    <Icon className="w-5 h-5 text-brand" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-lg text-ink tracking-tight">{ind.name}</h3>
+                    <p className="text-ink-soft text-base leading-relaxed">{ind.clients}</p>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </SectionShell>
 
