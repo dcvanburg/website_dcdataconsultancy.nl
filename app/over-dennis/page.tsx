@@ -83,8 +83,12 @@ export default function OverDennisPage() {
               </div>
               <div className="lg:col-span-7">
                 <p className="eyebrow text-brand-bright mb-6">{aboutPage.hero.eyebrow}</p>
-                <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-night-ink leading-[1.0] tracking-tight text-balance mb-7">
-                  {aboutPage.hero.heading}
+                <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-6xl text-night-ink leading-[1.0] tracking-tight text-balance mb-7">
+                  {aboutPage.hero.heading.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </h1>
                 <p className="text-lg md:text-xl text-night-soft-ink leading-relaxed mb-9">
                   {aboutPage.hero.intro}

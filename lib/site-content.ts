@@ -664,7 +664,8 @@ export const aboutPage = {
     "Dennis van Burg is AI/Data Engineering Consultant en oprichter van DC Data Consultancy. Sinds 2016 actief in data, sinds 2021 als zelfstandig consultant.",
   hero: {
     eyebrow: "Over Dennis van Burg",
-    heading: "Senior data specialist. Hands-on, met oog voor de business.",
+    // Two lines; U+2060 word joiner stops the browser breaking "Hands-on" at the hyphen.
+    heading: ["Senior data specialist.", "Hands-\u2060on, met oog voor de business."],
     intro:
       "Sinds 2016 werk ik in data, sinds 2021 met DC Data Consultancy. Ik ontwerp, bouw en denk mee over wat de business nodig heeft.",
   },
