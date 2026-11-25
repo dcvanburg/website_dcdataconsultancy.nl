@@ -35,10 +35,6 @@ export default function CtaBanner() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
           <p className="font-mono text-sm text-night-muted-ink">
-            <a href={siteConfig.phoneHref} className="hover:text-brand-bright transition-colors">
-              {siteConfig.phone}
-            </a>
-            {" · "}
             <a href={`mailto:${siteConfig.email}`} className="hover:text-brand-bright transition-colors">
               {siteConfig.email}
             </a>

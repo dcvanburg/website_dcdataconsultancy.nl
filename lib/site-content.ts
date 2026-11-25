@@ -10,8 +10,6 @@ export const siteConfig = {
     "Freelance senior data specialist. Ik bouw de dataplatforms waar BI, analytics en AI op kunnen vertrouwen, omdat zonder die fundering elke AI-pilot op ruis strandt.",
   url: "https://www.dcdataconsultancy.nl",
   email: "dennis@dcdataconsultancy.nl",
-  phone: "06 36 27 70 71",
-  phoneHref: "tel:+31636277071",
   linkedin: "https://www.linkedin.com/in/dennisvanburg/",
   city: "Breda",
   country: "Nederland",
@@ -235,7 +233,7 @@ export const testimonialsSection = {
 export const contactSection = {
   sectionId: "contact",
   eyebrow: "Plan een kennismaking",
-  heading: "Bel of mail me.",
+  heading: "Mail me of stuur een bericht via LinkedIn.",
   intro: "Vertel kort waar je staat. Dan kijken we samen of en hoe ik kan helpen.",
 } as const;
 

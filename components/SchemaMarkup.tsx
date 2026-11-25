@@ -26,7 +26,6 @@ export function OrganizationSchema() {
       "Senior data engineering consultancy voor heel Nederland. Schaalbare data pipelines, cloud dataplatforms en analytics engineering voor enterprise opdrachtgevers.",
     url: siteConfig.url,
     email: siteConfig.email,
-    telephone: "+31636277071",
     foundingDate: `${siteConfig.foundedYear}-01-01`,
     founder: {
       "@type": "Person",

@@ -1,5 +1,5 @@
 import { contactSection, siteConfig } from "@/lib/site-content";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -20,10 +20,6 @@ export default function ContactSection() {
         <p className="text-ink-soft text-lg leading-relaxed mb-12">{contactSection.intro}</p>
 
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4 text-left">
-          <a href={siteConfig.phoneHref} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 whitespace-nowrap hover:border-brand/40 transition-colors">
-            <Phone className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
-            <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors">{siteConfig.phone}</span>
-          </a>
           <a href={`mailto:${siteConfig.email}`} className="group flex items-center gap-4 rounded-xl border border-rule bg-surface px-6 py-5 whitespace-nowrap hover:border-brand/40 transition-colors">
             <Mail className="w-5 h-5 text-brand shrink-0" aria-hidden="true" />
             <span className="font-mono text-sm text-ink-soft group-hover:text-brand transition-colors">{siteConfig.email}</span>
