@@ -92,7 +92,7 @@ export function PersonSchema() {
     "@type": "Person",
     "@id": `${siteConfig.url}/#dennis`,
     name: "Dennis van Burg",
-    jobTitle: "Senior Data Engineering Consultant",
+    jobTitle: "AI/Data Engineering Consultant",
     worksFor: { "@id": `${siteConfig.url}/#organization` },
     url: `${siteConfig.url}/over-dennis`,
     sameAs: [siteConfig.linkedin],

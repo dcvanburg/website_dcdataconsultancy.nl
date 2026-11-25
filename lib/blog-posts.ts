@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
       "ETL was de norm in het on-prem tijdperk. Op moderne cloud-platforms wint ELT bijna altijd. Wanneer, hoe en waarom — met praktische guidelines.",
     metaTitle: "ETL vs ELT: wanneer kies je wat? (2026 guide)",
     metaDescription:
-      "Praktische guide tussen ETL en ELT op de Modern Data Stack. Wanneer kies je dbt + warehouse, wanneer klassieke ETL? Door senior data engineering consultant.",
+      "Praktische guide tussen ETL en ELT op de Modern Data Stack. Wanneer kies je dbt + warehouse, wanneer klassieke ETL? Door AI/Data Engineering Consultant Dennis van Burg.",
     category: "Data Engineering",
     tags: ["ETL", "ELT", "dbt", "Modern Data Stack"],
     publishedAt: "2026-01-14",
@@ -237,7 +237,7 @@ export const blogPosts: BlogPost[] = [
       "Wat is de Modern Data Stack, welke onderdelen heb je echt nodig, en wanneer is het te vroeg? Een nuchtere uitleg voor data leaders.",
     metaTitle: "Modern Data Stack uitgelegd | Wat, waarom en wanneer",
     metaDescription:
-      "Heldere uitleg over de Modern Data Stack: warehouse, ELT, dbt, orchestration en BI. Door senior data engineering consultant.",
+      "Heldere uitleg over de Modern Data Stack: warehouse, ELT, dbt, orchestration en BI. Door AI/Data Engineering Consultant Dennis van Burg.",
     category: "Modern Data Stack",
     tags: ["modern data stack", "Snowflake", "dbt", "Fivetran"],
     publishedAt: "2026-01-30",
@@ -623,7 +623,7 @@ export const blogPosts: BlogPost[] = [
       "Wat is een goed dataplatform anno 2026? Een blueprint met principes, lagen en concrete keuzes — getest in opdrachten bij enterprise organisaties.",
     metaTitle: "Dataplatform architectuur blueprint 2026 | Senior consultancy",
     metaDescription:
-      "Concrete blueprint voor een modern dataplatform: lagen, principes, governance, security en kostenbeheer. Door senior data engineering consultant.",
+      "Concrete blueprint voor een modern dataplatform: lagen, principes, governance, security en kostenbeheer. Door AI/Data Engineering Consultant Dennis van Burg.",
     category: "Data Strategy",
     tags: ["architectuur", "dataplatform", "Strategy"],
     publishedAt: "2026-03-05",

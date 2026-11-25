@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: "Insights. Data engineering, analytics en AI.",
   description:
-    "Praktische artikelen over data engineering, analytics engineering en AI door senior data engineering consultant Dennis van Burg.",
+    "Praktische artikelen over data engineering, analytics engineering en AI door AI/Data Engineering Consultant Dennis van Burg.",
   alternates: { canonical: `${siteConfig.url}/blog` },
   openGraph: {
     title: "Insights | DC Data Consultancy",

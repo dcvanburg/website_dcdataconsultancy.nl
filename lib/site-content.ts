@@ -106,8 +106,8 @@ export const aboutSection = {
   highlights: [
     { value: "10+", label: "jaar ervaring in data" },
     { value: "2021", label: "DC Data Consultancy gestart" },
-    { value: "5+", label: "sectoren waarvoor gewerkt" },
-    { value: "9", label: "enterprise opdrachtgevers" },
+    { value: "6+", label: "sectoren waarvoor gewerkt" },
+    { value: "10+", label: "bedrijven waarvoor gewerkt" },
   ],
   industries: [
     "Financial Services (banken, verzekeraars, pensioenen)",
@@ -659,9 +659,9 @@ export const aiInterfacePage = {
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const aboutPage = {
-  metaTitle: "Over Dennis van Burg | Senior Data Engineering Consultant",
+  metaTitle: "Over Dennis van Burg | AI/Data Engineering Consultant",
   metaDescription:
-    "Dennis van Burg is senior data engineering consultant en oprichter van DC Data Consultancy. Sinds 2016 actief in data, sinds 2021 als zelfstandig consultant.",
+    "Dennis van Burg is AI/Data Engineering Consultant en oprichter van DC Data Consultancy. Sinds 2016 actief in data, sinds 2021 als zelfstandig consultant.",
   hero: {
     eyebrow: "Over Dennis van Burg",
     heading: "Senior data specialist. Hands-on, met oog voor de business.",
@@ -670,50 +670,56 @@ export const aboutPage = {
   },
   story: [
     {
-      heading: "Van analytics naar engineering",
+      heading: "Van analytics naar engineering naar AI",
       paragraphs: [
-        "Ik begon als Data Scientist en liep steeds tegen hetzelfde aan: de fundering onder de analyses was niet betrouwbaar. Daarom verschoof mijn focus naar data engineering.",
+        "Ik begon in analytics en data science en liep steeds tegen hetzelfde aan: de fundering onder de analyses was niet betrouwbaar. Dus ging ik die fundering zelf bouwen. Pipelines, datamodellen, complete dataplatforms.",
+        "Nu verschuift het weer. Organisaties willen niet meer wekenlang wachten op een rapport of een analist. Ze willen zelf vragen stellen aan hun eigen data, in gewone taal, en direct een betrouwbaar antwoord. AI maakt dat mogelijk, maar alleen als de data eronder klopt en de definities vastliggen. Precies daar komen analytics, engineering en AI samen.",
       ],
     },
     {
       heading: "Eigen consultancy sinds 2021",
       paragraphs: [
-        "Ik werk rechtstreeks voor opdrachtgevers, zonder bureau ertussen. Meestal als senior consultant of lead, op het snijvlak van engineering en business.",
+        "Ik werk rechtstreeks voor opdrachtgevers, zonder bureau ertussen. Meestal als senior consultant of lead, op het snijvlak van business, engineering en AI.",
+        "Ik zit aan tafel met de mensen die de vragen hebben, en bouw daarna zelf wat het antwoord geeft. Naar AI kijk ik nuchter: het is een krachtig middel als de basis staat, geen doel op zich.",
       ],
     },
     {
       heading: "Hoe ik werk",
       paragraphs: [
-        "Meebouwen met je team in plaats van een adviesrapport schrijven. Techniek is een middel; wat de business ermee kan, telt.",
+        "In de eerste iteratie staat er al iets werkends: een eerste pipeline, een dashboard of een AI-assistent op je eigen data. Geen maanden plannen vooraf, maar snel iets in handen waar je op kunt reageren.",
+        "Daarna bouwen we samen verder, met je team erbij, zodat het blijft draaien als ik weer weg ben. Techniek is een middel; wat de business ermee kan, telt.",
       ],
     },
   ],
   expertise: [
     {
       area: "Data Engineering",
-      items: [
-        "Pipelines en orchestration",
-        "Datawarehousing en lakehouses",
-        "Data modelling (dimensional, Data Vault)",
-        "CI/CD, testing en data quality",
-      ],
+      description:
+        "De fundering: pipelines, datawarehouses en lakehouses, met testing en data quality ingebouwd. Betrouwbaar, schaalbaar en betaalbaar in de cloud.",
     },
     {
-      area: "Analytics Engineering & BI",
-      items: [
-        "Medallion-architectuur: bronze, silver, gold",
-        "BI en semantic layers",
-        "KPI-definitie met stakeholders",
-      ],
+      area: "Analytics Engineering",
+      description:
+        "Van ruwe data naar eenduidige cijfers. Ik leg KPI's en definities samen met de business vast, zodat iedereen met dezelfde getallen werkt.",
+    },
+    {
+      area: "Data Analytics & BI",
+      description:
+        "Dashboards en rapportages waar je op kunt sturen, plus analyses zoals forecasting en anomaly detection die verder kijken dan wat er gebeurd is.",
+    },
+    {
+      area: "AI op je eigen data",
+      description:
+        "In gewone taal vragen stellen aan je eigen data en documenten. Ik koppel AI veilig aan je dataplatform, met de context en governance die het betrouwbaar maken.",
     },
   ],
   industries: [
-    "Financial services (Rabobank, de Volksbank, Achmea, Obvion)",
-    "Logistiek (PostNL)",
-    "Energie (Gulf)",
-    "Publieke sector (Brandweer, ABG)",
-    "Vastgoed (Mileway)",
-    "Retail & e-commerce (DrWorker)",
+    { name: "Financial services", clients: "Rabobank, de Volksbank, Achmea, Obvion", icon: "Banknote" },
+    { name: "Logistiek", clients: "PostNL", icon: "Truck" },
+    { name: "Energie", clients: "Gulf", icon: "Zap" },
+    { name: "Publieke sector", clients: "Brandweer, ABG", icon: "Landmark" },
+    { name: "Vastgoed", clients: "Mileway", icon: "Building2" },
+    { name: "Retail & e-commerce", clients: "DrWorker", icon: "ShoppingCart" },
   ],
   values: [
     {
